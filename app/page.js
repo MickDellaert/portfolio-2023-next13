@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import Loading from "./loading";
-import { Inter } from "@next/font/google";
+import { DM_Sans } from "@next/font/google";
 import "./globals.css";
 import useSWR from "swr";
 import Project from "../components/Project";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -22,9 +24,9 @@ export default function Index() {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto">
-        <Header />
-        <ul className="grid lg:grid-cols-4 gap-12 ">
+      <div className="max-w-[90%] sm:max-w-[80%] mx-auto">
+        <Hero />
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {data.projects.map((project) => (
             <Project
               key={project.id}
@@ -36,6 +38,7 @@ export default function Index() {
           ))}
         </ul>
       </div>
+      <About />
     </>
   );
 }

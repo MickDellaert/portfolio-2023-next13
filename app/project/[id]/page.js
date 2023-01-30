@@ -31,13 +31,13 @@ function ProjectDetail({ params }) {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[80%] mx-auto mt-40 mb-32">
         <SingleProjectHeader singleProject={singleProject} />
         <SingleProjectImage singleProject={singleProject} />
-      </div>
 
-      <div className="project-navbuttons h-16 py-3">
-        <ProjectDetailBottomNav singleProject={singleProject} data={data} />
+        <div className="project-navbuttons flex justify-between h-16 py-3">
+          <ProjectDetailBottomNav singleProject={singleProject} data={data} />
+        </div>
       </div>
     </>
   );

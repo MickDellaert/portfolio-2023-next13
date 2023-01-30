@@ -2,5 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 
+
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  /* font-weight: 600; */
+}
+
+.header-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+.span-green {
+  font-family: "Manrope", sans-serif;
+  /* color: rgb(16, 185, 129); */
+  /* white-space: nowrap; */
+}
+
+.span-grey {
+  /* color: rgb(0, 0, 0); */
+  /* text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px; */
+  /* white-space: nowrap; */
+}
+
+/* .span-nowrap {
+  white-space: nowrap;
+} */
+
+.span4 {
+  color: grey;
+}
+
+
+.logo {
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+  display: block;
+  font-size: 0;
+}
+
+.logo:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+svg {
+  display: block;
+}

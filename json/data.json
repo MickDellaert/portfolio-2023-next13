@@ -5,7 +5,7 @@
     "name": "KittyChat",
     "description":
       "A silly themed chat application for all your kitty cat chats, with emoji toggle drawer. Built with Express and socket.io.",
-    "linkLive": "https://kittychat-app.herokuapp.com/",
+    "linkLive": "https://kittychat.onrender.com/",
     "linkName": "Demo",
     "linkGit": "https://github.com/MickDellaert/chatroom-exercise",
     "mainImage": "/KittyChat/kittychat-grid.jpg",
@@ -93,10 +93,21 @@
     "description":
       "Order some lovely bouquets on the FLWR website. I made the details page in this group effort, making this the first webpage I ever made. Built with Bootstrap and Sass.",
     "linkLive": "https://mickdellaert.github.io/FLWR/details.html",
-    "linkName": "Demo",
+    "linkName": "Visit website",
     "linkGit": "https://github.com/MickDellaert/FLWR",
     "mainImage": "/FLWR/FLWR.jpg",
     "detailImage": ["/FLWR/FLWR-top.jpg", "/FLWR/FLWR-bottom.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Reset Meal Guide landingpage",
+    "description":
+      "A landing page promoting the Meal Guide from Reset, designed during my internship at Webit. Interactive mockup build with Adobe XD, further development was done by Webit",
+    "linkLive": "https://resetcoach.be/mijn-aanbod/reset-meal-guide/",
+    "linkName": "Visit website",
+    "linkGit": "",
+    "mainImage": "/ResetMealGuide/reset_meal_guide_1.jpg",
+    "detailImage": ["/ResetMealGuide/reset_meal_guide_home_top.jpg", "/ResetMealGuide/reset_meal_guide_home_bottom.jpg"]
   }
 ]
 }
