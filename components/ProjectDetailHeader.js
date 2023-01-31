@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function SingleProjectHeader({singleProject}) {
+function ProjectDetailHeader({singleProject}) {
   return (
     <>
       <h2 className="text-4xl font-bold mb-4">{singleProject.name}</h2>
@@ -25,4 +25,4 @@ function SingleProjectHeader({singleProject}) {
   );
 }
 
-export default SingleProjectHeader;
+export default ProjectDetailHeader;

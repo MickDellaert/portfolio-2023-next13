@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Loading from "./loading";
-import { DM_Sans } from "@next/font/google";
 import "./globals.css";
 import useSWR from "swr";
 import Project from "../components/Project";
@@ -10,7 +9,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
+import { Manrope } from "@next/font/google";
+const mainFont = Manrope({ subsets: ["latin"] });
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -24,13 +24,14 @@ export default function Index() {
 
   return (
     <>
-      <div className="max-w-[90%] sm:max-w-[80%] mx-auto">
+      <div  className={`${mainFont.className} max-w-[90%] sm:max-w-[80%] mx-auto font-black`}>
         <Hero />
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <ul id="projects" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {data.projects.map((project) => (
             <Project
               key={project.id}
               id={project.id}
+              urlName={project.urlName}
               name={project.name}
               description={project.description}
               mainImage={project.mainImage}

@@ -3,8 +3,8 @@ import Loading from "../../loading";
 import Link from "next/link";
 import useSWR from "swr";
 // import Image from "next/image";
-import SingleProjectHeader from "@/components/SingleProjectHeader";
-import SingleProjectImage from "@/components/SingleProjectImage";
+import SingleProjectHeader from "@/components/ProjectDetailHeader";
+import SingleProjectImage from "@/components/ProjectDetailImage";
 import ProjectDetailBottomNav from "@/components/ProjectDetailBottomNav";
 // import CustomLink from "@/components/CustomLink";
 
@@ -20,7 +20,7 @@ function ProjectDetail({ params }) {
   if (!data) return <Loading />;
 
   const projectDetail = data.projects.filter(
-    (project) => project.id.toString() === params.id
+    (project) => project.urlName.toString() === params.id
   );
 
   const singleProject = projectDetail[0];

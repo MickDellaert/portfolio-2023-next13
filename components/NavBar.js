@@ -18,20 +18,27 @@ const Navbar = () => {
     window.addEventListener("scroll", changeNavbarColor);
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Fragment>
-      <nav>
-        <div className="navbar-wrapper fixed top-0 left-0 right-0 w-full z-10 bg-white">
+      <nav id="home">
+        <div className="navbar-wrapper fixed z-20 top-0 left-0 right-0 w-full  bg-white">
           <div
             className={`navbar-container flex justify-between items-center h-20 max-w-[90%] sm:max-w-[96%]  mx-auto ${
               colorChange
                 ? "bg-white border-b-2 border-white"
-                : "bg-white border-b-2 border-emerald-500"
+                : "bg-white border-b-2 border-primary"
             }`}
           >
             <div className="logo-container self-end mb-3">
-              <div className="logo ">
-                <Link href="/" passHref>
+              <div className="logo">
+                <Link href="#home">
                   <Image
                     className=""
                     src={
@@ -40,8 +47,9 @@ const Navbar = () => {
                         : "/MD_logo/MD_logo_courier_prime_black.svg"
                     }
                     alt="logo"
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
+                    onClick={scrollToTop}
                   />
                   {/* <Image src="/MD_logo_courier.svg" alt="" width={30} height={30} /> */}
                 </Link>
@@ -50,24 +58,22 @@ const Navbar = () => {
 
             <div className="navlinks self-end mb-3 ">
               <Link
-                href="/#projects"
-                passHref
+                href="#projects"
                 className={`${
                   colorChange
-                    ? "text-green-500 hover:text-black"
-                    : "text-black hover:text-green-500"
-                }`}
+                    ? "text-primary hover:text-black"
+                    : "text-black hover:text-primary"
+                } font-bold mr-6`}
               >
                 Projects
               </Link>
               <Link
-                href="/#about"
-                passHref
+                href="#about"
                 className={`${
                   colorChange
-                    ? "text-green-500 hover:text-black"
-                    : "text-black hover:text-green-500"
-                }`}
+                    ? "text-primary hover:text-black"
+                    : "text-black hover:text-primary"
+                } font-bold`}
               >
                 About
               </Link>

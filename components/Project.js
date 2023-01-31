@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function Project({ id, name, description, mainImage }) {
+function Project({ id, urlName, name, description, mainImage }) {
   return (
     <>
-      <Link className="" href={`/project/${id}`}>
+      <Link className="" href={`/project/${urlName}` } >
         <div className="bg-green-200 rounded-lg overflow-hidden">
           {/* <h1 className="text-xl font-bold">{name}</h1>
           <p>{description}</p> */}

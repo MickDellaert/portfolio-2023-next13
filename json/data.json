@@ -2,6 +2,7 @@
   "projects": [
   {
     "id": 1,
+    "urlName" : "kitty-chat",
     "name": "KittyChat",
     "description":
       "A silly themed chat application for all your kitty cat chats, with emoji toggle drawer. Built with Express and socket.io.",
@@ -13,6 +14,7 @@
   },
   {
     "id": 2,
+    "urlName" : "delish-delights",
     "name": "Delish Delights",
     "description":
       "Have some left-overs in the fridge? Get some inspiration with the Delish Delight app and search recipes by ingredient. Built with Vue and the meal API.",
@@ -24,6 +26,7 @@
   },
   {
     "id": 3,
+    "urlName" : "review-app",
     "name": "Review app",
     "description": "A review app built with Angular, Express and Bootstrap.",
     "linkLive": "https://angular-review-mick.herokuapp.com/",
@@ -37,6 +40,7 @@
   },
   {
     "id": 4,
+    "urlName" : "reminder-app",
     "name": "Reminder app",
     "description":
       "Never lose track of your todos with this Reminder app, built with React and styled with Tailwind.",
@@ -49,6 +53,7 @@
 
   {
     "id": 5,
+    "urlName" : "weather-app",
     "name": "Weather app",
     "description":
       "Check out the weather by searching for cities all over the world, toggle the background images between some nice cityscapes or current weather view. Made with the Weather API and Bootstrap.",
@@ -63,6 +68,7 @@
   },
   {
     "id": 6,
+    "urlName" : "pokedex",
     "name": "Pokedex",
     "description":
       "Search for a Pokemon by ID, number or get a random one, toggle a cool opening and closing effect. Built with JS, PHP and the Pokemon API.",
@@ -74,6 +80,7 @@
   },
   {
     "id": 7,
+    "urlName" : "rock-paper-scissors-lizard-spock",
     "name": "Rock Paper Scissors Lizard Spock",
     "description":
       "A spin on the classic game, with some added if statements. Made with JS and Bootstrap.",
@@ -89,6 +96,7 @@
   },
   {
     "id": 8,
+    "urlName" : "flwr",
     "name": "FLWR",
     "description":
       "Order some lovely bouquets on the FLWR website. I made the details page in this group effort, making this the first webpage I ever made. Built with Bootstrap and Sass.",
@@ -100,6 +108,7 @@
   },
   {
     "id": 9,
+    "urlName" : "reset-meal-guide-landing",
     "name": "Reset Meal Guide landingpage",
     "description":
       "A landing page promoting the Meal Guide from Reset, designed during my internship at Webit. Interactive mockup build with Adobe XD, further development was done by Webit",
