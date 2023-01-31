@@ -22,7 +22,7 @@ function ProjectDetailBottomNav({ singleProject, data }) {
   return (
     <>
       <Link
-        href={`/project/${previousProject}`}
+        href={`/project/${previousProject}`} scroll={false}
         className="text-gray-500 hover:text-green-600 font-bold"
       >
         {singleProject.id > 1 ? "← Previous" : ""}
