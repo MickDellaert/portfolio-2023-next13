@@ -116,7 +116,7 @@
     "linkName": "Visit website",
     "linkGit": "https://github.com/Kuli-HYF/kuli-landingpage",
     "mainImage": "/kuli-landing/kuli-landing-detail-top.jpg",
-    "detailImage": ["/kuli-landing/kuli-landing-1.jpg", "/kuli-landing/kuli-landing-detail-bottom.jpg"]
+    "detailImage": ["/kuli-landing/kuli-landing-1.jpg", "/kuli-landing/kuli-landing-home-mobile.jpg"]
   },
   {
     "id": 10,
