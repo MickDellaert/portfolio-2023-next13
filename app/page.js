@@ -26,7 +26,7 @@ export default function Index() {
     <>
       <div  className={`${mainFont.className} max-w-[90%] sm:max-w-[80%] mx-auto font-black`}>
         <Hero />
-        <ul id="projects" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <ul id="projects" className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {data.projects.map((project) => (
             <Project
               key={project.id}

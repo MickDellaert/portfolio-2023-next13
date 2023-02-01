@@ -8,6 +8,7 @@ function ProjectDetailImage({ singleProject }) {
           <>
             <div key={singleProject.id}>
               <Image
+              className="rounded-2xl"
                 key={singleProject.id}
                 width={1200}
                 height={1200}
