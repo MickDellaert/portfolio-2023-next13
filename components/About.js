@@ -18,7 +18,7 @@ const About = () => {
               About Me
             </h1>
             <p className="text-xl leading-snug">
-              Hi, I'm Mick, an experienced graphic designer, knowledgeable
+              Hi, I&apos;m Mick, an experienced graphic designer, knowledgeable
               dtp-operator, and aspiring web developer from Antwerp. Nice to
               meet you, welcome to my portfolio.
               <br></br>
@@ -29,7 +29,7 @@ const About = () => {
               steps I have been taking in my ambition of becoming a full stack
               developer with an emphasis on front-end. More projects can be
               found on my{" "}
-              <a href="https://github.com/MickDellaert" target="_blank">
+              <a href="https://github.com/MickDellaert" target="_blank" rel="noreferrer">
                 Github
               </a>{" "}
               profile.
@@ -39,7 +39,7 @@ const About = () => {
               mainly for printed output. During my{" "}
               <a
                 href="https://www.linkedin.com/in/mick-dellaert"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 career
               </a>{" "}
@@ -54,7 +54,7 @@ const About = () => {
               its endless possibilities and exciting prospects. At the moment I
               am actively looking for an internship, hoping to contribute and
               complete my new knowledge in a fresh position and continue my
-              journey. If I sparked your interest, don't hesitate to{" "}
+              journey. If I sparked your interest, don&apos;t hesitate to{" "}
               <a href="mailto: mickdellaert@yahoo.com">contact</a> me.
             </p>
           </div>
@@ -72,14 +72,14 @@ const About = () => {
             <a
               className="contact-link leading-relaxed "
               href="https://www.linkedin.com/in/mick-dellaert"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               LinkedIn
             </a>
             <a
               className="contact-link leading-relaxed block"
               href="https://github.com/MickDellaert"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               Github
             </a>

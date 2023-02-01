@@ -14,7 +14,7 @@ function ProjectDetailBottomNav({ singleProject, data }) {
     if (singleProject.id < data.projects.length) {
       setNextProject(data.projects[singleProject.id].urlName);
     }
-  }, []);
+  }, [data.projects, singleProject.id]);
 
   console.log(previousProject);
   console.log(nextProject);

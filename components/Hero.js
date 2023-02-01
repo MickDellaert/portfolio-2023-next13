@@ -30,7 +30,7 @@ const Hero = () => {
       <h1
         className={`header-title leading-snug text-[7vmin] sm:text-[6.2vmin] xl:mr-[10vw] 2xl:mr-[18vw] mt-44 font-bold`}
       >
-        Hello! I'm{" "}
+        Hello! I&apos;m{" "}
         <span className="span-green text-primary">Mick Dellaert</span>,{" "}
         <span className="whitespace-nowrap"> an experienced </span>{" "}
         <span className="span-grey">graphic designer</span>{" "}

@@ -1,7 +1,19 @@
  {
   "projects": [
+    {
+      "id": 1,
+      "urlName" : "kuli",
+      "name": "Kuli project",
+      "description":
+        "Kuli website made during the Hack Your Future graduation project.",
+      "linkLive": "https://kuli-hyf.netlify.app/",
+      "linkName": "Visit website",
+      "linkGit": "https://github.com/Kuli-HYF",
+      "mainImage": "/kuli/kuli-cropped.jpg",
+      "detailImage": ["/kuli/kuli-home-companies.jpg", "/kuli/kuli-ipad-login.jpg"]
+    },
   {
-    "id": 1,
+    "id": 2,
     "urlName" : "kitty-chat",
     "name": "KittyChat",
     "description":
@@ -13,7 +25,7 @@
     "detailImage": ["/KittyChat/kittychat-mockup-phone.jpg", "/KittyChat/kittychat-2.jpg"]
   },
   {
-    "id": 2,
+    "id": 3,
     "urlName" : "delish-delights",
     "name": "Delish Delights",
     "description":
@@ -24,31 +36,18 @@
     "mainImage": "/Delish/delish-laptop-grid.jpg",
     "detailImage": ["/Delish/delish-mockup-phone.jpg", "/Delish/delish-ipad.jpg"]
   },
-  {
-    "id": 3,
-    "urlName" : "review-app",
-    "name": "Review app",
-    "description": "A review app built with Angular, Express and Bootstrap.",
-    "linkLive": "https://angular-review-mick.herokuapp.com/",
-    "linkName": "Demo",
-    "linkGit": "https://github.com/MickDellaert/angular-review-app",
-    "mainImage": "/Review/reviewapp-1.jpg",
-    "detailImage": [
-      "/Review/reviewapp-1.jpg",
-      "/Review/reviewapp-phone-mockup.jpg"
-    ]
-  },
+ 
   {
     "id": 4,
-    "urlName" : "reminder-app",
-    "name": "Reminder app",
+    "urlName" : "de-meyer",
+    "name": "De Meyer",
     "description":
-      "Never lose track of your todos with this Reminder app, built with React and styled with Tailwind.",
-    "linkLive": "https://react-to-do-app-mick.netlify.app/",
-    "linkName": "Demo",
-    "linkGit": "https://github.com/MickDellaert/react-intro",
-    "mainImage": "/Todo/todo-app-grid.jpg",
-    "detailImage": ["/Todo/todo-ipad-mockup.jpg", "/Todo/todo-mockup-phone.jpg"]
+      "Design of the whole website, interactive mockup in Adobe XD, made during internship. Further development done by Webit",
+    "linkLive": "https://demeyeruitvaart.be/",
+    "linkName": "Visit website",
+    "linkGit": "",
+    "mainImage": "/de-meyer/de-meyer-home-top.jpg",
+    "detailImage": ["/de-meyer/de-meyer-home-contact-salon.jpg", "/de-meyer/de-meyer-info-diensten.jpg" ]
   },
 
   {
@@ -72,7 +71,7 @@
     "name": "Pokedex",
     "description":
       "Search for a Pokemon by ID, number or get a random one, toggle a cool opening and closing effect. Built with JS, PHP and the Pokemon API.",
-    "linkLive": "https://shrouded-fortress-50245.herokuapp.com/",
+    "linkLive": "https://podedex.000webhostapp.com/",
     "linkName": "Demo",
     "linkGit": "https://github.com/MickDellaert/php_pokedex",
     "mainImage": "/Pokedex/pokedex-open.jpg",
@@ -94,18 +93,7 @@
       "/RockPaper/rock-phone.jpg"
     ]
   },
-  {
-    "id": 8,
-    "urlName" : "flwr",
-    "name": "FLWR",
-    "description":
-      "Order some lovely bouquets on the FLWR website. I made the details page in this group effort, making this the first webpage I ever made. Built with Bootstrap and Sass.",
-    "linkLive": "https://mickdellaert.github.io/FLWR/details.html",
-    "linkName": "Visit website",
-    "linkGit": "https://github.com/MickDellaert/FLWR",
-    "mainImage": "/FLWR/FLWR.jpg",
-    "detailImage": ["/FLWR/FLWR-top.jpg", "/FLWR/FLWR-bottom.jpg"]
-  },
+
   {
     "id": 9,
     "urlName" : "reset-meal-guide-landing",
@@ -115,8 +103,58 @@
     "linkLive": "https://resetcoach.be/mijn-aanbod/reset-meal-guide/",
     "linkName": "Visit website",
     "linkGit": "",
-    "mainImage": "/ResetMealGuide/reset_meal_guide_1.jpg",
-    "detailImage": ["/ResetMealGuide/reset_meal_guide_home_top.jpg", "/ResetMealGuide/reset_meal_guide_home_bottom.jpg"]
+    "mainImage": "/ResetMealGuide/reset-meal-guide_home-cropped.jpg",
+    "detailImage": ["/ResetMealGuide/reset_meal_guide_1.jpg", "/ResetMealGuide/reset_meal_guide_home_bottom.jpg"]
+  },
+  {
+    "id": 10,
+    "urlName" : "kuli-landing",
+    "name": "Kuli project landingpage",
+    "description":
+      "A landing page to promote our Kuli website made during the Hack Your Future graduation project.",
+    "linkLive": "https://introducing-kuli.netlify.app/",
+    "linkName": "Visit website",
+    "linkGit": "https://github.com/Kuli-HYF/kuli-landingpage",
+    "mainImage": "/kuli-landing/kuli-landing-detail-top.jpg",
+    "detailImage": ["/kuli-landing/kuli-landing-1.jpg", "/kuli-landing/kuli-landing-detail-bottom.jpg"]
+  },
+  {
+    "id": 11,
+    "urlName" : "reminder-app",
+    "name": "Reminder app",
+    "description":
+      "Never lose track of your todos with this Reminder app, built with React and styled with Tailwind.",
+    "linkLive": "https://react-to-do-app-mick.netlify.app/",
+    "linkName": "Demo",
+    "linkGit": "https://github.com/MickDellaert/react-intro",
+    "mainImage": "/Todo/todo-app-grid.jpg",
+    "detailImage": ["/Todo/todo-ipad-mockup.jpg", "/Todo/todo-mockup-phone.jpg"]
+  },
+  {
+    "id": 12,
+    "urlName" : "groevy",
+    "name": "Groevy",
+    "description":
+      "Rebuilding the Groevy website to a onepager.",
+    "linkLive": "https://groevy.com/en/",
+    "linkName": "Visit website",
+    "linkGit": "",
+    "mainImage": "/groevy/groevy-home-top.jpg",
+    "detailImage": ["/groevy/groevy-home-blog.jpg", "/groevy/groevy-home-top-bottom.jpg"]
+  },
+
+  {
+    "id": 12,
+    "urlName" : "ergens-onderweg",
+    "name": "Ergens Onderweg",
+    "description":
+      "Design of the whole website, interactive mockup in Adobe XD, made during internship. Further development done by Webit",
+    "linkLive": "https://ergensonderweg.be/",
+    "linkName": "Visit website",
+    "linkGit": "",
+    "mainImage": "/ergens-onderweg/ergens-onderweg-cropped.jpg",
+    "detailImage": ["/ergens-onderweg/ergens-onderweg-blog-home.jpg", "/ergens-onderweg/ergens-onderweg-over-reis.jpg" ]
   }
+
 ]
 }
