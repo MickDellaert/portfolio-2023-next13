@@ -26,7 +26,7 @@ export default function Index() {
   return (
     <>
       <div
-        className={`${mainFont.className} max-w-[90%] sm:max-w-[80%] mx-auto font-black`}
+        className={`${mainFont.className} px-8 max-w-screen-2xl mx-auto font-black`}
       >
         <Hero />
         <ul

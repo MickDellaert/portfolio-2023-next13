@@ -30,7 +30,7 @@ const Navbar = () => {
       <nav id="home">
         <div className="navbar-wrapper fixed z-20 top-0 left-0 right-0 w-full  bg-white">
           <div
-            className={`navbar-container flex justify-between items-center h-20 max-w-[90%] sm:max-w-[96%]  mx-auto ${
+            className={`navbar-container flex justify-between items-center h-20 mx-8  ${
               colorChange
                 ? "bg-white border-b-2 border-white"
                 : "bg-white border-b-2 border-primary"
