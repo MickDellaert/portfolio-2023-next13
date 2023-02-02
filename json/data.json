@@ -98,10 +98,10 @@
       "linkLive": "https://kittychat.onrender.com/",
       "linkName": "Demo",
       "linkGit": "https://github.com/MickDellaert/chatroom-exercise",
-      "mainImage": "/KittyChat/kittychat-grid.jpg",
+      "mainImage": "/KittyChat/kittychat-cropped.jpg",
       "detailImage": [
-        "/KittyChat/kittychat-mockup-phone.jpg",
-        "/KittyChat/kittychat-2.jpg"
+        "/KittyChat/kittychat-mockup-phone-blauw.jpg",
+        "/KittyChat/kittychat-blauw.jpg"
       ],
       "Icon": ["SiJavascript", "SiExpress", "SiSocketdotio"]
     },
@@ -113,7 +113,7 @@
       "linkLive": "https://delish-delights.netlify.app/",
       "linkName": "Demo",
       "linkGit": "https://github.com/MickDellaert/vue-api",
-      "mainImage": "/Delish/delish-laptop-grid.jpg",
+      "mainImage": "/Delish/delish-laptop-cropped.jpg",
       "detailImage": [
         "/Delish/delish-mockup-phone.jpg",
         "/Delish/delish-ipad.jpg"
@@ -165,7 +165,7 @@
         "/Pokedex/pokedex-closed.jpg",
         "/Pokedex/pokedex-open.jpg"
       ],
-      "Icon": ["SiPhp"]
+      "Icon": ["SiJavascript","SiPhp"]
     },
     {
       "id": 7,

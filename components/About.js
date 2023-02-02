@@ -1,11 +1,12 @@
 import Image from "next/image";
+import portret from "../public/portret/portret-gray-23.jpg"
 
 const About = () => {
   return (
     <>
       <div id="about" className="about-anchor"></div>
 
-      <section className="about-container bg-gray-100 py-20 mt-32 mb-12 mx-8 rounded-xl ">
+      <section className="about-container bg-gray-100 py-20 mt-32 mb-12 mx-8 rounded-2xl ">
         {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
           <h1 className="header-title leading-normal text-4xl text-emerald-600">
             About
@@ -58,16 +59,17 @@ const About = () => {
               <a href="mailto: mickdellaert@yahoo.com">contact</a> me.
             </p>
           </div>
-          <div className="portrait mt-6 xl:mt-0 md:col-span-3 xl:col-span-2 xl:col-start-7 md:mt-6 2xl:col-span-2 2xl:col-start-7">
+          <div className="portrait  mt-6 xl:mt-0 md:col-span-3 xl:col-span-2 xl:col-start-7 md:mt-6 2xl:col-span-2 2xl:col-start-7">
             <Image
-              src={"/portret/portret-rgb.jpg"}
+              src={portret}
               alt={"mick"}
               width={800}
               height={800}
-              className={"image rounded-xl"}
+              className={"image rounded-2xl"}
+              placeholder="blur"
             />
           </div>
-          <div className="contact font-bold text-emerald-600 text-xl my-6 md:mb-0 md:col-span-4 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7 self-end">
+          <div className="contact font-bold text-primary text-xl my-6 md:mb-0 md:col-span-4 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7 self-end">
             <h1 className="leading-normal text-4xl text-black mb-4">Contact</h1>
             <a
               className="contact-link leading-relaxed "

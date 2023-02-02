@@ -5,7 +5,9 @@
 @layer base {
   :root {
     /* For rgb(255 115 179 / <alpha-value>) */
-    --color-primary: 5 150 105;
+    --color-primary: 59 196 159;
+    /* --color-primary: 5 150 105; */
+
     /* --color-secondary: 111 114 185; */
 
     /* ... */
@@ -52,7 +54,7 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255, 1);
   color: rgba(16, 185, 129);
   display: flex;
   justify-content: center;

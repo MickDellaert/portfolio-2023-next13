@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "./Logo";
 import { useState, Fragment } from "react";
 
 const Navbar = () => {
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <nav id="home">
-        <div className="navbar-wrapper fixed z-20 top-0 left-0 right-0 w-full  bg-white">
+        <div className="navbar-wrapper fixed z-20 top-0 left-0 right-0 w-full ">
           <div
             className={`navbar-container flex justify-between items-center h-20 mx-8  ${
               colorChange
@@ -38,20 +39,14 @@ const Navbar = () => {
           >
             <div className="logo-container self-end mb-3">
               <div className="logo">
-                <Link href="#home">
-                  <Image
-                    className=""
-                    src={
-                      colorChange
-                        ? "/MD_logo/MD_logo_courier_prime_green.svg"
-                        : "/MD_logo/MD_logo_courier_prime_black.svg"
-                    }
-                    alt="logo"
-                    width={20}
-                    height={20}
-                    onClick={scrollToTop}
-                  />
-                  {/* <Image src="/MD_logo_courier.svg" alt="" width={30} height={30} /> */}
+                <Link href="/"
+                
+                onClick={scrollToTop}>
+                  {colorChange ? (
+                    <Logo className=" w-9 h-9" />
+                  ) : (
+                    <Logo className="fill-primary w-9 h-9" />
+                  )}
                 </Link>
               </div>
             </div>
@@ -61,8 +56,8 @@ const Navbar = () => {
                 href="#projects"
                 className={`${
                   colorChange
-                    ? "text-primary hover:text-black"
-                    : "text-black hover:text-primary"
+                    ? "text-black hover:text-primary"
+                    : "text-primary hover:text-black"
                 } font-bold mr-6`}
               >
                 Projects
@@ -71,8 +66,8 @@ const Navbar = () => {
                 href="#about"
                 className={`${
                   colorChange
-                    ? "text-primary hover:text-black"
-                    : "text-black hover:text-primary"
+                    ? "text-black hover:text-primary"
+                    : "text-primary hover:text-black"
                 } font-bold`}
               >
                 About

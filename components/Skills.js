@@ -23,7 +23,7 @@ function Skills() {
         <div className="flex justify-center flex-wrap w-50 h-50 gap-2">
           {data.skills.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.Icon];
-            return <HomeSkills key={i} className="w-12 h-12 fill-gray-400" />;
+            return <HomeSkills key={i} className="w-12 h-12 fill-gray-400 hover:fill-primary cursor-pointer" />;
           })}
         </div>
 
