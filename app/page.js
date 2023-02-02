@@ -1,16 +1,18 @@
 "use client";
 
 import "./globals.css";
+import useSWR from "swr";
 
 import Loading from "./loading";
-import useSWR from "swr";
+import Error from "./error";
 import Project from "../components/Project";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
+
 import * as ReactIcons from "react-icons/si";
 
 import { Manrope } from "@next/font/google";
-import Skills from "@/components/Skills";
 const mainFont = Manrope({ subsets: ["latin"] });
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -18,7 +20,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Index() {
   const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  if (error) return <div>Failed to load</div>;
+  if (error) return <Error />;
   if (!data) return <Loading />;
 
   // console.log(data.skills);
@@ -26,12 +28,12 @@ export default function Index() {
   return (
     <>
       <div
-        className={`${mainFont.className} px-8 max-w-screen-2xl mx-auto font-black`}
+        className={`${mainFont.className} mx-auto max-w-screen-2xl px-8 font-black`}
       >
         <Hero />
         <ul
           id="projects"
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+          className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
           {data.projects.map((project) => (
             <Project

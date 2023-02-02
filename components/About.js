@@ -1,21 +1,21 @@
 import Image from "next/image";
-import portret from "../public/portret/portret-gray-23.jpg"
+import portret from "../public/portret/portret-gray-23.jpg";
 
 const About = () => {
   return (
     <>
       <div id="about" className="about-anchor"></div>
 
-      <section className="about-container bg-gray-100 py-20 mt-32 mb-12 mx-8 rounded-2xl ">
+      <section className="about-container mx-8 mt-32 mb-12 rounded-2xl bg-gray-100 py-20 ">
         {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
           <h1 className="header-title leading-normal text-4xl text-emerald-600">
             About
           </h1>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-8 gap-6 max-w-[84%] mx-auto">
+        <div className="mx-auto grid max-w-[84%] grid-cols-1 gap-6 md:grid-cols-8">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
-            <h1 className="header-title leading-normal text-4xl text-black mb-4 font-bold">
+            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-black">
               About Me
             </h1>
             <p className="text-xl leading-snug">
@@ -30,7 +30,11 @@ const About = () => {
               steps I have been taking in my ambition of becoming a full stack
               developer with an emphasis on front-end. More projects can be
               found on my{" "}
-              <a href="https://github.com/MickDellaert" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/MickDellaert"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Github
               </a>{" "}
               profile.
@@ -40,7 +44,8 @@ const About = () => {
               mainly for printed output. During my{" "}
               <a
                 href="https://www.linkedin.com/in/mick-dellaert"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 career
               </a>{" "}
@@ -59,7 +64,7 @@ const About = () => {
               <a href="mailto: mickdellaert@yahoo.com">contact</a> me.
             </p>
           </div>
-          <div className="portrait  mt-6 xl:mt-0 md:col-span-3 xl:col-span-2 xl:col-start-7 md:mt-6 2xl:col-span-2 2xl:col-start-7">
+          <div className="portrait mt-6 md:col-span-3 md:mt-6 xl:col-span-2 xl:col-start-7 xl:mt-0 2xl:col-span-2 2xl:col-start-7">
             <Image
               src={portret}
               alt={"mick"}
@@ -69,19 +74,21 @@ const About = () => {
               placeholder="blur"
             />
           </div>
-          <div className="contact font-bold text-primary text-xl my-6 md:mb-0 md:col-span-4 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7 self-end">
-            <h1 className="leading-normal text-4xl text-black mb-4">Contact</h1>
+          <div className="contact my-6 self-end text-xl font-bold text-primary md:col-span-4 md:mb-0 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7">
+            <h1 className="mb-4 text-4xl leading-normal text-black">Contact</h1>
             <a
               className="contact-link leading-relaxed "
               href="https://www.linkedin.com/in/mick-dellaert"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               LinkedIn
             </a>
             <a
-              className="contact-link leading-relaxed block"
+              className="contact-link block leading-relaxed"
               href="https://github.com/MickDellaert"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               Github
             </a>

@@ -29,36 +29,34 @@ const Navbar = () => {
   return (
     <Fragment>
       <nav id="home">
-        <div className="navbar-wrapper fixed z-20 top-0 left-0 right-0 w-full ">
+        <div className="navbar-wrapper fixed top-0 left-0 right-0 z-20 w-full ">
           <div
-            className={`navbar-container flex justify-between items-center h-20 mx-8  ${
+            className={`navbar-container mx-8 flex h-20 items-center justify-between  ${
               colorChange
-                ? "bg-white border-b-2 border-white"
-                : "bg-white border-b-2 border-primary"
+                ? "border-b-2 border-white bg-white"
+                : "border-b-2 border-primary bg-white"
             }`}
           >
-            <div className="logo-container self-end mb-3">
+            <div className="logo-container mb-3 self-end">
               <div className="logo">
-                <Link href="/"
-                
-                onClick={scrollToTop}>
+                <Link href="/" onClick={scrollToTop}>
                   {colorChange ? (
-                    <Logo className=" w-9 h-9" />
+                    <Logo className=" h-9 w-9" />
                   ) : (
-                    <Logo className="fill-primary w-9 h-9" />
+                    <Logo className="h-9 w-9 fill-primary" />
                   )}
                 </Link>
               </div>
             </div>
 
-            <div className="navlinks self-end mb-3 ">
+            <div className="navlinks mb-3 self-end ">
               <Link
                 href="#projects"
                 className={`${
                   colorChange
                     ? "text-black hover:text-primary"
                     : "text-primary hover:text-black"
-                } font-bold mr-6`}
+                } mr-6 font-bold`}
               >
                 Projects
               </Link>

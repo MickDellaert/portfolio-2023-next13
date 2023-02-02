@@ -25,13 +25,9 @@ function ProjectDetail({ params }) {
 
   const singleProject = projectDetail[0];
 
-  // console.log(singleProject);
-  // console.log(projectDetail.name);
-  // console.log(data.projects.length);
-
   return (
     <>
-      <div className="px-8 max-w-screen-2xl mx-auto mt-40 mb-16">
+      <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-8">
         <SingleProjectHeader singleProject={singleProject} />
         <SingleProjectImage singleProject={singleProject} />
 

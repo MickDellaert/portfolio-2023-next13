@@ -18,12 +18,17 @@ function Skills() {
   return (
     <>
       <div className="mx-auto mt-32">
-        <h2 className="text-4xl font-black text-center mb-6">Skills</h2>
+        <h2 className="mb-6 text-center text-4xl font-black">Skills</h2>
 
-        <div className="flex justify-center flex-wrap w-50 h-50 gap-2">
+        <div className="w-50 h-50 flex flex-wrap justify-center gap-2">
           {data.skills.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.Icon];
-            return <HomeSkills key={i} className="w-12 h-12 fill-gray-400 hover:fill-primary cursor-pointer" />;
+            return (
+              <HomeSkills
+                key={i}
+                className="h-12 w-12 cursor-pointer fill-gray-400 hover:fill-primary"
+              />
+            );
           })}
         </div>
 

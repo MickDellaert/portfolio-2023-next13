@@ -22,13 +22,13 @@ const Hero = () => {
   return (
     <div
       // className="hero relative grid grid-cols-8 bg-white mx-6 md:mx-16 2xl:mx-40 my-8 md:my-20 lg:my-28 xl:mt-32 xl:mb-16 2xl:mt-44 2xl:mb-28"
-      className="flex flex-col grow mb-24 "
+      className="mb-24 flex grow flex-col "
       style={{
         transform: `translateY(${offset * 0.2}px)`,
       }}
     >
       <h1
-        className={`header-title leading-snug text-[7vmin] sm:text-[6.2vmin] xl:mr-[10vw] 2xl:mr-[18vw] mt-44 font-bold`}
+        className={`header-title mt-44 text-[7vmin] font-bold leading-snug sm:text-[6.2vmin] xl:mr-[10vw] 2xl:mr-[18vw]`}
       >
         Hello! I&apos;m{" "}
         <span className="span-green text-primary">Mick Dellaert</span>,{" "}
@@ -40,20 +40,18 @@ const Hero = () => {
         <span className="span-nowrap">currently </span>{" "}
         <span className="whitespace-nowrap">
           on a{" "}
-          <span className="span-green underlined text-primary">
-            journey
-          </span>{" "}
+          <span className="span-green underlined text-primary">journey</span>{" "}
         </span>{" "}
         <span className="span-nowrap">of becoming </span>{" "}
         <span className="span-nowrap whitespace-nowrap">
           a{" "}
-          <span className="span-green text-primary whitespace-nowrap">
+          <span className="span-green whitespace-nowrap text-primary">
             web developer
           </span>
           .
         </span>
       </h1>
-      <h1 className=" text-[6.2vmin] font-bold text-primary animate-bounce">
+      <h1 className=" animate-bounce text-[6.2vmin] font-bold text-primary">
         ↓
       </h1>
 
