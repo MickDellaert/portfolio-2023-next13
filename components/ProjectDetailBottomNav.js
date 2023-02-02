@@ -23,13 +23,13 @@ function ProjectDetailBottomNav({ singleProject, data }) {
     <>
       <Link
         href={`/project/${previousProject}`} scroll={false}
-        className="text-gray-500 hover:text-green-600 font-bold"
+        className="text-regular font-bold text-gray-400 hover:text-primary"
       >
         {singleProject.id > 1 ? "← Previous" : ""}
       </Link>
       <Link
         href={`/project/${nextProject}`}
-        className="text-gray-500 hover:text-green-600 font-bold"
+        className="text-regular font-bold text-gray-400 hover:text-primary"
       >
         {singleProject.id < data.projects.length ? "Next →" : ""}
       </Link>

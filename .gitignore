@@ -30,3 +30,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+components/skillData.js
+pages/api/skilldata.js
+json/data copy.json
+json/jsonskill.json
+json/tech.json
+public/skill-icons

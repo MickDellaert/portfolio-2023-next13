@@ -35,7 +35,7 @@ function ProjectDetail({ params }) {
         <SingleProjectHeader singleProject={singleProject} />
         <SingleProjectImage singleProject={singleProject} />
 
-        <div className="project-navbuttons flex justify-between h-16 py-3">
+        <div className="project-navbuttons flex justify-between h-16">
           <ProjectDetailBottomNav singleProject={singleProject} data={data} />
         </div>
       </div>

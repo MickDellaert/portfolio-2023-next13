@@ -17,7 +17,7 @@ function Project({ id, urlName, name, description, mainImage }) {
             height={800}
           />
 
-          <div className="grid-overlay absolute rounded-lg ">
+          <div className="grid-overlay rounded-lg ">
             <div className="grid-title text-3xl text-center font-black text-primary p-12">
               <h2 className="mb-4">{name}</h2>
               <p className="text-base font-bold text-black underline decoration-2 underline-offset-2">
