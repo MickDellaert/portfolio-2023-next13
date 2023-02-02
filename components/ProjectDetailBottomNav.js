@@ -16,8 +16,8 @@ function ProjectDetailBottomNav({ singleProject, data }) {
     }
   }, [data.projects, singleProject.id]);
 
-  console.log(previousProject);
-  console.log(nextProject);
+  // console.log(previousProject);
+  // console.log(nextProject);
 
   return (
     <>

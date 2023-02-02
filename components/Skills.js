@@ -6,8 +6,6 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import skills from "./skillData";
-
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Skills() {
@@ -16,21 +14,16 @@ function Skills() {
   if (error) return <div>Failed to load</div>;
   if (!data) return <Loading />;
 
-  console.log(skills);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="mx-auto mt-32">
         <h2 className="text-4xl font-black text-center mb-6">Skills</h2>
 
         <div className="flex justify-center w-50 h-50 gap-2">
-          {data.skills.map((skill) => {
+          {data.skills.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.Icon];
-            return (
-              <>
-                <HomeSkills className="w-12 h-12 fill-gray-400" />
-              </>
-            );
+            return <HomeSkills key={i} className="w-12 h-12 fill-gray-400" />;
           })}
         </div>
 

@@ -13,7 +13,7 @@ import ProjectDetailBottomNav from "@/components/ProjectDetailBottomNav";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function ProjectDetail({ params }) {
-  console.log(params);
+  // console.log(params);
   const { data, error } = useSWR("/api/staticdata", fetcher);
 
   if (error) return <div>Failed to load</div>;
@@ -25,9 +25,9 @@ function ProjectDetail({ params }) {
 
   const singleProject = projectDetail[0];
 
-  console.log(singleProject);
+  // console.log(singleProject);
   // console.log(projectDetail.name);
-  console.log(data.projects.length);
+  // console.log(data.projects.length);
 
   return (
     <>

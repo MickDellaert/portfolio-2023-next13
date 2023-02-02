@@ -21,7 +21,7 @@ export default function Index() {
   if (error) return <div>Failed to load</div>;
   if (!data) return <Loading />;
 
-  console.log(data.skills);
+  // console.log(data.skills);
 
   return (
     <>
