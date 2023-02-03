@@ -10,7 +10,7 @@ import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
 import Skills from "@/components/home/Skills";
 
-import jsonData from "../json/data.json"
+import jsonData from "../json/data.json";
 
 import * as ReactIcons from "react-icons/si";
 
@@ -25,8 +25,7 @@ export default function Index() {
   if (error) return <Error />;
   if (!data) return <Loading />;
 
-  console.log(data);
-
+  console.log(jsonData);
 
   return (
     <>
@@ -38,7 +37,7 @@ export default function Index() {
           id="projects"
           className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {jsonData.projects.map((project) => (
+          {data.projects.map((project) => (
             <Project
               key={project.id}
               id={project.id}
@@ -50,7 +49,7 @@ export default function Index() {
           ))}
         </ul>
 
-        <Skills data={data}/>
+        <Skills data={data} />
       </div>
       <About />
     </>
