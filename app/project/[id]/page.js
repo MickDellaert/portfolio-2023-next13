@@ -7,22 +7,27 @@ import SingleProjectHeader from "@/components/project-detail/ProjectDetailHeader
 import SingleProjectImage from "@/components/project-detail/ProjectDetailImage";
 import ProjectDetailBottomNav from "@/components/project-detail/ProjectDetailBottomNav";
 
-import jsonData from "../../../json/data.json"
-
-// import CustomLink from "@/components/CustomLink";
+import jsonData from "../../../json/data.json";
 
 // import projectData from "../../json/data.json";
 
-// const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
+export async function generateStaticParams() {
+  const { data } = useSWR("/api/staticdata", fetcher);
+
+  return data.projects.map((project) => {
+    project: toString(project.urlName);
+  });
+}
 
 function ProjectDetail({ params }) {
-  // console.log(params);
-  // const { data, error } = useSWR("/api/staticdata", fetcher);
+  const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  // if (error) return <div>Failed to load</div>;
-  // if (!data) return <Loading />;
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <Loading />;
 
-  const projectDetail = jsonData.projects.filter(
+  const projectDetail = data.projects.filter(
     (project) => project.urlName.toString() === params.id
   );
 
@@ -33,10 +38,7 @@ function ProjectDetail({ params }) {
       <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-8">
         <SingleProjectHeader singleProject={singleProject} />
         <SingleProjectImage singleProject={singleProject} />
-
-        <div className="project-navbuttons flex justify-between">
-          <ProjectDetailBottomNav singleProject={singleProject} data={jsonData} />
-        </div>
+        <ProjectDetailBottomNav singleProject={singleProject} data={jsonData} />
       </div>
     </>
   );

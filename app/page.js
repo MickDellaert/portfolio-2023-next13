@@ -17,15 +17,15 @@ import * as ReactIcons from "react-icons/si";
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
 
-// const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  // const { data, error } = useSWR("/api/staticdata", fetcher);
+  const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  // if (error) return <Error />;
-  // if (!data) return <Loading />;
+  if (error) return <Error />;
+  if (!data) return <Loading />;
 
-  console.log(jsonData);
+  console.log(data);
 
 
   return (
@@ -38,7 +38,7 @@ export default function Index() {
           id="projects"
           className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {jsonData.projects.map((project) => (
+          {data.projects.map((project) => (
             <Project
               key={project.id}
               id={project.id}
@@ -50,7 +50,7 @@ export default function Index() {
           ))}
         </ul>
 
-        <Skills />
+        <Skills data={data}/>
       </div>
       <About />
     </>

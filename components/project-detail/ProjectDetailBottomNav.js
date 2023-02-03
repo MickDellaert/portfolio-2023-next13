@@ -18,19 +18,21 @@ function ProjectDetailBottomNav({ singleProject, data }) {
 
   return (
     <>
-      <Link
-        href={`/project/${previousProject}`}
-        scroll={false}
-        className="text-regular font-bold text-gray-400 hover:text-primary"
-      >
-        {singleProject.id > 1 ? "← Previous" : ""}
-      </Link>
-      <Link
-        href={`/project/${nextProject}`}
-        className="text-regular font-bold text-gray-400 hover:text-primary"
-      >
-        {singleProject.id < data.projects.length ? "Next →" : ""}
-      </Link>
+      <div className="project-navbuttons flex justify-between">
+        <Link
+          href={`/project/${previousProject}`}
+          scroll={false}
+          className="text-regular font-bold text-gray-400 hover:text-primary"
+        >
+          {singleProject.id > 1 ? "← Previous" : ""}
+        </Link>
+        <Link
+          href={`/project/${nextProject}`}
+          className="text-regular font-bold text-gray-400 hover:text-primary"
+        >
+          {singleProject.id < data.projects.length ? "Next →" : ""}
+        </Link>
+      </div>
     </>
   );
 }
