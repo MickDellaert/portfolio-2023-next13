@@ -3,23 +3,26 @@ import Loading from "../../loading";
 import Link from "next/link";
 import useSWR from "swr";
 // import Image from "next/image";
-import SingleProjectHeader from "@/components/ProjectDetailHeader";
-import SingleProjectImage from "@/components/ProjectDetailImage";
-import ProjectDetailBottomNav from "@/components/ProjectDetailBottomNav";
+import SingleProjectHeader from "@/components/project-detail/ProjectDetailHeader";
+import SingleProjectImage from "@/components/project-detail/ProjectDetailImage";
+import ProjectDetailBottomNav from "@/components/project-detail/ProjectDetailBottomNav";
+
+import jsonData from "../../../json/data.json"
+
 // import CustomLink from "@/components/CustomLink";
 
 // import projectData from "../../json/data.json";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+// const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function ProjectDetail({ params }) {
   // console.log(params);
-  const { data, error } = useSWR("/api/staticdata", fetcher);
+  // const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <Loading />;
+  // if (error) return <div>Failed to load</div>;
+  // if (!data) return <Loading />;
 
-  const projectDetail = data.projects.filter(
+  const projectDetail = jsonData.projects.filter(
     (project) => project.urlName.toString() === params.id
   );
 
@@ -32,7 +35,7 @@ function ProjectDetail({ params }) {
         <SingleProjectImage singleProject={singleProject} />
 
         <div className="project-navbuttons flex justify-between">
-          <ProjectDetailBottomNav singleProject={singleProject} data={data} />
+          <ProjectDetailBottomNav singleProject={singleProject} data={jsonData} />
         </div>
       </div>
     </>

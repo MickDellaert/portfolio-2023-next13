@@ -2,26 +2,27 @@ import useSWR from "swr";
 import Loading from "@/app/loading";
 import * as ReactIcons from "react-icons/si";
 
+import jsonData from "../../json/data.json";
+
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+// const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Skills() {
-  const { data, error } = useSWR("/api/staticdata", fetcher);
+  // const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <Loading />;
+  // if (error) return <div>Failed to load</div>;
+  // if (!data) return <Loading />;
 
-  // console.log(data);
   return (
     <>
       <div className="mx-auto mt-32">
         <h2 className="mb-6 text-center text-4xl font-black">Skills</h2>
 
         <div className="w-50 h-50 flex flex-wrap justify-center gap-2">
-          {data.skills.map((skill, i) => {
+          {jsonData.skills.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.Icon];
             return (
               <HomeSkills

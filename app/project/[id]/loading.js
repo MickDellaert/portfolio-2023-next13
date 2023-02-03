@@ -1,11 +1,10 @@
-"use client";
 
-function Error() {
+function Loading() {
   return (
     <div className="absolute top-24 left-1/2 z-50 justify-center text-primary">
-      Failed to load
+      Loading route...
     </div>
   );
 }
 
-export default Error;
+export default Loading;

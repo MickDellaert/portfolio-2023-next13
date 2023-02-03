@@ -1,5 +1,5 @@
 import Image from "next/image";
-import portret from "../public/portret/portret-gray-23.jpg";
+import portret from "../../public/portret/portret-gray-23.jpg";
 
 const About = () => {
   return (

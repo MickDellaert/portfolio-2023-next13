@@ -5,25 +5,28 @@ import useSWR from "swr";
 
 import Loading from "./loading";
 import Error from "./error";
-import Project from "../components/Project";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
+import Project from "../components/home/Project";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import Skills from "@/components/home/Skills";
+
+import jsonData from "../json/data.json"
 
 import * as ReactIcons from "react-icons/si";
 
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+// const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/staticdata", fetcher);
+  // const { data, error } = useSWR("/api/staticdata", fetcher);
 
-  if (error) return <Error />;
-  if (!data) return <Loading />;
+  // if (error) return <Error />;
+  // if (!data) return <Loading />;
 
-  // console.log(data.skills);
+  console.log(jsonData);
+
 
   return (
     <>
@@ -35,7 +38,7 @@ export default function Index() {
           id="projects"
           className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {data.projects.map((project) => (
+          {jsonData.projects.map((project) => (
             <Project
               key={project.id}
               id={project.id}
