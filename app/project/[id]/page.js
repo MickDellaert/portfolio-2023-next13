@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   const { data } = useSWR("/api/staticdata", fetcher);
 
   return data.projects.map((project) => {
-    project: toString(project.urlName);
+    id: toString(project.urlName);
   });
 }
 
@@ -27,7 +27,7 @@ function ProjectDetail({ params }) {
   if (error) return <div>Failed to load</div>;
   if (!data) return <Loading />;
 
-  const projectDetail = data.projects.filter(
+  const projectDetail = jsonData.projects.filter(
     (project) => project.urlName.toString() === params.id
   );
 

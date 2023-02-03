@@ -23,7 +23,9 @@
     "swr": "^2.0.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.1.6",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",

@@ -14,7 +14,7 @@ function ProjectDetailImage({ singleProject }) {
               height={1200}
               alt={singleProject.name}
               src={detailUrl}
-              priority={true}
+              // priority={true}
             />
           </div>
         );
