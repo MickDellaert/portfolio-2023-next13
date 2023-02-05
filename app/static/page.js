@@ -1,4 +1,5 @@
 // export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 import supabase from "../../utils/supabase";
 import Filter from "@/app/Filter";

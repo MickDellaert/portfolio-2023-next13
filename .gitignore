@@ -43,4 +43,4 @@ json/testdata.js
 components/home/Test.js
 
 next.config.js
-utils\supabase.js
+# utils\supabase.js
