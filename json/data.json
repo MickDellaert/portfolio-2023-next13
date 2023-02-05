@@ -2,76 +2,76 @@
   "skills": [
     {
       "name": "HTML",
-      "Icon": "SiHtml5"
+      "icon": "SiHtml5"
     },
     {
-      "name": "CSS",
-      "Icon": "SiCss3"
+      "name": "CSS3",
+      "icon": "SiCss3"
     },
     {
       "name": "Javascript",
-      "Icon": "SiJavascript"
+      "icon": "SiJavascript"
     },
     {
       "name": "Typescript",
-      "Icon": "SiTypescript"
+      "icon": "SiTypescript"
     },
     {
-      "name": "React.js",
-      "Icon": "SiReact"
+      "name": "React Js",
+      "icon": "SiReact"
     },
     {
-      "name": "Next.js",
-      "Icon": "SiNextdotjs"
+      "name": "Next Js",
+      "icon": "SiNextdotjs"
     },
     {
       "name": "Tailwind CSS",
-      "Icon": "SiTailwindcss"
+      "icon": "SiTailwindcss"
     },
     {
       "name": "Bootstrap",
-      "Icon": "SiBootstrap"
+      "icon": "SiBootstrap"
     },
 
     {
       "name": "MySQL",
-      "Icon": "SiMysql"
+      "icon": "SiMysql"
     },
     {
       "name": "Postgres",
-      "Icon": "SiPostgresql"
+      "icon": "SiPostgresql"
     },
     {
       "name": "Strapi",
-      "Icon": "SiStrapi"
+      "icon": "SiStrapi"
     },
     {
       "name": "Wordpress",
-      "Icon": "SiWordpress"
+      "icon": "SiWordpress"
     },
     {
       "name": "GitHub",
-      "Icon": "SiGithub"
+      "icon": "SiGithub"
     },
     {
       "name": "Figma",
-      "Icon": "SiFigma"
+      "icon": "SiFigma"
     },
     {
       "name": "AdobeXD",
-      "Icon": "SiAdobexd"
+      "icon": "SiAdobexd"
     },
     {
       "name": "Photoshop",
-      "Icon": "SiAdobephotoshop"
+      "icon": "SiAdobephotoshop"
     },
     {
       "name": "InDesign",
-      "Icon": "SiAdobeindesign"
+      "icon": "SiAdobeindesign"
     },
     {
       "name": "Illustrator",
-      "Icon": "SiAdobeillustrator"
+      "icon": "SiAdobeillustrator"
     }
   ],
   "projects": [
@@ -88,7 +88,7 @@
         "/kuli/kuli-home-companies.jpg",
         "/kuli/kuli-ipad-login.jpg"
       ],
-      "Icon": ["SiStrapi", "SiReact", "SiPostgresql"]
+      "icon": ["SiStrapi", "SiReact", "SiPostgresql"]
     },
     {
       "id": 2,
@@ -103,7 +103,7 @@
         "/KittyChat/kittychat-mockup-phone-blauw.jpg",
         "/KittyChat/kittychat-blauw.jpg"
       ],
-      "Icon": ["SiJavascript", "SiExpress", "SiSocketdotio"]
+      "icon": ["SiJavascript", "SiExpress", "SiSocketdotio"]
     },
     {
       "id": 3,
@@ -118,7 +118,7 @@
         "/Delish/delish-mockup-phone.jpg",
         "/Delish/delish-ipad.jpg"
       ],
-      "Icon": ["SiVuedotjs", "SiJavascript"]
+      "icon": ["SiVuedotjs", "SiJavascript"]
     },
 
     {
@@ -134,7 +134,7 @@
         "/de-meyer/de-meyer-home-contact-salon.jpg",
         "/de-meyer/de-meyer-info-diensten.jpg"
       ],
-      "Icon": ["SiAdobexd", "SiAdobephotoshop"]
+      "icon": ["SiAdobexd", "SiAdobephotoshop"]
     },
 
     {
@@ -150,7 +150,7 @@
         "/Weather/weather-laptop-mockup-rio.jpg",
         "/Weather/weather-phone-mockup-rio.jpg"
       ],
-      "Icon": ["SiJavascript", "SiBootstrap"]
+      "icon": ["SiJavascript", "SiBootstrap"]
     },
     {
       "id": 6,
@@ -165,7 +165,7 @@
         "/Pokedex/pokedex-closed.jpg",
         "/Pokedex/pokedex-open.jpg"
       ],
-      "Icon": ["SiJavascript","SiPhp"]
+      "icon": ["SiJavascript","SiPhp"]
     },
     {
       "id": 7,
@@ -180,7 +180,7 @@
         "/RockPaper/rock-ipad-mockup.jpg",
         "/RockPaper/rock-phone.jpg"
       ],
-      "Icon": ["SiJavascript"]
+      "icon": ["SiJavascript"]
     },
 
     {
@@ -196,7 +196,7 @@
         "/ResetMealGuide/reset_meal_guide_1.jpg",
         "/ResetMealGuide/reset_meal_guide_home_bottom.jpg"
       ],
-      "Icon": ["SiAdobexd"]
+      "icon": ["SiAdobexd"]
     },
     {
       "id": 9,
@@ -211,7 +211,7 @@
         "/kuli-landing/kuli-landing-1.jpg",
         "/kuli-landing/kuli-landing-home-mobile.jpg"
       ],
-      "Icon": ["SiReact"]
+      "icon": ["SiReact"]
     },
     {
       "id": 10,
@@ -226,7 +226,7 @@
         "/Todo/todo-ipad-mockup.jpg",
         "/Todo/todo-mockup-phone.jpg"
       ],
-      "Icon": ["SiReact", "SiTailwindcss"]
+      "icon": ["SiReact", "SiTailwindcss"]
     },
     {
       "id": 11,
@@ -241,7 +241,7 @@
         "/groevy/groevy-home-blog.jpg",
         "/groevy/groevy-home-top-bottom.jpg"
       ],
-      "Icon": ["SiWordpress", "SiSass"]
+      "icon": ["SiWordpress", "SiSass"]
     },
 
     {
@@ -257,7 +257,7 @@
         "/ergens-onderweg/ergens-onderweg-blog-home.jpg",
         "/ergens-onderweg/ergens-onderweg-over-reis.jpg"
       ],
-      "Icon": ["SiAdobexd"]
+      "icon": ["SiAdobexd"]
     }
   ]
 }

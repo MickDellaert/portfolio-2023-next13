@@ -11,10 +11,10 @@ import About from "@/components/home/About";
 import Skills from "@/components/home/Skills";
 
 import jsonData from "../json/data.json";
-
 import * as ReactIcons from "react-icons/si";
 
 import { Manrope } from "@next/font/google";
+import Test from "@/components/home/Test";
 const mainFont = Manrope({ subsets: ["latin"] });
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -25,7 +25,7 @@ export default function Index() {
   if (error) return <Error />;
   if (!data) return <Loading />;
 
-  console.log(jsonData);
+  // console.log(jsonData);
 
   return (
     <>

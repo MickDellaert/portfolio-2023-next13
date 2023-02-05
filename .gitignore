@@ -39,4 +39,8 @@ json/data copy.json
 json/jsonskill.json
 json/tech.json
 public/skill-icons
-json\testdata.js
+json/testdata.js
+components/home/Test.js
+
+next.config.js
+utils\supabase.js
