@@ -41,6 +41,7 @@ json/tech.json
 public/skill-icons
 json/testdata.js
 components/home/Test.js
+hooks\useRouterPush.js
 
 next.config.js
 # utils\supabase.js

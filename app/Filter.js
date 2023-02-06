@@ -3,11 +3,21 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import useRouterPush from "@/hooks/useRouterPush";
 
 export default function Filter() {
+  const techButtons = ["Vue", "JavaScript", "React JS", "HTML5", "CSS3"];
+  const [tags, setTags] = useState([]);
+
+  // const {} = useRouterPush(techButtons, tags)
+
   const router = useRouter();
 
-  const [tags, setTags] = useState([]);
+  const handleClick = (tech) => {
+    tags.includes(tech)
+      ? setTags(tags.filter((tag) => tag !== tech))
+      : setTags((current) => [...current, tech]);
+  };
 
   useEffect(() => {
     if (tags.length === 0) {
@@ -16,14 +26,6 @@ export default function Filter() {
       router.push(`/static?tag=${tags}`);
     }
   }, [tags]);
-
-  const techButtons = ["Vue", "JavaScript", "React JS", "HTML5", "CSS3"];
-
-  const handleClick = (val) => {
-    tags.includes(val)
-      ? setTags(tags.filter((tag) => tag !== val))
-      : setTags((current) => [...current, val]);
-  };
 
   return (
     <>

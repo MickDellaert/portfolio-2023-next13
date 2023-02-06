@@ -5,10 +5,10 @@ import useSWR from "swr";
 
 import Loading from "./loading";
 import Error from "./error";
-import Project from "../components/home/Project";
-import Hero from "@/components/home/Hero";
-import About from "@/components/home/About";
-import Skills from "@/components/home/Skills";
+import Project from "./home/Project";
+import Hero from "@/app/home/Hero";
+import About from "@/app/home/About";
+import Skills from "@/app/home/Skills";
 
 import jsonData from "../json/data.json";
 import * as ReactIcons from "react-icons/si";
