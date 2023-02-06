@@ -39,10 +39,10 @@ export default async function ProjectDetail({ params: { id } }) {
   );
 }
 
-export async function generateStaticParams() {
-  const { data } = await supabase.from("projects").select("id");
+// export async function generateStaticParams() {
+//   const { data } = await supabase.from("projects").select("id");
 
-  return data?.map((id) => ({
-    id: id.id.toString(),
-  }));
-}
+//   return data?.map((id) => ({
+//     id: id.id.toString(),
+//   }));
+// }
