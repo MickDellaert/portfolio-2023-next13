@@ -1,33 +1,35 @@
-"use client";
-import Loading from "../../loading";
-// import Link from "next/link";
-import useSWR from "swr";
-// import Image from "next/image";
+import supabase from "../../../utils/supabase";
+import { notFound } from "next/navigation";
 
-import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
-import ProjectDetailImage from "./ProjectDetailImage";
+// import Loading from "../../loading";
+
 import ProjectDetailHeader from "./ProjectDetailHeader";
+import ProjectDetailImage from "./ProjectDetailImage";
+import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
-// import jsonData from "../../../json/data.json";
+export default async function ProjectDetail({ params: { id } }) {
+  const { data } = await supabase
+    .from("projects")
+    .select(`*, icons(*), images(*)`);
+  // .match({ urlName: id })
+  // .single();
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+  if (!data) {
+    notFound();
+  }
 
-function ProjectDetail({ params }) {
-  const { data, error } = useSWR("/api/staticdata", fetcher);
+  const projectFilter = data.filter((project) => id === project.urlName);
+  const singleProject = projectFilter[0];
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <Loading />;
-
-  // console.log(data);
-
-  const projectDetail = data.projects.filter(
-    (project) => project.urlName.toString() === params.id
-  );
-
-  const singleProject = projectDetail[0];
+  console.log(projectFilter);
+  console.log(singleProject);
 
   return (
     <>
+      <pre className="mt-[100px] text-sm">
+        {/* {JSON.stringify(singleProject, null, 2)} */}
+      </pre>
+
       <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-8">
         <ProjectDetailHeader singleProject={singleProject} />
         <ProjectDetailImage singleProject={singleProject} />
@@ -37,6 +39,10 @@ function ProjectDetail({ params }) {
   );
 }
 
-export default ProjectDetail;
+export async function generateStaticParams() {
+  const { data } = await supabase.from("projects").select("id");
 
-
+  return data?.map((id) => ({
+    id: id.id.toString(),
+  }));
+}

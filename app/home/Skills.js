@@ -1,15 +1,6 @@
-import useSWR from "swr";
-import Loading from "@/app/loading";
 import * as ReactIcons from "react-icons/si";
 
-// const fetcher = (url) => fetch(url).then((res) => res.json());
-
-function Skills({data}) {
-  // const { data, error } = useSWR("/api/staticdata", fetcher);
-
-  // if (error) return <div>Failed to load</div>;
-  // if (!data) return <Loading />;
-
+function Skills({ data }) {
   return (
     <>
       <div className="mx-auto mt-32">

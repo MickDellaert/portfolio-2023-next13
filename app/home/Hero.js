@@ -1,8 +1,7 @@
-import { Manrope } from "@next/font/google";
-import Link from "next/link";
-const mainFont = Manrope({ subsets: ["latin"] });
+"use client";
 
-import { CldImage } from "next-cloudinary";
+import { Manrope } from "@next/font/google";
+const mainFont = Manrope({ subsets: ["latin"] });
 
 import { useEffect, useState } from "react";
 

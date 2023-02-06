@@ -6,7 +6,7 @@ import { useState } from "react";
 import useRouterPush from "@/hooks/useRouterPush";
 
 export default function Filter() {
-  const techButtons = ["Vue", "JavaScript", "React JS", "HTML5", "CSS3"];
+  const techButtons = ["Vue", "JavaScript", "React JS", "Strapi", "Tailwind CSS"];
   const [tags, setTags] = useState([]);
 
   // const {} = useRouterPush(techButtons, tags)
@@ -21,9 +21,9 @@ export default function Filter() {
 
   useEffect(() => {
     if (tags.length === 0) {
-      router.push(`/static?`);
+      router.push(`/`);
     } else {
-      router.push(`/static?tag=${tags}`);
+      router.push(`/?tag=${tags}`);
     }
   }, [tags]);
 

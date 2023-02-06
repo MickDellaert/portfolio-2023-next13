@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { CldImage } from "next-cloudinary";
+
 
 function Project({ id, urlName, name, description, mainImage }) {
   return (
@@ -9,7 +13,7 @@ function Project({ id, urlName, name, description, mainImage }) {
         <div className="grid-image-container overflow-hidden rounded-2xl">
           {/* <h1 className="text-xl font-bold">{name}</h1>
           <p>{description}</p> */}
-          <Image
+          <CldImage
             className="grid-image rounded-xl"
             src={mainImage}
             alt={name}

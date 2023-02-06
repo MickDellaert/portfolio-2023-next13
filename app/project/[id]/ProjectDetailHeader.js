@@ -1,7 +1,11 @@
+"use client"
+
 import Link from "next/link";
 import ProjectSkills from "./ProjectSkills";
 
 function ProjectDetailHeader({ singleProject }) {
+
+  console.log(singleProject)
   return (
     <>
       <div className="mb-8 xl:mr-[30vw]">
@@ -12,7 +16,7 @@ function ProjectDetailHeader({ singleProject }) {
         <div className="flex gap-2 fill-primary sm:flex-row">
           <p className="hidden text-base text-gray-400 sm:block">Built with:</p>
           <div className="flex gap-2">
-            <ProjectSkills singleProject={singleProject} />
+            {/* <ProjectSkills singleProject={singleProject} /> */}
           </div>
         </div>
         <div className="flex items-end">

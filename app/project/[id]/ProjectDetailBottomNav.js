@@ -10,13 +10,13 @@ function ProjectDetailBottomNav({ singleProject, data }) {
 
   useEffect(() => {
     if (singleProject.id > 1) {
-      setPreviousProject(data.projects[singleProject.id - 2].urlName);
+      setPreviousProject(data[singleProject.id - 2].urlName);
     }
 
-    if (singleProject.id < data.projects.length) {
-      setNextProject(data.projects[singleProject.id].urlName);
+    if (singleProject.id < data.length) {
+      setNextProject(data[singleProject.id].urlName);
     }
-  }, [data.projects, singleProject.id]);
+  }, [data, singleProject.id]);
 
   return (
     <>
@@ -32,7 +32,7 @@ function ProjectDetailBottomNav({ singleProject, data }) {
           href={`/project/${nextProject}`}
           className="text-regular font-bold text-gray-400 hover:text-primary"
         >
-          {singleProject.id < data.projects.length ? "Next →" : ""}
+          {singleProject.id < data.length ? "Next →" : ""}
         </Link>
       </div>
     </>

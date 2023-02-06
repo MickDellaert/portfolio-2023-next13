@@ -2,7 +2,7 @@
 export const revalidate = 0;
 
 import supabase from "../../utils/supabase";
-import Filter from "@/app/Filter";
+// import Filter from "@/app/home/Filter";
 
 export default async function Posts({ searchParams }) {
   let filter = searchParams.tag;
@@ -24,7 +24,7 @@ export default async function Posts({ searchParams }) {
   return (
     <>
       <div className="mt-[100px]"></div>
-      <Filter />
+      {/* <Filter /> */}
       <pre className="mt-[100px] text-sm">{JSON.stringify(data, null, 2)}</pre>
     </>
   );
