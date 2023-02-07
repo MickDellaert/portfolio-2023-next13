@@ -6,7 +6,13 @@ import { useState } from "react";
 import useRouterPush from "@/hooks/useRouterPush";
 
 export default function Filter() {
-  const techButtons = ["Vue", "JavaScript", "React JS", "Strapi", "Tailwind CSS"];
+  const techButtons = [
+    "Vue",
+    "JavaScript",
+    "React JS",
+    "Strapi",
+    "Tailwind CSS",
+  ];
   const [tags, setTags] = useState([]);
 
   // const {} = useRouterPush(techButtons, tags)
@@ -21,27 +27,29 @@ export default function Filter() {
 
   useEffect(() => {
     if (tags.length === 0) {
-      router.push(`/`, { shallow: true });
+      router.push(`/`);
     } else {
-      router.push(`/?tag=${tags}`, { shallow: true });
+      router.push(`/?tag=${tags}`);
     }
   }, [tags]);
 
   return (
     <>
-      {techButtons.map((tech) => (
-        <button
-          className=" mr-3 bg-primary p-1"
-          onClick={() => {
-            handleClick(tech);
-          }}
-          key={tech}
-        >
-          {tech}
-        </button>
-      ))}
-
-      <p>{tags}</p>
+      <div className="flex justify-start">
+        <div className="">
+          {techButtons.map((tech) => (
+            <button
+              className=" mr-3 bg-gray-300 p-1 text-xs"
+              onClick={() => {
+                handleClick(tech);
+              }}
+              key={tech}
+            >
+              {tech}
+            </button>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
