@@ -21,13 +21,14 @@ export default async function ProjectDetail({ params: { id } }) {
     notFound();
   }
 
-  // console.log(id)
+  const { data: test } = await supabase.from("projects").select("urlName");
+
+  if (!test) {
+    notFound();
+  }
 
   // const projectFilter = data.filter((project) => id === project.urlName);
   // const singleProject = projectFilter[0];
-
-  // console.log(projectFilter);
-  // console.log(singleProject);
 
   return (
     <>
@@ -45,11 +46,11 @@ export default async function ProjectDetail({ params: { id } }) {
 }
 
 export async function generateStaticParams() {
-  const { data: projects } = await supabase
-    .from("projects")
-    .select("id")
-    .order("id");
-  return projects?.map((id) => ({
-    id: id.id.toString(),
+  const { data: testdata } = await supabase.from("projects").select();
+
+  console.log(testdata);
+
+  return testdata.map((el) => ({
+    id: el.urlName.toString(),
   }));
 }
