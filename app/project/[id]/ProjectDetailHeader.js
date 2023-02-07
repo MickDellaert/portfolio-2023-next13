@@ -5,7 +5,6 @@ import ProjectSkills from "./ProjectSkills";
 
 function ProjectDetailHeader({ singleProject }) {
 
-  console.log(singleProject)
   return (
     <>
       <div className="mb-8 xl:mr-[30vw]">

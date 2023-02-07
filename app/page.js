@@ -32,8 +32,6 @@ export default async function Index({ searchParams }) {
 
   const { data: projects } = await query;
 
-
-
   return (
     <>
       <div className="mt-[100px]"></div>
@@ -61,11 +59,9 @@ export default async function Index({ searchParams }) {
           ))}
         </ul>
 
-        {/* <Skills data={data} /> */}
+        <Skills />
       </div>
       <About />
     </>
   );
 }
-
-

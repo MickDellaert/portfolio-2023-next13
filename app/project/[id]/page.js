@@ -1,3 +1,5 @@
+// export const revalidate = 0;
+
 import supabase from "../../../utils/supabase";
 import { notFound } from "next/navigation";
 
@@ -6,16 +8,6 @@ import { notFound } from "next/navigation";
 import ProjectDetailHeader from "./ProjectDetailHeader";
 import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
-
-export async function generateStaticParams() {
-  const { data: projects } = await supabase
-    .from("projects")
-    .select("id")
-    .order("id");
-  return projects?.map((id) => ({
-    id: id.id.toString(),
-  }));
-}
 
 export default async function ProjectDetail({ params: { id } }) {
   const { data } = await supabase
@@ -52,3 +44,13 @@ export default async function ProjectDetail({ params: { id } }) {
     </>
   );
 }
+
+// export async function generateStaticParams() {
+//   const { data: projects } = await supabase
+//     .from("projects")
+//     .select("id")
+//     .order("id");
+//   return projects?.map((id) => ({
+//     id: id.id.toString(),
+//   }));
+// }
