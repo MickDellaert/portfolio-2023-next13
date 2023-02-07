@@ -1,6 +1,6 @@
 import "./globals.css";
 
-export const revalidate = 0;
+// export const revalidate = 0;
 
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
