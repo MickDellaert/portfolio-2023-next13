@@ -1,4 +1,4 @@
-// export const revalidate = 0;
+export const revalidate = 0;
 
 import supabase from "../../../utils/supabase";
 import { notFound } from "next/navigation";
