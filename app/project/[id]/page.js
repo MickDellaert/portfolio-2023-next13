@@ -1,4 +1,4 @@
-export const revalidate = 0;
+// export const revalidate = 0;
 
 import supabase from "../../../utils/supabase";
 import { notFound } from "next/navigation";
@@ -10,22 +10,21 @@ import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
 export default async function ProjectDetail({ params: { id } }) {
-  const { data } = await supabase
+  const { data: singleProject } = await supabase
     .from("projects")
     .select(`*, icons(*), images(*)`)
-    .order("id");
+    .order("id")
+    .match({ urlName: id })
+    .single();
 
-  // .match({ urlName: id })
-  // .single();
-
-  if (!data) {
+  if (!singleProject) {
     notFound();
   }
 
   // console.log(id)
 
-  const projectFilter = data.filter((project) => id === project.urlName);
-  const singleProject = projectFilter[0];
+  // const projectFilter = data.filter((project) => id === project.urlName);
+  // const singleProject = projectFilter[0];
 
   // console.log(projectFilter);
   // console.log(singleProject);
@@ -39,7 +38,7 @@ export default async function ProjectDetail({ params: { id } }) {
       <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-8">
         <ProjectDetailHeader singleProject={singleProject} />
         <ProjectDetailImage singleProject={singleProject} />
-        <ProjectDetailBottomNav singleProject={singleProject} data={data} />
+        <ProjectDetailBottomNav singleProject={singleProject} />
       </div>
     </>
   );

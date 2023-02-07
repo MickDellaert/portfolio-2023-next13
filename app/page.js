@@ -5,8 +5,6 @@ export const revalidate = 0;
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
 
-// export const revalidate = 0;
-
 import supabase from "@/utils/supabase";
 import Hero from "./home/Hero";
 import Filter from "./home/Filter";
@@ -65,3 +63,14 @@ export default async function Index({ searchParams }) {
     </>
   );
 }
+
+
+// export async function generateStaticParams() {
+//   const { data: projects } = await supabase
+//     .from("projects")
+//     .select("id")
+//     .order("id");
+//   return projects?.map((id) => ({
+//     id: id.id.toString(),
+//   }));
+// }

@@ -4,19 +4,40 @@ import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function ProjectDetailBottomNav({ singleProject, data }) {
+import supabase from "@/utils/supabase";
+
+function ProjectDetailBottomNav({ singleProject }) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+
   const [previousProject, setPreviousProject] = useState(singleProject.urlName);
   const [nextProject, setNextProject] = useState(singleProject.urlName);
 
   useEffect(() => {
-    if (singleProject.id > 1) {
-      setPreviousProject(data[singleProject.id - 2].urlName);
-    }
+    const fetchPosts = async () => {
+      const { data } = await supabase.from("projects").select();
+      setProjects(data);
+      setIsLoading(false);
+    };
 
-    if (singleProject.id < data.length) {
-      setNextProject(data[singleProject.id].urlName);
+    fetchPosts();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      if (singleProject.id > 1) {
+        setPreviousProject(projects[singleProject.id - 2].urlName);
+      }
+
+      if (singleProject.id < projects.length) {
+        setNextProject(projects[singleProject.id].urlName);
+      }
     }
-  }, [data, singleProject.id]);
+  }, [projects, singleProject.id]);
+
+  if (isLoading) return <p>Loading</p>;
+
+  console.log(projects[2].id);
 
   return (
     <>
@@ -32,7 +53,7 @@ function ProjectDetailBottomNav({ singleProject, data }) {
           href={`/project/${nextProject}`}
           className="text-regular font-bold text-gray-400 hover:text-primary"
         >
-          {singleProject.id < data.length ? "Next →" : ""}
+          {singleProject.id < projects.length ? "Next →" : ""}
         </Link>
       </div>
     </>
