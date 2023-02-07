@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "^13.1.6",
     "@supabase/supabase-js": "^2.7.0",
+    "encoding": "^0.1.13",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^8.5.5",
