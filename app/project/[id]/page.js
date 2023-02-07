@@ -45,12 +45,12 @@ export default async function ProjectDetail({ params: { id } }) {
   );
 }
 
-// export async function generateStaticParams() {
-//   const { data: projects } = await supabase
-//     .from("projects")
-//     .select("id")
-//     .order("id");
-//   return projects?.map((id) => ({
-//     id: id.id.toString(),
-//   }));
-// }
+export async function generateStaticParams() {
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("id")
+    .order("id");
+  return projects?.map((id) => ({
+    id: id.id.toString(),
+  }));
+}
