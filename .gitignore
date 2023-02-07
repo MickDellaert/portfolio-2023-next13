@@ -42,6 +42,9 @@ public/skill-icons
 json/testdata.js
 components/home/Test.js
 hooks\useRouterPush.js
+app\(static)\[id]
+app\(static)\[id]\page.js
+app\(static)
 
 next.config.js
 # utils\supabase.js
