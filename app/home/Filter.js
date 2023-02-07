@@ -21,9 +21,9 @@ export default function Filter() {
 
   useEffect(() => {
     if (tags.length === 0) {
-      router.push(`/`);
+      router.push(`/`, { shallow: true });
     } else {
-      router.push(`/?tag=${tags}`);
+      router.push(`/?tag=${tags}`, { shallow: true });
     }
   }, [tags]);
 
