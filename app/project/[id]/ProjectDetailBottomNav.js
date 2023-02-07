@@ -6,38 +6,37 @@ import { useEffect } from "react";
 
 import supabase from "@/utils/supabase";
 
-function ProjectDetailBottomNav({ singleProject }) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [projects, setProjects] = useState([]);
+function ProjectDetailBottomNav({ singleProject, data }) {
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [projects, setProjects] = useState([]);
 
   const [previousProject, setPreviousProject] = useState(singleProject.urlName);
   const [nextProject, setNextProject] = useState(singleProject.urlName);
 
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const { data } = await supabase.from("projects").select().order("id");
+  //     setProjects(data);
+  //     setIsLoading(false);
+  //   };
+
+  //   fetchPosts();
+  // }, []);
+
+  // console.log(projects)
+
   useEffect(() => {
-    const fetchPosts = async () => {
-      const { data } = await supabase.from("projects").select();
-      setProjects(data);
-      setIsLoading(false);
-    };
-
-    fetchPosts();
-  }, []);
-
-  useEffect(() => {
-    if (!isLoading) {
-      if (singleProject.id > 1) {
-        setPreviousProject(projects[singleProject.id - 2].urlName);
-      }
-
-      if (singleProject.id < projects.length) {
-        setNextProject(projects[singleProject.id].urlName);
-      }
+    if (singleProject.id > 1) {
+      setPreviousProject(data[singleProject.id - 2].urlName);
     }
-  }, [projects, singleProject.id]);
 
-  if (isLoading) return <p>Loading</p>;
+    if (singleProject.id < data.length) {
+      setNextProject(data[singleProject.id].urlName);
+    }
+  }, [data, singleProject.id]);
 
-  console.log(projects[2].id);
+  // if (isLoading) return <p>Loading</p>;
+  // console.log(projects[2].id);
 
   return (
     <>
@@ -53,7 +52,7 @@ function ProjectDetailBottomNav({ singleProject }) {
           href={`/project/${nextProject}`}
           className="text-regular font-bold text-gray-400 hover:text-primary"
         >
-          {singleProject.id < projects.length ? "Next →" : ""}
+          {singleProject.id < data.length ? "Next →" : ""}
         </Link>
       </div>
     </>
