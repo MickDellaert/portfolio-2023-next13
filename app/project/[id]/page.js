@@ -55,5 +55,5 @@ export async function generateStaticParams() {
 
   return testdata.map((el) => ({
     id: el.urlName.toString(),
-  }));
+  })); 
 }
