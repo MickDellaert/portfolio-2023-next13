@@ -7,6 +7,13 @@ import ProjectDetailHeader from "./ProjectDetailHeader";
 import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
+export async function generateStaticParams() {
+  const { data: projects } = await supabase.from("projects").select("id");
+  return projects?.map((id) => ({
+    id: id.id.toString(),
+  }));
+}
+
 export default async function ProjectDetail({ params: { id } }) {
   const { data } = await supabase
     .from("projects")
@@ -18,11 +25,13 @@ export default async function ProjectDetail({ params: { id } }) {
     notFound();
   }
 
+  // console.log(id)
+
   const projectFilter = data.filter((project) => id === project.urlName);
   const singleProject = projectFilter[0];
 
-  console.log(projectFilter);
-  console.log(singleProject);
+  // console.log(projectFilter);
+  // console.log(singleProject);
 
   return (
     <>
@@ -38,11 +47,3 @@ export default async function ProjectDetail({ params: { id } }) {
     </>
   );
 }
-
-// export async function generateStaticParams() {
-//   const { data } = await supabase.from("projects").select("id");
-
-//   return data?.map((id) => ({
-//     id: id.id.toString(),
-//   }));
-// }
