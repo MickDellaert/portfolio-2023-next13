@@ -8,7 +8,10 @@ import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
 export async function generateStaticParams() {
-  const { data: projects } = await supabase.from("projects").select("id");
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("id")
+    .order("id");
   return projects?.map((id) => ({
     id: id.id.toString(),
   }));
@@ -17,7 +20,9 @@ export async function generateStaticParams() {
 export default async function ProjectDetail({ params: { id } }) {
   const { data } = await supabase
     .from("projects")
-    .select(`*, icons(*), images(*)`);
+    .select(`*, icons(*), images(*)`)
+    .order("id");
+
   // .match({ urlName: id })
   // .single();
 

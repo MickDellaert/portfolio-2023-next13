@@ -8,6 +8,8 @@ function ProjectDetailBottomNav({ singleProject, data }) {
   const [previousProject, setPreviousProject] = useState(singleProject.urlName);
   const [nextProject, setNextProject] = useState(singleProject.urlName);
 
+  console.log(data)
+  
   useEffect(() => {
     if (singleProject.id > 1) {
       setPreviousProject(data[singleProject.id - 2].urlName);
