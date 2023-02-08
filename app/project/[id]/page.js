@@ -11,7 +11,7 @@ import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
 export default async function ProjectDetail({ params: { id } }) {
-  
+
   const { data } = await supabase
     .from("projects")
     .select(`*, icons(*), images(*)`)
@@ -57,5 +57,5 @@ export async function generateStaticParams() {
 
   return testdata.map((el) => ({
     id: el.urlName.toString(),
-  })); 
+  }));
 }

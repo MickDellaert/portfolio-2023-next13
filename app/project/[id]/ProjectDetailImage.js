@@ -13,8 +13,8 @@ function ProjectDetailImage({ singleProject }) {
             <CldImage
               className="rounded-2xl"
               key={singleProject.id}
-              width={800}
-              height={800}
+              width={1000}
+              height={1000}
               alt={image.name}
               src={image.url}
               // priority={true}

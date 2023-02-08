@@ -13,11 +13,14 @@ import Project from "./home/Project";
 import About from "./home/About";
 import Skills from "./home/Skills";
 import Tags from "./home/Tags";
+import TagButtons from "./home/TagButtons";
+import Test from "./home/Test";
+import TestChild from "./home/TestChild";
 
 export default async function Index({ searchParams }) {
   let filter = searchParams.tag;
 
-  console.log(searchParams.tag);
+  // console.log(searchParams.tag);
 
   if (filter) {
     filter = filter.split(",");
@@ -44,7 +47,12 @@ export default async function Index({ searchParams }) {
         className={`${mainFont.className} mx-auto max-w-screen-2xl px-8 font-black`}
       >
         <Hero />
-        <Tags/>
+        <Tags />
+
+        <Test>
+          <TestChild test="testprop" />
+        </Test>
+
         {/* <Filter /> */}
         <ul
           id="projects"

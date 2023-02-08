@@ -26,6 +26,7 @@ const useNavigation = (tags, setTags) => {
     if (!paramTag) {
       setTags([]);
     }
+    
   }, [pathname, searchParams]);
 };
 

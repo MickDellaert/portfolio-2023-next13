@@ -1,8 +1,9 @@
 import supabase from "@/utils/supabase";
 import React from "react";
+import Projects from "./ProjectsState";
 import TagButtons from "./TagButtons";
 
-export default async function Tags() {
+export default async function Tags({children}) {
   const { data: icons } = await supabase.from("icons").select();
 
   if (!icons) {
@@ -12,6 +13,8 @@ export default async function Tags() {
   return (
     <>
       <TagButtons icons={icons} />
+      {/* {children} */}
+      {/* <Projects icons={icons}/> */}
     </>
   );
 }
