@@ -1,33 +1,29 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const useNavigation = (tags, setTags) => {
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const paramTag = searchParams.get("tag");
+  const urlTags = searchParams.get("tag");
+
+  console.log(urlTags);
 
   useEffect(() => {
-    router.push(`/?tag=${tags}`);
-
-    console.log(tags);
-
     if (tags.length === 0) {
       router.push(`/`);
+    } else {
+      router.push(`/?tag=${tags}`);
     }
   }, [tags]);
 
   useEffect(() => {
-    if (paramTag) {
-      router.push(`/?tag=${paramTag}`);
-    }
-
-    if (!paramTag) {
+    if (!urlTags) {
       setTags([]);
+    } else {
+      setTags(urlTags.split(","));
     }
-    
-  }, [pathname, searchParams]);
+  }, [urlTags]);
 };
 
 export default useNavigation;

@@ -20,7 +20,7 @@ import TestChild from "./home/TestChild";
 export default async function Index({ searchParams }) {
   let filter = searchParams.tag;
 
-  // console.log(searchParams.tag);
+  console.log(searchParams.tag);
 
   if (filter) {
     filter = filter.split(",");
@@ -49,9 +49,9 @@ export default async function Index({ searchParams }) {
         <Hero />
         <Tags />
 
-        <Test>
+        {/* <Test>
           <TestChild test="testprop" />
-        </Test>
+        </Test> */}
 
         {/* <Filter /> */}
         <ul

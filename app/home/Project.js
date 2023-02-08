@@ -5,8 +5,16 @@ import Link from "next/link";
 import React from "react";
 import { CldImage } from "next-cloudinary";
 
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function Project({ id, urlName, name, description, mainImage }) {
+
+  const projectParams = useSearchParams()
+  console.log(projectParams.get('tag'))
+  const router = useRouter()
+  // console.log(router)
+  
   return (
     <>
       <Link className="relative" href={`/project/${urlName}`}>
