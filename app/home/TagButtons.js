@@ -3,6 +3,7 @@
 import React from "react";
 import { useState } from "react";
 import useNavigation from "@/hooks/useNavigation";
+import { useSearchParams } from "next/navigation";
 
 function TagButtons({ icons }) {
   const [tags, setTags] = useState([]);
