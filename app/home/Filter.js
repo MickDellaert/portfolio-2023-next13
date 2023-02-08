@@ -1,78 +1,81 @@
-"use client";
+// "use client";
 
-export const dynamic = "auto";
+// export const dynamic = "auto";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import useRouterPush from "@/hooks/useRouterPush";
-import { usePathname, useSearchParams } from "next/navigation";
+// import { useEffect } from "react";
+// import { useRouter } from "next/navigation";
+// import { useState } from "react";
+// import useRouterPush from "@/hooks/useRouterPush";
+// import { usePathname, useSearchParams } from "next/navigation";
+// import Tags from "./Tags";
 
-export default function Filter() {
-  // const searchParams = useSearchParams();
-  // const filterParam = searchParams.get("tag");
+// export default function Filter() {
+//   // const searchParams = useSearchParams();
+//   // const filterParam = searchParams.get("tag");
 
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+//   const pathname = usePathname();
+//   const searchParams = useSearchParams();
 
-  const techButtons = [
-    "Vue",
-    "JavaScript",
-    "React JS",
-    "Strapi",
-    "Tailwind CSS",
-  ];
+//   const techButtons = [
+//     "Vue",
+//     "JavaScript",
+//     "React JS",
+//     "Strapi",
+//     "Tailwind CSS",
+//   ];
 
-  const [tags, setTags] = useState([]);
+//   const [tags, setTags] = useState([]);
 
-  // const {} = useRouterPush(techButtons, tags)
-  const router = useRouter();
+//   // const {} = useRouterPush(techButtons, tags)
+//   const router = useRouter();
 
-  console.log(searchParams.get("tag"));
-  const testTag = searchParams.get("tag");
+//   const testTag = searchParams.get("tag");
 
-  const handleClick = (tech) => {
-    tags.includes(tech)
-      ? setTags(tags.filter((tag) => tag !== tech))
-      : setTags((current) => [...current, tech]);
-  };
+//   // console.log(searchParams.toString());
+//   // console.log(searchParams.get("tag"));
+//   // searchParams.toString();
 
-  useEffect(() => {
-    router.push(`/?tag=${tags}`);
+//   const handleClick = (tech) => {
+//     tags.includes(tech)
+//       ? setTags(tags.filter((tag) => tag !== tech))
+//       : setTags((current) => [...current, tech]);
+//   };
 
-    if (tags.length === 0) {
-      router.push(`/`);
-    }
-  }, [tags]);
+//   useEffect(() => {
+//     router.push(`/?tag=${tags}`);
 
-  useEffect(() => {
-    
-    if (testTag) {
-      router.push(`/?tag=${testTag}`);
-    }
+//     if (tags.length === 0) {
+//       router.push(`/`);
+//     }
+//   }, [tags]);
 
-    if (searchParams.toString() === "") {
-      setTags([]);
-    }
-  }, [pathname, searchParams]);
+//   useEffect(() => {
+//     if (testTag) {
+//       router.push(`/?tag=${testTag}`);
+//     }
 
-  return (
-    <>
-      <div className="flex justify-start">
-        <div className="">
-          {techButtons.map((tech) => (
-            <button
-              className=" mr-3 bg-gray-300 p-1 text-xs"
-              onClick={() => {
-                handleClick(tech);
-              }}
-              key={tech}
-            >
-              {tech}
-            </button>
-          ))}
-        </div>
-      </div>
-    </>
-  );
-}
+//     if (!testTag) {
+//       setTags([]);
+//     }
+//   }, [pathname, searchParams]);
+
+//   return (
+//     <>
+//       <div className="flex justify-start">
+//         <div className="">
+//           {techButtons.map((tech) => (
+//             <button
+//               className=" mr-3 bg-gray-300 p-1 text-xs"
+//               onClick={() => {
+//                 handleClick(tech);
+//               }}
+//               key={tech}
+//             >
+//               {tech}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// }

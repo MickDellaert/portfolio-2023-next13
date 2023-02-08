@@ -1,7 +1,7 @@
 import "./globals.css";
 
 // export const revalidate = 0;
-export const dynamic = 'auto'
+export const dynamic = "auto";
 
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
@@ -12,11 +12,12 @@ import Filter from "./home/Filter";
 import Project from "./home/Project";
 import About from "./home/About";
 import Skills from "./home/Skills";
+import Tags from "./home/Tags";
 
 export default async function Index({ searchParams }) {
   let filter = searchParams.tag;
 
-  console.log(searchParams.tag)
+  console.log(searchParams.tag);
 
   if (filter) {
     filter = filter.split(",");
@@ -43,7 +44,8 @@ export default async function Index({ searchParams }) {
         className={`${mainFont.className} mx-auto max-w-screen-2xl px-8 font-black`}
       >
         <Hero />
-        <Filter />
+        <Tags/>
+        {/* <Filter /> */}
         <ul
           id="projects"
           className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
@@ -66,7 +68,6 @@ export default async function Index({ searchParams }) {
     </>
   );
 }
-
 
 // export async function generateStaticParams() {
 //   const { data: projects } = await supabase
