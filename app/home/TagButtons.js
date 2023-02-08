@@ -24,9 +24,9 @@ function TagButtons({ icons }) {
   const handleClick = (tech) => {
     const singleIcon = tech.iconName;
 
-    tags.includes(singleIcon)
-      ? setTags(tags.filter((tag) => tag !== singleIcon))
-      : setTags((current) => [...current, singleIcon]);
+    tags.includes(tech)
+      ? setTags(tags.filter((tag) => tag !== tech))
+      : setTags((current) => [...current, tech]);
   };
 
   return (
@@ -37,7 +37,7 @@ function TagButtons({ icons }) {
           {icons.map((icon) => (
             <button
               className={`mr-3 mb-2 rounded-lg py-1 px-2 text-[12px] hover:bg-primary ${
-                activeTags?.includes(icon.iconName)
+                activeTags?.includes(icon)
                   ? "bg-primary"
                   : "bg-gray-300"
               }`}
@@ -46,7 +46,7 @@ function TagButtons({ icons }) {
               }}
               key={icon.id}
             >
-              {icon.iconName}
+              {icon}
             </button>
           ))}
         </div>
