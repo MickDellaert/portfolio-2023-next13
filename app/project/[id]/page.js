@@ -52,7 +52,7 @@ export async function generateStaticParams() {
     .select("urlName")
     .order("id");
 
-  console.log(testdata);
+  // console.log(testdata);
 
   return testdata.map((el) => ({
     id: el.urlName.toString(),

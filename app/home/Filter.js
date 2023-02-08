@@ -28,6 +28,9 @@ export default function Filter() {
   // const {} = useRouterPush(techButtons, tags)
   const router = useRouter();
 
+  console.log(searchParams.get("tag"));
+  const testTag = searchParams.get("tag");
+
   const handleClick = (tech) => {
     tags.includes(tech)
       ? setTags(tags.filter((tag) => tag !== tech))
@@ -43,6 +46,11 @@ export default function Filter() {
   }, [tags]);
 
   useEffect(() => {
+    
+    if (testTag) {
+      router.push(`/?tag=${testTag}`);
+    }
+
     if (searchParams.toString() === "") {
       setTags([]);
     }

@@ -1,6 +1,7 @@
 import "./globals.css";
 
 // export const revalidate = 0;
+export const dynamic = 'auto'
 
 import { Manrope } from "@next/font/google";
 const mainFont = Manrope({ subsets: ["latin"] });
@@ -14,6 +15,8 @@ import Skills from "./home/Skills";
 
 export default async function Index({ searchParams }) {
   let filter = searchParams.tag;
+
+  console.log(searchParams.tag)
 
   if (filter) {
     filter = filter.split(",");
