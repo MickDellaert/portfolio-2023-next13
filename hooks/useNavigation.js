@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 const useNavigation = (tags, setTags) => {
   const searchParams = useSearchParams();
@@ -10,10 +10,10 @@ const useNavigation = (tags, setTags) => {
   console.log(urlTags);
 
   useEffect(() => {
+    router.push(`/?tag=${tags}`);
+
     if (tags.length === 0) {
       router.push(`/`);
-    } else {
-      router.push(`/?tag=${tags}`);
     }
   }, [tags]);
 
