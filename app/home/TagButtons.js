@@ -19,7 +19,7 @@ function TagButtons({ icons }) {
   //   { iconName: "React JS", clicked: false },
   // ];
 
-  // console.log(tags)
+  console.log(tags)
 
   const handleClick = (tech) => {
     const singleIcon = tech.iconName;
@@ -31,15 +31,14 @@ function TagButtons({ icons }) {
 
   return (
     <>
-      <button onClick={() => setTags([])}>Clear</button>
-      <div className="flex justify-start">
+      <div className="flex items-center justify-start">
+        {tags.length > 0 && <button onClick={() => setTags([])} className="mr-3 mb-2 rounded-lg py-1 px-2 text-[12px] border-primary border-2 hover:bg-primary">Clear</button>}
+
         <div className="">
           {icons.map((icon) => (
             <button
               className={`mr-3 mb-2 rounded-lg py-1 px-2 text-[12px] hover:bg-primary ${
-                activeTags?.includes(icon)
-                  ? "bg-primary"
-                  : "bg-gray-300"
+                activeTags?.includes(icon) ? "bg-primary" : "bg-gray-300"
               }`}
               onClick={() => {
                 handleClick(icon);
