@@ -10,10 +10,10 @@ const useNavigation = (tags, setTags) => {
   console.log(urlTags);
 
   useEffect(() => {
-    router.push(`/?tag=${tags}`);
+    router.push(`/?tag=${tags}`, undefined, { shallow: true });
 
     if (tags.length === 0) {
-      router.push(`/`);
+      router.push(`/`, undefined, { shallow: true });
     }
   }, [tags]);
 
