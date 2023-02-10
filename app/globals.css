@@ -74,24 +74,3 @@ svg {
 .grid-overlay:hover > div {
   transform: translateY(0) scale(1.1);
 }
-
-/* .grid-image-container:hover > img {
-  transform: scale(0.98);
-} */
-
-/* .grid-image-container:hover > img {
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(1.2rem);
-} */
-
-/* .grid-title {
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: 500;
-} */
-
-/* .grid-image-container:hover {
-  transform: scale(1.01);
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
-  filter: blur(1.5rem);
-} */
