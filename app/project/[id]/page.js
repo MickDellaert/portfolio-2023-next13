@@ -1,5 +1,5 @@
 // export const revalidate = 0;
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
 
 import { notFound } from "next/navigation"
 import supabase from "../../../utils/supabase";
