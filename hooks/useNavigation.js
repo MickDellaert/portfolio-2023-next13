@@ -1,16 +1,23 @@
+
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname, useSearchParams } from "next/navigation";
 
+
+
 const useNavigation = (tags, setTags) => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const urlTags = searchParams.get("tag");
+  let urlTags = searchParams.get("tag");
 
-  console.log(urlTags);
+  // console.log(urlTags);
+  // console.log(tags);
 
   useEffect(() => {
+    if (tags.length > 0) {
     router.push(`/?tag=${tags}`, undefined, { shallow: true });
+    // setTags(urlTags.split(","))
+    }
 
     if (tags.length === 0) {
       router.push(`/`, undefined, { shallow: true });
@@ -18,9 +25,13 @@ const useNavigation = (tags, setTags) => {
   }, [tags]);
 
   useEffect(() => {
+    // if (urlTags) {
+    //   setTags(urlTags.split(","));
+    // }
+
     if (!urlTags) {
       setTags([]);
-    } else {
+    } else  {
       setTags(urlTags.split(","));
     }
   }, [urlTags]);

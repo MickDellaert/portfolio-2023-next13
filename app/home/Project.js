@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,27 +6,47 @@ import React from "react";
 import { CldImage } from "next-cloudinary";
 
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 
-function Project({ id, urlName, name, description, mainImage }) {
+function Project({
+  id,
+  urlName,
+  name,
+  description,
+  mainImage,
+  projects,
+  filteredProjects,
+  project,
+}) {
+  // console.log(projects);
+  // console.log(filteredProjects);
 
-  const projectParams = useSearchParams()
-  console.log(projectParams.get('tag'))
-  const router = useRouter()
-  // console.log(router)
-  
   return (
     <>
       <Link className="relative" href={`/project/${urlName}`}>
+        {/* <div
+          className={`"absolute z-20 h-full w-full rounded-2xl bg-primary hover:hidden ${
+            filteredProjects.length === 0
+              ? "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-0"
+              : filteredProjects.includes(project)
+              ? "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-0"
+              : "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-5"
+          }`}
+        ></div> */}
         <div className="grid-image-container overflow-hidden rounded-2xl">
           {/* <h1 className="text-xl font-bold">{name}</h1>
           <p>{description}</p> */}
           <CldImage
-            className="grid-image rounded-xl"
+            className={`"grid-image grayscale" rounded-xl ${
+              filteredProjects.length === 0
+                ? "grayscale-0"
+                : filteredProjects.includes(project)
+                ? "grayscale-0"
+                : "opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            }`}
             src={mainImage}
             alt={name}
-            width={800}
-            height={800}
+            width={1200}
+            height={1200}
           />
 
           <div className="grid-overlay rounded-2xl ">
