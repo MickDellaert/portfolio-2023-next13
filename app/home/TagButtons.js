@@ -1,34 +1,18 @@
 "use client";
 
-import React from "react";
 import { useState } from "react";
 import useNavigation from "@/hooks/useNavigation";
 import { useSearchParams } from "next/navigation";
 
 function TagButtons({ icons }) {
   const searchParams = useSearchParams();
-  const activeTags = searchParams.get("tag");
+  let activeTags = searchParams.get("tag");
 
   const [tags, setTags] = useState([]);
 
   const useNavigate = useNavigation(tags, setTags);
 
-  // const iconTest = [
-  //   { iconName: "JavaScript", clicked: false },
-  //   { iconName: "Strapi", clicked: false },
-  //   { iconName: "React JS", clicked: false },
-  // ];
-
-  const iconTestArray = ["JavaScript", "Strapi", "React JS", "Vue"];
-
-  let filteredIcons = icons.filter((icon) => tags.includes(icon));
-
-  console.log(tags);
-  console.log("filtered: " + filteredIcons);
-
   const handleClick = (tech) => {
-    const singleIcon = tech.iconName;
-
     tags.includes(tech)
       ? setTags(tags.filter((tag) => tag !== tech))
       : setTags((current) => [...current, tech]);
@@ -36,21 +20,12 @@ function TagButtons({ icons }) {
 
   return (
     <>
-      <div className="flex items-center justify-start">
-        {tags.length > 0 && (
-          <button
-            onClick={() => setTags([])}
-            className="mr-3 mb-2 rounded-lg border-2 border-primary py-1 px-2 text-[12px] hover:bg-primary"
-          >
-            Clear
-          </button>
-        )}
-
+      <div className="relative z-50 flex items-center justify-start bg-white">
         <div className="">
           {icons.map((icon) => (
             <button
-              className={`mr-3 mb-2 rounded-lg py-1 px-2 text-[12px] hover:bg-primary ${
-                activeTags?.includes(icon) ? "bg-primary" : "bg-gray-300"
+              className={`mr-3 mb-2 h-6 rounded-lg py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white ${
+                activeTags?.includes(icon) ? "bg-primary text-white" : "bg-gray-300"
               }`}
               onClick={() => {
                 handleClick(icon);
@@ -60,6 +35,22 @@ function TagButtons({ icons }) {
               {icon}
             </button>
           ))}
+          {tags.length > 0 && (
+            <button
+              onClick={() => setTags([])}
+              className="mr-3 mb-2 h-6 rounded-lg border-2 text-primary border-primary py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white"
+            >
+              Clear
+            </button>
+          )}
+          {/* {tags.length === 0 && (
+            <button
+              onClick={() => setTags([])}
+              className="mr-3 mb-2 h-6 rounded-lg border-2 text-primary border-primary py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white"
+            >
+              Show all
+            </button>
+          )} */}
         </div>
       </div>
     </>
