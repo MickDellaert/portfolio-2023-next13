@@ -24,8 +24,8 @@ const About = () => {
               meet you, welcome to my portfolio.
               <br></br>
               <br></br>
-              On this website you can find some of the projects made recently with new
-              skills I gained during a seven-month full-time Junior Web
+              On this website you can find some of the projects made recently
+              with new skills I gained during a seven-month full-time Junior Web
               Developer training at BeCode Antwerp, a graduation project at Hack
               Your Future Antwerp and my first internship at Webit. They
               represent the first steps I have been taking in my ambition of
@@ -35,6 +35,7 @@ const About = () => {
                 href="https://github.com/MickDellaert"
                 target="_blank"
                 rel="noreferrer"
+                className="font-bold"
               >
                 Github
               </a>{" "}
@@ -47,6 +48,7 @@ const About = () => {
                 href="https://www.linkedin.com/in/mick-dellaert"
                 target="_blank"
                 rel="noreferrer"
+                className="font-bold"
               >
                 career
               </a>{" "}
@@ -59,10 +61,14 @@ const About = () => {
               Currently, I would love to add a more dynamic and interactive
               dimension to my skills and enter the world of web development with
               its endless possibilities and exciting prospects. At the moment I
-              am actively looking for a job or an internship, hoping to contribute and
-              complete my new knowledge in a fresh position and continue my
-              journey. If I sparked your interest, don&apos;t hesitate to{" "}
-              <a href="mailto: mickdellaert@yahoo.com">contact</a> me.
+              am actively looking for a job or an internship, hoping to
+              contribute and complete my new knowledge in a fresh position and
+              continue my journey. If I sparked your interest, don&apos;t
+              hesitate to{" "}
+              <a href="mailto: mickdellaert@yahoo.com" className="font-bold">
+                contact
+              </a>{" "}
+              me.
             </p>
           </div>
           <div className="portrait mt-6 md:col-span-3 md:mt-6 xl:col-span-2 xl:col-start-7 xl:mt-0 2xl:col-span-2 2xl:col-start-7">
