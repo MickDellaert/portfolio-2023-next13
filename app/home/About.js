@@ -24,12 +24,13 @@ const About = () => {
               meet you, welcome to my portfolio.
               <br></br>
               <br></br>
-              On this website you can find some of the projects made with new
+              On this website you can find some of the projects made recently with new
               skills I gained during a seven-month full-time Junior Web
-              Developer training at BeCode Antwerp. They represent the first
-              steps I have been taking in my ambition of becoming a full stack
-              developer with an emphasis on front-end. More projects can be
-              found on my{" "}
+              Developer training at BeCode Antwerp, a graduation project at Hack
+              Your Future Antwerp and my first internship at Webit. They
+              represent the first steps I have been taking in my ambition of
+              becoming a full stack developer with an emphasis on front-end.
+              More projects can be found on my{" "}
               <a
                 href="https://github.com/MickDellaert"
                 target="_blank"
@@ -58,7 +59,7 @@ const About = () => {
               Currently, I would love to add a more dynamic and interactive
               dimension to my skills and enter the world of web development with
               its endless possibilities and exciting prospects. At the moment I
-              am actively looking for an internship, hoping to contribute and
+              am actively looking for a job or an internship, hoping to contribute and
               complete my new knowledge in a fresh position and continue my
               journey. If I sparked your interest, don&apos;t hesitate to{" "}
               <a href="mailto: mickdellaert@yahoo.com">contact</a> me.

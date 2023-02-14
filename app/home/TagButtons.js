@@ -24,12 +24,12 @@ function TagButtons({ icons }) {
         <div className="">
           {icons.map((icon) => (
             <button
-              className={`mr-3 mb-2 h-6 rounded-lg py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white ${
-                activeTags?.includes(icon) ? "bg-primary text-white" : "bg-gray-300"
+              className={`mr-3 mb-2 h-6 rounded-lg py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white 
+              ${
+                activeTags?.includes(icon)
+                  ? "bg-primary text-white" : "bg-gray-300"
               }`}
-              onClick={() => {
-                handleClick(icon);
-              }}
+              onClick={() => {handleClick(icon); }}
               key={icon.id}
             >
               {icon}
@@ -38,7 +38,7 @@ function TagButtons({ icons }) {
           {tags.length > 0 && (
             <button
               onClick={() => setTags([])}
-              className="mr-3 mb-2 h-6 rounded-lg border-2 text-primary border-primary py-1 px-2 text-xs font-bold leading-none hover:bg-primary hover:text-white"
+              className="mr-3 mb-2 h-6 rounded-lg border-2 border-primary py-1 px-2 text-xs font-bold leading-none text-primary hover:bg-primary hover:text-white"
             >
               Clear
             </button>

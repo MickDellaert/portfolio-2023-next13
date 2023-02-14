@@ -7,41 +7,72 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function Projects({ projects, uniqueIcons }) {
-  const [newProjects, setNewProjects] = useState(projects);
-  const [filteredProjects, setFilteredProjects] = useState([]);
-
-  // const filteredProjects = []
-  console.log(filteredProjects);
-
   const searchParams = useSearchParams();
   const selectedProjects = searchParams.get("tag");
-  const selectedProjectsArray = selectedProjects
-    ? selectedProjects.split(",")
-    : [];
+  // const selectedProjectsArray = selectedProjects
+  //   ? selectedProjects.split(",")
+  //   : [];
 
-  // console.log(selectedProjects);
-  // console.log(selectedProjectsArray)
+  // const [filteredProjects, setFilteredProjects] = useState([]);
+  // const [newProjects, setNewProjects] = useState(projects);
 
-  const filterSort = () => {};
+  const filteredProjects = filterProjects();
+  const combinedAndSorted = combineAndSort();
 
-  useEffect(() => {
+  function filterProjects() {
+    let filtered = [];
+
     if (selectedProjects) {
-      setFilteredProjects(
-        projects.filter((project) =>
-          project.icons.some((icon) => selectedProjects.includes(icon.iconName))
-        )
+      filtered = projects.filter((project) =>
+        project.icons.some((icon) => selectedProjects.includes(icon.iconName))
       );
-    } else {
-      setFilteredProjects([]);
     }
-  }, [selectedProjects]);
+    return filtered;
+  }
 
-  useEffect(() => {
+  function combineAndSort() {
     let combinedArray = [...filteredProjects, ...projects];
-    let sortedProjects = Array.from(new Set(combinedArray));
+    return Array.from(new Set(combinedArray));
+  }
 
-    setNewProjects(sortedProjects);
-  }, [filteredProjects]);
+  // useEffect(() => {
+  //   if (selectedProjects) {
+  //     setFilteredProjects(
+  //       projects.filter((project) =>
+  //         project.icons.some((icon) => selectedProjects.includes(icon.iconName))
+  //       )
+  //     );
+  //   } else {
+  //     setFilteredProjects([]);
+  //   }
+  // }, [selectedProjects]);
+
+  // useEffect(() => {
+  //   let combinedArray = [...filteredProjects, ...projects];
+  //   let sortedProjects = Array.from(new Set(combinedArray));
+
+  //   setNewProjects(sortedProjects);
+  // }, [filteredProjects]);
+
+  // const filterAndSort = (projects, selectedProjects) => {
+  //   let filteredTemp = [];
+
+  //   if (selectedProjects) {
+  //     filteredTemp = projects.filter((project) =>
+  //       project.icons.some((icon) => selectedProjects.includes(icon.iconName))
+  //     );
+  //   }
+  //   if (projects) {
+  //     let combinedArray = [...filteredTemp, ...projects];
+  //     let sortedProjects = Array.from(new Set(combinedArray));
+
+  //     return sortedProjects;
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   filterAndSort(projects, selectedProjects);
+  // }, [selectedProjects]);
 
   return (
     <>
@@ -51,9 +82,9 @@ export default function Projects({ projects, uniqueIcons }) {
 
       <ul
         id="projects"
-        className="mt-12 grid gap-8 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4"
+        className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4"
       >
-        {newProjects.map((project, i) => (
+        {combinedAndSorted.map((project, i) => (
           <Project
             key={i}
             id={project.id}
