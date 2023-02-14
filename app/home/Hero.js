@@ -29,7 +29,7 @@ const Hero = () => {
       }}
     >
       <h1
-        className={`header-title mt-24 text-[7vmin] font-bold leading-snug sm:text-[6.2vmin] xl:mr-[10vw] 2xl:mr-[18vw]`}
+        className={`header-title mt-24 text-[6vmin] font-bold leading-snug sm:text-[6.2vmin] xl:mr-[10vw] 2xl:mr-[18vw]`}
       >
         Hello! I&apos;m{" "}
         <span className="span-green text-primary">Mick Dellaert</span>,{" "}
