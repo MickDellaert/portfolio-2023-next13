@@ -20,7 +20,7 @@ function TagButtons({ icons }) {
 
   return (
     <>
-      <div className="relative z-50 flex items-center justify-start bg-white">
+      <div className="relative z-50 flex items-center justify-start ">
         <div className="">
           {icons.map((icon) => (
             <button
