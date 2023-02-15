@@ -41,7 +41,7 @@ const Hero = () => {
         <span className="span-nowrap">currently </span>{" "}
         <span className="whitespace-nowrap">
           on a{" "}
-          <span className="span-green underlined text-primary">journey</span>{" "}
+          <span className="span-green underlined text-black">journey</span>{" "}
         </span>{" "}
         <span className="span-nowrap">of becoming </span>{" "}
         <span className="span-nowrap whitespace-nowrap">

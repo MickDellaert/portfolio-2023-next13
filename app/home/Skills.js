@@ -10,10 +10,10 @@ async function Skills() {
 
   return (
     <>
-      <div className="mx-auto mt-32">
+      <div className="mx-auto mt-44">
         <h2 className="mb-6 text-center text-4xl font-black">Skills</h2>
 
-        <div className="w-50 h-50 flex flex-wrap justify-center gap-2">
+        <div className="w-50 h-50 flex flex-wrap justify-center gap-4 lg:w-3/4 m-auto">
           {icons.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.iconCode];
             return (

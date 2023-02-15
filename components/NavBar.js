@@ -31,20 +31,20 @@ const Navbar = () => {
       <nav id="home">
         <div className="navbar-wrapper fixed top-0 left-0 right-0 z-20 w-full ">
           <div
-            className={`navbar-container mx-8 flex h-20 items-center justify-between  
-            ${
+            className={`navbar-container mx-8 flex h-20 items-center justify-between`}
+          >
+            {/* ${
               colorChange
                 ? "border-b-2 border-white bg-white"
                 : "border-b-2 border-primary bg-white"
-            }`}
-          >
+            } */}
             <div className="logo-container mb-3 self-end">
               <div className="logo">
                 <Link href="/" onClick={scrollToTop}>
                   {colorChange ? (
-                    <Logo className=" h-9 w-9" />
+                    <Logo className=" h-9 w-9 opacity-0 transition" />
                   ) : (
-                    <Logo className="h-9 w-9 fill-primary" />
+                    <Logo className="h-9 w-9 fill-black transition" />
                   )}
                 </Link>
               </div>
@@ -55,8 +55,8 @@ const Navbar = () => {
                 href="#projects"
                 className={`${
                   colorChange
-                    ? "text-black hover:text-primary"
-                    : "text-primary hover:text-black"
+                    ? "text-black opacity-0 hover:text-black transition"
+                    : "text-black hover:text-primary transition"
                 } mr-6 font-bold`}
               >
                 Projects
@@ -65,8 +65,8 @@ const Navbar = () => {
                 href="#about"
                 className={`${
                   colorChange
-                    ? "text-black hover:text-primary"
-                    : "text-primary hover:text-black"
+                    ? "text-black opacity-0 hover:text-black"
+                    : "text-black hover:text-primary"
                 } font-bold`}
               >
                 About
