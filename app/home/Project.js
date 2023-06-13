@@ -52,11 +52,11 @@ function Project({
 
           <div className="grid-overlay rounded-2xl ">
             <div className="grid-title p-8 text-center">
-              <h2 className="mb-4 text-3xl font-black text-primary lg:text-xl xl:text-3xl">
+            <h2 className="mb-4 text-3xl font-black text-primary lg:text-xl xl:text-3xl">
                 {name}
               </h2>
-              {/* <p className="text-base text-gray-400 sm:block">Built with:</p> */}
-              {/* <div className="mb-4 flex justify-center gap-2">
+              <p className="text-base font-normal text-gray-400 sm:block">Built with:</p>
+              <div className="mb-4 flex justify-center gap-2">
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = ReactIcons[skills.iconCode];
                   return (
@@ -66,7 +66,7 @@ function Project({
                     />
                   );
                 })}
-              </div> */}
+              </div>
               <p className="text-base font-bold text-black underline decoration-2 underline-offset-2">
                 Find out more
               </p>
