@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CldImage } from "next-cloudinary";
+import * as ReactIcons from "react-icons/si";
 
 import { useSearchParams } from "next/navigation";
 
@@ -17,7 +18,7 @@ function Project({
   filteredProjects,
   project,
 }) {
-  // console.log(projects);
+  console.log(project);
   // console.log(filteredProjects);
 
   return (
@@ -36,7 +37,7 @@ function Project({
           {/* <h1 className="text-xl font-bold">{name}</h1>
           <p>{description}</p> */}
           <CldImage
-            className={`"grid-image grayscale" rounded-xl ${
+            className={`"grid-image grayscale" rounded-2xl ${
               filteredProjects.length === 0
                 ? "grayscale-0"
                 : filteredProjects.includes(project)
@@ -50,8 +51,22 @@ function Project({
           />
 
           <div className="grid-overlay rounded-2xl ">
-            <div className="grid-title p-8 text-center text-3xl font-black text-primary">
-              <h2 className="mb-4">{name}</h2>
+            <div className="grid-title p-8 text-center">
+              <h2 className="mb-4 text-3xl font-black text-primary lg:text-xl xl:text-3xl">
+                {name}
+              </h2>
+              {/* <p className="text-base text-gray-400 sm:block">Built with:</p> */}
+              <div className="mb-4 flex justify-center gap-2">
+                {project.icons.map((skills, i) => {
+                  const ProjectSkills = ReactIcons[skills.iconCode];
+                  return (
+                    <ProjectSkills
+                      key={i}
+                      className="h-[20px] w-[20px] fill-gray-400"
+                    />
+                  );
+                })}
+              </div>
               <p className="text-base font-bold text-black underline decoration-2 underline-offset-2">
                 Find out more
               </p>

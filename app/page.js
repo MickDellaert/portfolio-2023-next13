@@ -1,4 +1,5 @@
 import "./globals.css";
+import { notFound } from 'next/navigation'
 
 // export const revalidate = 100;
 // export const dynamic = "auto";
@@ -39,9 +40,12 @@ export default async function Index({ searchParams }) {
 
   const { data: icons } = await supabase.from("skills").select();
 
-  if (!projects) {
-    notFound();
-  }
+  // console.log(projects);
+
+
+  // if (!projects) {
+  //   notFound();
+  // }
 
   let iconsArray = icons.map((iconName) => iconName.iconName);
   let uniqueIcons = [...new Set(iconsArray)];

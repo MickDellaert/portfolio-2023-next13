@@ -15,7 +15,7 @@ function ProjectDetailHeader({ singleProject }) {
         <div className="flex gap-2 fill-primary sm:flex-row">
           <p className="hidden text-base text-gray-400 sm:block">Built with:</p>
           <div className="flex gap-2">
-            {/* <ProjectSkills singleProject={singleProject} /> */}
+            <ProjectSkills singleProject={singleProject} />
           </div>
         </div>
         <div className="flex items-end">
