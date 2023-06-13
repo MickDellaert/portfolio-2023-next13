@@ -43,9 +43,9 @@ export default async function Index({ searchParams }) {
   // console.log(projects);
 
 
-  // if (!projects) {
-  //   notFound();
-  // }
+  if (!projects) {
+    notFound();
+  }
 
   let iconsArray = icons.map((iconName) => iconName.iconName);
   let uniqueIcons = [...new Set(iconsArray)];

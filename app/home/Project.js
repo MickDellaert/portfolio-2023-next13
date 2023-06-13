@@ -18,7 +18,7 @@ function Project({
   filteredProjects,
   project,
 }) {
-  console.log(project);
+  // console.log(project);
   // console.log(filteredProjects);
 
   return (
