@@ -56,7 +56,7 @@ function Project({
                 {name}
               </h2>
               {/* <p className="text-base text-gray-400 sm:block">Built with:</p> */}
-              <div className="mb-4 flex justify-center gap-2">
+              {/* <div className="mb-4 flex justify-center gap-2">
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = ReactIcons[skills.iconCode];
                   return (
@@ -66,7 +66,7 @@ function Project({
                     />
                   );
                 })}
-              </div>
+              </div> */}
               <p className="text-base font-bold text-black underline decoration-2 underline-offset-2">
                 Find out more
               </p>
