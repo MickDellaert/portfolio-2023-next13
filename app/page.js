@@ -1,5 +1,5 @@
 import "./globals.css";
-import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 
 // export const revalidate = 100;
 // export const dynamic = "auto";
@@ -42,7 +42,6 @@ export default async function Index({ searchParams }) {
 
   // console.log(projects);
 
-
   if (!projects) {
     notFound();
   }
@@ -53,11 +52,9 @@ export default async function Index({ searchParams }) {
 
   return (
     <>
+      {/* <h2>under construction</h2> */}
+
       <div className="mt-[100px]"></div>
-      {/* 
-      <pre className="mt-[100px] text-sm">
-        {JSON.stringify(projects, null, 2)}
-      </pre> */}
 
       <div
         className={`${mainFont.className} mx-auto max-w-screen-2xl px-8 font-black`}
@@ -67,6 +64,11 @@ export default async function Index({ searchParams }) {
         <Skills />
       </div>
       <About />
+
+      {/* 
+      <pre className="mt-[100px] text-sm">
+        {JSON.stringify(projects, null, 2)}
+      </pre> */}
     </>
   );
 }
