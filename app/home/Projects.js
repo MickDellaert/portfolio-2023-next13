@@ -78,7 +78,7 @@ export default function Projects({ projects, uniqueIcons }) {
     <>
       {/* <TagButtons tags={tags} setTags={setTags} /> */}
 
-      {/* <TagButtons icons={uniqueIcons} /> */}
+      <TagButtons icons={uniqueIcons} />
 
       <ul
         id="projects"

@@ -15,12 +15,14 @@ const useNavigation = (tags, setTags) => {
 
   useEffect(() => {
     if (tags.length > 0) {
-    router.push(`/?tag=${tags}`, undefined, { shallow: true });
+    router.push(`/?tag=${tags}`);
+    // router.push(`/?tag=${tags}`, undefined, { shallow: true });
     // setTags(urlTags.split(","))
     }
 
     if (tags.length === 0) {
-      router.push(`/`, undefined, { shallow: true });
+      router.push(`/`);
+      // router.push(`/`, undefined, { shallow: true });
     }
   }, [tags]);
 

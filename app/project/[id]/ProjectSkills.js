@@ -3,7 +3,7 @@ import * as ReactIcons from "react-icons/si";
 
 function ProjectSkills({ singleProject }) {
 
-  console.log(singleProject.icons)
+  // console.log(singleProject.icons)
   return (
     <>
       {singleProject.icons.map((skills, i) => {
