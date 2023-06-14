@@ -76,9 +76,12 @@ svg {
 }
 
 @media only screen and (max-width: 640px) {
-  ul {
-    pointer-events: none;
+  .grid-overlay {
+    display: none;
     /* cursor: none; */
   }
 
+  .grid-image-container:hover {
+    transform: none;
+  }
 }
