@@ -52,10 +52,12 @@ function Project({
 
           <div className="grid-overlay rounded-2xl ">
             <div className="grid-title p-8 text-center">
-            <h2 className="mb-4 text-3xl font-black text-primary lg:text-xl xl:text-3xl">
+              <h2 className="mb-4 text-3xl font-black text-black lg:text-xl xl:text-3xl">
                 {name}
               </h2>
-              <p className="text-base font-normal text-gray-400 sm:block">Built with:</p>
+              <p className="text-base font-normal text-gray-400 sm:block">
+                Built with:
+              </p>
               <div className="mb-4 flex justify-center gap-2">
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = ReactIcons[skills.iconCode];
@@ -67,12 +69,37 @@ function Project({
                   );
                 })}
               </div>
-              <p className="text-base font-bold text-black underline decoration-2 underline-offset-2">
+              <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2">
                 Find out more
               </p>
             </div>
           </div>
         </div>
+
+        <div className="flex items-center justify-between mt-2 mb-4 sm:hidden">
+          {/* <div className="flex items-center "> */}
+            <h2 className="text-2xl font-black text-black w-4/5">
+              {name}
+            </h2>
+            {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">
+              Built with:
+            </p> */}
+            <div className="flex justify-center gap-2">
+              {project.icons.map((skills, i) => {
+                const ProjectSkills = ReactIcons[skills.iconCode];
+                return (
+                  <ProjectSkills
+                    key={i}
+                    className="h-[20px] w-[20px] fill-gray-400"
+                  />
+                );
+              })}
+            </div>
+          </div>
+          {/* <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2">
+            Find out more
+          </p> */}
+        {/* </div> */}
       </Link>
     </>
   );

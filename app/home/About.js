@@ -6,7 +6,7 @@ const About = () => {
     <>
       <div id="about" className="about-anchor"></div>
 
-      <section className="about-container mx-8 mt-44 mb-12 rounded-2xl bg-gray-100 py-20 ">
+      <section className="about-container mx-6 mt-44 mb-12 rounded-2xl bg-gray-100 py-20 ">
         {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
           <h1 className="header-title leading-normal text-4xl text-emerald-600">
             About

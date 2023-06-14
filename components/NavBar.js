@@ -31,7 +31,7 @@ const Navbar = () => {
       <nav id="home">
         <div className="navbar-wrapper fixed top-0 left-0 right-0 z-20 w-full ">
           <div
-            className={`navbar-container mx-8 flex h-20 items-center justify-between`}
+            className={`navbar-container mx-6 flex h-20 items-center justify-between`}
           >
             {/* ${
               colorChange

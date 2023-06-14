@@ -38,7 +38,7 @@ export default async function ProjectDetail({ params: { id } }) {
         {/* {JSON.stringify(singleProject, null, 2)} */}
       </pre>
 
-      <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-8">
+      <div className="mx-auto mt-40 mb-16 max-w-screen-2xl px-6">
         <ProjectDetailHeader singleProject={singleProject} />
         <ProjectDetailImage singleProject={singleProject} />
         <ProjectDetailBottomNav singleProject={singleProject} data={data} />

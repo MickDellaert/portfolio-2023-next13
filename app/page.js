@@ -57,7 +57,7 @@ export default async function Index({ searchParams }) {
       <div className="mt-[100px]"></div>
 
       <div
-        className={`${mainFont.className} mx-auto max-w-screen-2xl px-8 font-black`}
+        className={`${mainFont.className} mx-auto max-w-screen-2xl px-6 font-black`}
       >
         <Hero />
         <Projects projects={projects} uniqueIcons={uniqueIcons} />
