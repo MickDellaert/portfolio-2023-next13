@@ -78,7 +78,7 @@ function Project({
 
         <div className="flex items-center justify-between mt-2 mb-4 sm:hidden">
           {/* <div className="flex items-center "> */}
-            <h2 className="text-2xl font-black text-black w-4/5">
+            <h2 className="text-xl font-black text-black w-4/5">
               {name}
             </h2>
             {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">
