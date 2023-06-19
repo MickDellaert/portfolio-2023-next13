@@ -28,8 +28,8 @@ async function Skills() {
             );
           })}
         </div> */}
-
-        <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6">
+        {/* <hr className="mx-auto mt-4 mb-16 w-3/4 fill-gray-50"></hr> */}
+        <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6 xl:w-2/3">
           {icons.map((skill, i) => {
             const HomeSkills = ReactIcons[skill.iconCode];
             return (
@@ -39,7 +39,7 @@ async function Skills() {
                     key={i}
                     className="h-12 w-12 cursor-pointer fill-gray-400 group-hover:fill-primary"
                   />
-                  <h3 className="h-4 mt-1 opacity-0 group-hover:block text-sm md:text-base text-center text-primary group-hover:opacity-100">
+                  <h3 className="mt-1 h-4 text-center text-sm text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
                     {skill.iconName}
                   </h3>
                 </div>
@@ -47,6 +47,7 @@ async function Skills() {
             );
           })}
         </div>
+        {/* <hr className="mx-auto mt-14 w-3/4 fill-gray-50"></hr> */}
       </div>
     </>
   );
