@@ -52,7 +52,7 @@ const Navbar = () => {
 
             <div className="navlinks mb-3 self-end ">
               <Link
-                href="#projects"
+                href="/#projects"
                 className={`${
                   colorChange
                     ? "text-black opacity-0 hover:text-black transition"
@@ -62,7 +62,7 @@ const Navbar = () => {
                 Projects
               </Link>
               <Link
-                href="#skills"
+                href="/#skills"
                 className={`${
                   colorChange
                     ? "text-black opacity-0 hover:text-black transition"
@@ -73,7 +73,7 @@ const Navbar = () => {
               </Link>
               
               <Link
-                href="#about"
+                href="/#about"
                 className={`${
                   colorChange
                     ? "text-black opacity-0 hover:text-black"
