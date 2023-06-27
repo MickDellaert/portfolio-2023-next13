@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import ProjectSkills from "./ProjectSkills";
 
 function ProjectDetailHeader({ singleProject }) {
-
   return (
     <>
       <div className="mb-8 xl:mr-[30vw]">
@@ -18,23 +17,25 @@ function ProjectDetailHeader({ singleProject }) {
             <ProjectSkills singleProject={singleProject} />
           </div>
         </div>
-        <div className="flex items-end">
+        <div className="flex gap-4">
           <Link
             href={singleProject.linkLive}
-            className="livelink mr-4 text-sm font-bold text-gray-400 hover:text-primary sm:text-base"
+            className="livelink text-sm font-bold text-gray-400 hover:text-primary sm:text-base"
             target="_blank"
             rel="noreferrer"
           >
             {singleProject.linkName}
           </Link>
-          <Link
-            href={singleProject.linkGit}
-            className="gitlink text-sm font-bold text-gray-400 hover:text-primary sm:text-base"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github
-          </Link>
+          {singleProject.linkGit.includes("https") && (
+            <Link
+              href={singleProject.linkGit}
+              className="gitlink text-sm font-bold text-gray-400 hover:text-primary sm:text-base"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </Link>
+          )}
         </div>
       </div>
     </>

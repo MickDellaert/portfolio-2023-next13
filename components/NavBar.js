@@ -62,6 +62,17 @@ const Navbar = () => {
                 Projects
               </Link>
               <Link
+                href="#skills"
+                className={`${
+                  colorChange
+                    ? "text-black opacity-0 hover:text-black transition"
+                    : "text-black hover:text-primary transition"
+                } mr-6 font-bold`}
+              >
+                Skills
+              </Link>
+              
+              <Link
                 href="#about"
                 className={`${
                   colorChange

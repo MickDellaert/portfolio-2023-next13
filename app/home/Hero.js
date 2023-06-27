@@ -1,7 +1,7 @@
 "use client";
 
-import { Manrope } from "@next/font/google";
-const mainFont = Manrope({ subsets: ["latin"] });
+import { Archivo } from "next/font/google";
+const mainFont = Archivo({ subsets: ["latin"] });
 
 import { useEffect, useState } from "react";
 
@@ -60,7 +60,7 @@ const Hero = () => {
 
 
        <h1
-        className={`header-title mt-24 text-[8vmin] font-extrabold leading-snug sm:text-[6.2vmin] xl:mr-[10vw]`}
+        className={`header-title mt-24 text-[8vmin] font-bold leading-snug sm:text-[6.2vmin] xl:mr-[10vw]`}
 
         // 2xl:mr-[18vw]
       >

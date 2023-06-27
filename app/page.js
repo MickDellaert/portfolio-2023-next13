@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 // export const revalidate = 100;
 // export const dynamic = "auto";
 
-import { Manrope } from "@next/font/google";
-const mainFont = Manrope({ subsets: ["latin"] });
+import { Archivo } from "next/font/google";
+const mainFont = Archivo({ subsets: ["latin"] });
 
 import supabase from "@/utils/supabase";
 import Hero from "./home/Hero";

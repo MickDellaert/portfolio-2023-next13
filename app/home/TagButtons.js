@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 
 function TagButtons({ icons }) {
   const searchParams = useSearchParams();
-  let activeTags = searchParams.get("tag");
+  let activeTags = searchParams.get("filter");
 
   const [tags, setTags] = useState([]);
 

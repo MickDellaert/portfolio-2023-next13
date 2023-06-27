@@ -8,14 +8,14 @@ import { usePathname, useSearchParams } from "next/navigation";
 const useNavigation = (tags, setTags) => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  let urlTags = searchParams.get("tag");
+  let urlTags = searchParams.get("filter");
 
   // console.log(urlTags);
   // console.log(tags);
 
   useEffect(() => {
     if (tags.length > 0) {
-    router.push(`/?tag=${tags}`);
+    router.push(`/?filter=${tags}`);
     // router.push(`/?tag=${tags}`, undefined, { shallow: true });
     // setTags(urlTags.split(","))
     }
