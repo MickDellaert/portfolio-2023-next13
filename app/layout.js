@@ -2,9 +2,9 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
 
 import "./globals.css";
-import { Manrope } from "@next/font/google";
+import { Archivo } from "next/font/google";
 import HashScroll from "@/components/HashScroll";
-const mainFont = Manrope({ subsets: ["latin"] });
+const mainFont = Archivo({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (

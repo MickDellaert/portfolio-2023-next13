@@ -52,7 +52,7 @@ function Project({
 
           <div className="grid-overlay rounded-2xl ">
             <div className="grid-title p-8 text-center">
-              <h2 className="mb-4 text-3xl font-black text-black lg:text-xl xl:text-3xl">
+              <h2 className="mb-4 text-3xl font-bold text-black lg:text-xl xl:text-3xl">
                 {name}
               </h2>
               <p className="text-base font-normal text-gray-400 sm:block">
@@ -78,7 +78,7 @@ function Project({
 
         <div className="flex items-center justify-between mt-2 mb-4 sm:hidden">
           {/* <div className="flex items-center "> */}
-            <h2 className="text-xl font-black text-black w-4/5">
+            <h2 className="text-xl font-bold text-black w-4/5">
               {name}
             </h2>
             {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">

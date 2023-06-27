@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function Projects({ projects, uniqueIcons }) {
   const searchParams = useSearchParams();
-  const selectedProjects = searchParams.get("tag");
+  const selectedProjects = searchParams.get("filter");
   // const selectedProjectsArray = selectedProjects
   //   ? selectedProjects.split(",")
   //   : [];
