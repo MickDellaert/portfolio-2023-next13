@@ -2,9 +2,13 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
 
 import "./globals.css";
-import { Archivo } from "next/font/google";
-import HashScroll from "@/components/HashScroll";
-const mainFont = Archivo({ subsets: ["latin"] });
+// import { Archivo } from "next/font/google";
+// const mainFont = Archivo({ subsets: ["latin"] });
+
+import { Red_Hat_Display } from "next/font/google";
+const mainFont = Red_Hat_Display({ subsets: ["latin"] });
+
+// import HashScroll from "@/components/HashScroll";
 
 export default function RootLayout({ children }) {
   return (
@@ -15,11 +19,11 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={`${mainFont.className}`}>
-        <HashScroll>
+        {/* <HashScroll> */}
           <Navbar />
           {children}
           <Footer />
-        </HashScroll>
+        {/* </HashScroll> */}
       </body>
     </html>
   );

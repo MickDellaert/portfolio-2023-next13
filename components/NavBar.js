@@ -52,28 +52,28 @@ const Navbar = () => {
 
             <div className="navlinks mb-3 self-end ">
               <Link
-                href="#projects"
+                href="/#projects" scroll={false}
                 className={`${
                   colorChange
-                    ? "text-black opacity-0 hover:text-black transition"
-                    : "text-black hover:text-primary transition"
+                    ? "text-black opacity-0 transition hover:text-black"
+                    : "text-black transition hover:text-primary"
                 } mr-6 font-bold`}
               >
                 Projects
               </Link>
               <Link
-                href="#skills"
+                href="/#skills" scroll={false}
                 className={`${
                   colorChange
-                    ? "text-black opacity-0 hover:text-black transition"
-                    : "text-black hover:text-primary transition"
+                    ? "text-black opacity-0 transition hover:text-black"
+                    : "text-black transition hover:text-primary"
                 } mr-6 font-bold`}
               >
                 Skills
               </Link>
-              
+
               <Link
-                href="#about"
+                href="/#about" scroll={false}
                 className={`${
                   colorChange
                     ? "text-black opacity-0 hover:text-black"
