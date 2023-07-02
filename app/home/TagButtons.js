@@ -24,7 +24,7 @@ function TagButtons({ icons }) {
         <div className="">
           {icons.map((icon) => (
             <button
-              className={`mr-3 mb-2 h-6 rounded-lg py-1 px-2 text-[0.75rem] sm:text-xs font-bold leading-none hover:bg-primary hover:text-white 
+              className={`mr-2 sm:mr-3 mb-2 h-6 rounded-lg py-px px-2 sm:py-1 sm:px-2 text-[0.60rem] sm:text-xs font-bold leading-none hover:bg-primary hover:text-white 
               ${
                 activeTags?.includes(icon)
                   ? "bg-primary text-white" : "bg-gray-300"
