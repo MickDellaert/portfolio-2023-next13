@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 // export const revalidate = 100;
 // export const dynamic = "auto";
 
-import { Archivo } from "next/font/google";
-const mainFont = Archivo({ subsets: ["latin"] });
+// import { Archivo } from "next/font/google";
+// const mainFont = Archivo({ subsets: ["latin"] });
+
+// import { Red_Hat_Display } from "next/font/google";
+// const mainFont = Red_Hat_Display({ subsets: ["latin"] });
 
 import supabase from "@/utils/supabase";
 import Hero from "./home/Hero";
@@ -57,7 +60,7 @@ export default async function Index({ searchParams }) {
       <div className="mt-[100px]"></div>
 
       <div
-        className={`${mainFont.className} mx-auto max-w-screen-2xl px-6 font-black`}
+        className={`mx-auto max-w-screen-2xl px-6 font-black`}
       >
         <Hero />
         <Projects projects={projects} uniqueIcons={uniqueIcons} />

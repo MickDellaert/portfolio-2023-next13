@@ -11,9 +11,8 @@ async function Skills() {
   console.log(icons);
 
   return (
-
     <>
-          <div id="skills" className="relative top-36"></div>
+      <div id="skills" className="relative top-36"></div>
 
       <div className="mx-auto mt-44">
         <h2 className="mb-12 text-center text-4xl font-bold">Skills</h2>
@@ -42,7 +41,7 @@ async function Skills() {
                     key={i}
                     className="h-12 w-12 cursor-pointer fill-gray-400 group-hover:fill-primary"
                   />
-                  <h3 className="mt-1 h-4 text-center font-bold text-sm text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
+                  <h3 className="mt-1 h-4 text-center text-sm font-bold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
                     {skill.iconName}
                   </h3>
                 </div>

@@ -1,7 +1,10 @@
 "use client";
 
-import { Archivo } from "next/font/google";
-const mainFont = Archivo({ subsets: ["latin"] });
+// import { Archivo } from "next/font/google";
+// const mainFont = Archivo({ subsets: ["latin"] });
+
+// import { Red_Hat_Display } from "next/font/google";
+// const mainFont = Red_Hat_Display({ subsets: ["latin"] });
 
 import { useEffect, useState } from "react";
 
