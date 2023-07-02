@@ -57,7 +57,7 @@ const Navbar = () => {
                   colorChange
                     ? "text-black opacity-0 transition hover:text-black"
                     : "text-black transition hover:text-primary"
-                } mr-6 font-bold`}
+                } mr-3 sm:mr-6 font-bold`}
               >
                 Projects
               </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   colorChange
                     ? "text-black opacity-0 transition hover:text-black"
                     : "text-black transition hover:text-primary"
-                } mr-6 font-bold`}
+                } mr-3 sm:mr-6 font-bold`}
               >
                 Skills
               </Link>
