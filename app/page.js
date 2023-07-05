@@ -1,5 +1,7 @@
 import "./globals.css";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { ProjectLoading } from "@/components/ProjectLoading";
 
 // export const revalidate = 100;
 // export const dynamic = "auto";
@@ -59,14 +61,15 @@ export default async function Index({ searchParams }) {
 
       <div className="mt-[100px]"></div>
 
-      <div
-        className={`mx-auto max-w-screen-2xl px-6 font-black`}
-      >
+      <div className={`mx-auto min-h-screen max-w-screen-2xl px-6`}>
         <Hero />
-        <Projects projects={projects} uniqueIcons={uniqueIcons} />
-        <Skills />
+        <Suspense fallback={<ProjectLoading />}>
+          <Projects projects={projects} uniqueIcons={uniqueIcons} />
+          <Skills />
+        </Suspense>
       </div>
       <About />
+      {/* <Footer /> */}
 
       {/* 
       <pre className="mt-[100px] text-sm">

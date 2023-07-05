@@ -25,7 +25,7 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ["var(--font-main)", "sans-serif"],
+        sans: ["var(--font-redhat)", "sans-serif"],
       },
     },
   },
