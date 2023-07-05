@@ -86,7 +86,7 @@ const Hero = () => {
           .
         </span>
       </h1>
-      <h1 className=" animate-bounce text-[6.2vmin] font-bold text-primary">
+      <h1 className="animate-bounce text-[6.2vmin] font-bold text-primary">
         ↓
       </h1>
 

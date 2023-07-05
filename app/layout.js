@@ -6,7 +6,11 @@ import "./globals.css";
 // const mainFont = Archivo({ subsets: ["latin"] });
 
 import { Red_Hat_Display } from "next/font/google";
-const mainFont = Red_Hat_Display({ subsets: ["latin"] });
+const mainFont = Red_Hat_Display({
+  subsets: ["latin"],
+  variable: "--font-redhat",
+  // fallback: ["Helvetica", "sans-serif"],
+});
 
 // import HashScroll from "@/components/HashScroll";
 
@@ -18,12 +22,12 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${mainFont.className}`}>
+      <body className={`${mainFont.variable} font-sans`}>
         {/* <HashScroll> */}
-          <Navbar />
-          {children}
-          <Footer />
+        <Navbar />
+        {children}
         {/* </HashScroll> */}
+        <Footer />
       </body>
     </html>
   );

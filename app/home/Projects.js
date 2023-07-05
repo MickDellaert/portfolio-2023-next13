@@ -6,6 +6,9 @@ import TagButtons from "./TagButtons";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
+
+
+
 export default function Projects({ projects, uniqueIcons }) {
   const searchParams = useSearchParams();
   const selectedProjects = searchParams.get("filter");
@@ -15,6 +18,9 @@ export default function Projects({ projects, uniqueIcons }) {
 
   // const [filteredProjects, setFilteredProjects] = useState([]);
   // const [newProjects, setNewProjects] = useState(projects);
+
+
+  
 
   const filteredProjects = filterProjects();
   const combinedAndSorted = combineAndSort();
