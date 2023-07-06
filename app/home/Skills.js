@@ -8,7 +8,7 @@ async function Skills() {
     notFound();
   }
 
-  console.log(icons);
+  // console.log(icons);
 
   return (
     <>
