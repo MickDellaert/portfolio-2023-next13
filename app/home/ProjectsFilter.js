@@ -10,7 +10,7 @@ function ProjectsFilter({ uniqueTechNames }) {
 
   const [filters, setFilters] = useState([]);
 
-  console.log(uniqueTechNames)
+  // console.log(uniqueTechNames)
 
   const useNavigate = useNavigation(filters, setFilters);
 

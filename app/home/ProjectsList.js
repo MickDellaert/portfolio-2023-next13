@@ -7,6 +7,8 @@ export default function ProjectsList({ projects }) {
   const searchParams = useSearchParams();
   const selectedProjects = searchParams.get("filter");
 
+  // console.log(projects)
+
   const filteredProjects = filterProjects();
   const combinedAndSorted = combineAndSort();
 

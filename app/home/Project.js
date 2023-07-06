@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CldImage } from "next-cloudinary";
-import * as ReactIcons from "react-icons/si";
 
-import { useSearchParams } from "next/navigation";
+import skillIcons from "@/components/skillIcons";
 
 function Project({
   id,
@@ -18,7 +16,6 @@ function Project({
   filteredProjects,
   project,
 }) {
-
   return (
     <>
       <Link className="relative" href={`/project/${urlName}`}>
@@ -58,7 +55,7 @@ function Project({
               </p>
               <div className="mb-4 flex justify-center gap-2">
                 {project.icons.map((skills, i) => {
-                  const ProjectSkills = ReactIcons[skills.iconCode];
+                  const ProjectSkills = skillIcons[skills.iconCode];
                   return (
                     <ProjectSkills
                       key={i}
@@ -74,27 +71,25 @@ function Project({
           </div>
         </div>
 
-        <div className="flex items-center justify-between mt-2 mb-4 sm:hidden">
+        <div className="mt-2 mb-4 flex items-center justify-between sm:hidden">
           {/* <div className="flex items-center "> */}
-            <h2 className="text-xl font-bold text-black w-4/5">
-              {name}
-            </h2>
-            {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">
+          <h2 className="w-4/5 text-xl font-bold text-black">{name}</h2>
+          {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">
               Built with:
             </p> */}
-            <div className="flex justify-center gap-2">
-              {project.icons.map((skills, i) => {
-                const ProjectSkills = ReactIcons[skills.iconCode];
-                return (
-                  <ProjectSkills
-                    key={i}
-                    className="h-[20px] w-[20px] fill-gray-400"
-                  />
-                );
-              })}
-            </div>
+          <div className="flex justify-center gap-2">
+            {project.icons.map((skills, i) => {
+              const ProjectSkills = skillIcons[skills.iconCode];
+              return (
+                <ProjectSkills
+                  key={i}
+                  className="h-[20px] w-[20px] fill-gray-400"
+                />
+              );
+            })}
           </div>
-          {/* <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2">
+        </div>
+        {/* <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2">
             Find out more
           </p> */}
         {/* </div> */}

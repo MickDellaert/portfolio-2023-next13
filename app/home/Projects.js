@@ -17,9 +17,9 @@ if (!projects) {
 let allTechNames = projectsTech.map((tech) => tech.iconName);
 let uniqueTechNames = [...new Set(allTechNames)];
 
-console.log(projectsTech);
-console.log(allTechNames);
-console.log(uniqueTechNames);
+// console.log(projectsTech);
+// console.log(allTechNames);
+// console.log(uniqueTechNames);
 
 export default async function Projects() {
   return (
