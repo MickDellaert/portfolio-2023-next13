@@ -1,5 +1,3 @@
-
-
 import skillIcons from "@/components/skillIcons";
 import supabase from "@/utils/supabase";
 

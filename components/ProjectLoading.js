@@ -6,7 +6,7 @@ export const ProjectLoading = () => {
       <div className="flex flex-wrap">
         {[...Array(13).keys()].map((i) => (
           <div
-            className="mr-2 mb-2 h-6 w-16 shrink-0 animate-pulse rounded-lg bg-gray-200 sm:mr-3"
+            className="mr-2 mb-2 h-6 w-14 md:w-16 shrink-0 animate-pulse rounded-lg bg-gray-200 sm:mr-3"
             key={i}
           ></div>
         ))}
