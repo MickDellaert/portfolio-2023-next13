@@ -41,7 +41,7 @@ svg {
   display: block;
 }
 
-.grid-image:hover {
+/* .grid-image:hover {
 }
 
 .grid-image-container {
@@ -80,15 +80,14 @@ svg {
 
 .grid-overlay:hover > div {
   transform: translateY(0) scale(1.1);
-}
+} */
 
-@media only screen and (max-width: 640px) {
+/* @media only screen and (max-width: 640px) {
   .grid-overlay {
     display: none;
-    /* cursor: none; */
   }
 
   .grid-image-container:hover {
     transform: none;
   }
-}
+} */

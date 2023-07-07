@@ -1,4 +1,6 @@
-import * as ReactIcons from "react-icons/si";
+
+
+import skillIcons from "@/components/skillIcons";
 import supabase from "@/utils/supabase";
 
 async function Skills() {
@@ -8,7 +10,7 @@ async function Skills() {
     notFound();
   }
 
-  console.log(icons);
+  // console.log(icons);
 
   return (
     <>
@@ -33,7 +35,7 @@ async function Skills() {
         {/* <hr className="mx-auto mt-4 mb-16 w-3/4 fill-gray-50"></hr> */}
         <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6 xl:w-2/3">
           {icons.map((skill, i) => {
-            const HomeSkills = ReactIcons[skill.iconCode];
+            const HomeSkills = skillIcons[skill.iconCode];
             return (
               <>
                 <div className="group flex flex-col items-center">

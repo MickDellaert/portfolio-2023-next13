@@ -4,40 +4,42 @@ import { useState } from "react";
 import useNavigation from "@/hooks/useNavigation";
 import { useSearchParams } from "next/navigation";
 
-function TagButtons({ icons }) {
+function ProjectsFilter({ uniqueTechNames }) {
   const searchParams = useSearchParams();
   let activeTags = searchParams.get("filter");
 
-  const [tags, setTags] = useState([]);
+  const [filters, setFilters] = useState([]);
 
-  const useNavigate = useNavigation(tags, setTags);
+  // console.log(uniqueTechNames)
 
-  const handleClick = (tech) => {
-    tags.includes(tech)
-      ? setTags(tags.filter((tag) => tag !== tech))
-      : setTags((current) => [...current, tech]);
+  const useNavigate = useNavigation(filters, setFilters);
+
+  const handleClick = (techName) => {
+    filters.includes(techName)
+      ? setFilters(filters.filter((selectedFilter) => selectedFilter !== techName))
+      : setFilters((current) => [...current, techName]);
   };
 
   return (
     <>
       <div className="relative z-50 flex items-center justify-start ">
         <div className="">
-          {icons.map((icon) => (
+          {uniqueTechNames.map((techName) => (
             <button
               className={`mr-2 sm:mr-3 mb-2 h-6 rounded-lg py-px px-2 sm:py-1 sm:px-2 text-[0.60rem] sm:text-xs font-bold leading-none md:hover:bg-primary md:hover:text-white 
               ${
-                activeTags?.includes(icon)
+                activeTags?.includes(techName)
                   ? "bg-primary text-white" : "bg-gray-300"
               }`}
-              onClick={() => {handleClick(icon); }}
-              key={icon.id}
+              onClick={() => {handleClick(techName); }}
+              key={techName}
             >
-              {icon}
+              {techName}
             </button>
           ))}
-          {tags.length > 0 && (
+          {filters.length > 0 && (
             <button
-              onClick={() => setTags([])}
+              onClick={() => setFilters([])}
               className="mr-3 mb-2 h-6 rounded-lg border-2 border-primary py-1 px-2 text-xs font-bold leading-none text-primary md:hover:bg-primary md:hover:text-white"
             >
               Clear
@@ -57,4 +59,4 @@ function TagButtons({ icons }) {
   );
 }
 
-export default TagButtons;
+export default ProjectsFilter;
