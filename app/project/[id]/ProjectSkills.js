@@ -1,18 +1,15 @@
-import React from "react";
-import * as ReactIcons from "react-icons/si";
+import skillIcons from "@/components/skillIcons";
 
 function ProjectSkills({ singleProject }) {
-
   // console.log(singleProject.icons)
   return (
     <>
       {singleProject.icons.map((skills, i) => {
-        const ProjectSkills = ReactIcons[skills.iconCode];
+        const ProjectSkills = skillIcons[skills.iconCode];
         return (
           <ProjectSkills key={i} className="h-[24px] w-[24px] fill-gray-400" />
         );
       })}
-
     </>
   );
 }
