@@ -21,8 +21,11 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-spinners": "^0.13.8",
+    "react-text-transition": "^3.1.0",
     "sharp": "^0.31.3",
-    "swr": "^2.0.3"
+    "swr": "^2.0.3",
+    "use-scramble": "^2.2.12",
+    "use-window-size-v2": "^2.2.3"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.4.8",

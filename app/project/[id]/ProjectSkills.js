@@ -1,7 +1,6 @@
 import skillIcons from "@/components/skillIcons";
 
 function ProjectSkills({ singleProject }) {
-  // console.log(singleProject.icons)
   return (
     <>
       {singleProject.icons.map((skills, i) => {
