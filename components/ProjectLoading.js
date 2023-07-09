@@ -3,11 +3,11 @@ import React from "react";
 export const ProjectLoading = () => {
   return (
     <>
-      <div className="h-screen">
+      {/* <div className="h-screen">
         <p>page is loading</p>
-      </div>
+      </div> */}
 
-      {/* <div className="flex flex-wrap">
+      <div className="flex flex-wrap">
         {[...Array(13).keys()].map((i) => (
           <div
             className="mr-2 mb-2 h-6 w-14 md:w-16 shrink-0 animate-pulse rounded-lg bg-gray-200 sm:mr-3"
@@ -22,7 +22,7 @@ export const ProjectLoading = () => {
             key={i}
           ></div>
         ))}
-      </ul> */}
+      </ul>
     </>
   );
 };
