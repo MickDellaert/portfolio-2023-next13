@@ -6,34 +6,14 @@ import { CldImage } from "next-cloudinary";
 
 import skillIcons from "@/components/skillIcons";
 
-function Project({
-  id,
-  urlName,
-  name,
-  description,
-  mainImage,
-  projects,
-  filteredProjects,
-  project,
-}) {
+function Project({ urlName, name, mainImage, filteredProjects, project }) {
   return (
     <>
       <Link className="relative" href={`/project/${urlName}`}>
-        {/* <div
-          className={`"absolute z-20 h-full w-full rounded-2xl bg-primary hover:hidden ${
-            filteredProjects.length === 0
-              ? "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-0"
-              : filteredProjects.includes(project)
-              ? "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-0"
-              : "absolute z-20 h-full w-full rounded-2xl bg-primary opacity-5"
-          }`}
-        ></div> */}
-        <div className="grid-image-container group rounded-2xl ">
+        <div className="group">
           <div className="relative transition-all duration-200 ease-in-out sm:group-hover:scale-[.98] sm:group-hover:opacity-0">
-            {/* <h1 className="text-xl font-bold">{name}</h1>
-          <p>{description}</p> */}
             <CldImage
-              className={`"grid-image grayscale" rounded-2xl ${
+              className={`rounded-2xl ${
                 filteredProjects.length === 0
                   ? "grayscale-0"
                   : filteredProjects.includes(project)
@@ -42,60 +22,37 @@ function Project({
               }`}
               src={mainImage}
               alt={name}
-              width={1200}
-              height={1200}
+              width={600}
+              height={600}
             />
           </div>
 
-          <div className="grid-overlay absolute top-0 flex h-full w-full items-center justify-center 
-          rounded-2xl opacity-0 transition-all duration-200 ease-in-out sm:group-hover:scale-[1.08] sm:group-hover:opacity-100">
-            <div className="grid-title p-8 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-black lg:text-xl xl:text-3xl">
-                {name}
-              </h2>
-              <p className="text-base font-normal text-gray-400 sm:block">
-                Built with:
-              </p>
-              <div className="mb-4 flex justify-center gap-2">
-                {project.icons.map((skills, i) => {
-                  const ProjectSkills = skillIcons[skills.iconCode];
-                  return (
-                    <ProjectSkills
-                      key={i}
-                      className="h-[20px] w-[20px] fill-gray-400"
-                    />
-                  );
-                })}
-              </div>
-              <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2 hover:text-black hover:decoration-primary">
-                Find out more
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-2 mb-4 flex items-center justify-between sm:hidden">
-          {/* <div className="flex items-center "> */}
-          <h2 className="w-4/5 text-lg font-bold text-black">{name}</h2>
-          {/* <p className="text-base font-normal text-gray-400 ml-2 sm:block">
+          <div
+            className="mt-3 mb-5 flex h-full w-full content-center items-center justify-between transition-all duration-200 ease-in-out sm:absolute sm:top-0 sm:mt-0 
+          sm:mb-0 sm:flex-col sm:justify-center sm:opacity-0 sm:group-hover:scale-[1.08] sm:group-hover:opacity-100"
+          >
+            <h2 className="w-4/5 text-lg font-bold text-black sm:mb-3 sm:text-center sm:text-3xl lg:text-xl xl:text-3xl">
+              {name}
+            </h2>
+            <p className="hidden mb-1 text-base font-normal text-gray-400 sm:block">
               Built with:
-            </p> */}
-          <div className="flex justify-center gap-2">
-            {project.icons.map((skills, i) => {
-              const ProjectSkills = skillIcons[skills.iconCode];
-              return (
-                <ProjectSkills
-                  key={i}
-                  className="h-[20px] w-[20px] fill-gray-400"
-                />
-              );
-            })}
+            </p>
+            <div className="flex justify-center gap-2 sm:mb-8">
+              {project.icons.map((skills, i) => {
+                const ProjectSkills = skillIcons[skills.iconCode];
+                return (
+                  <ProjectSkills
+                    key={i}
+                    className="h-[20px] w-[20px] fill-gray-400"
+                  />
+                );
+              })}
+            </div>
+            <p className="hidden text-base font-bold text-primary underline decoration-2 underline-offset-4 hover:text-black hover:decoration-primary sm:block">
+              Find out more
+            </p>
           </div>
         </div>
-        {/* <p className="text-base font-bold text-primary underline decoration-2 underline-offset-2">
-            Find out more
-          </p> */}
-        {/* </div> */}
       </Link>
     </>
   );

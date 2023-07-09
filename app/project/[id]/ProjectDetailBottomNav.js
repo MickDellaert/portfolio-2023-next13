@@ -13,18 +13,6 @@ function ProjectDetailBottomNav({ singleProject, data }) {
   const [previousProject, setPreviousProject] = useState(singleProject.urlName);
   const [nextProject, setNextProject] = useState(singleProject.urlName);
 
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const { data } = await supabase.from("projects").select().order("id");
-  //     setProjects(data);
-  //     setIsLoading(false);
-  //   };
-
-  //   fetchPosts();
-  // }, []);
-
-  // console.log(projects)
-
   useEffect(() => {
     if (singleProject.id > 1) {
       setPreviousProject(data[singleProject.id - 2].urlName);
@@ -34,9 +22,6 @@ function ProjectDetailBottomNav({ singleProject, data }) {
       setNextProject(data[singleProject.id].urlName);
     }
   }, [data, singleProject.id]);
-
-  // if (isLoading) return <p>Loading</p>;
-  // console.log(projects[2].id);
 
   return (
     <>
