@@ -13,7 +13,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const TEXTS = [
   "web",
-  "great",
+  "dedicated",
   "front-end",
   "skilled",
   "full stack",
@@ -25,7 +25,7 @@ const Hero = () => {
   const [offset, setOffset] = useState(0);
 
   // const { width, height } = useWindowSize(10); // wait 100ms for the resize events
-  const { width, height } = useWindowDimensions();
+  // const { width, height } = useWindowDimensions();
 
   useEffect(() => {
     const intervalId = setInterval(
@@ -50,23 +50,19 @@ const Hero = () => {
   return (
     <>
       <div
-        className={`${
-          height < 600 ? "mt-32" : "mt-48"
-        } flex h-[35vh] flex-col sm:h-[45vh]`}
+        className={`mt-48 flex h-[35vh] flex-col sm:h-[45vh] very-short:mt-20 short:mt-32 short:h-[52vh]`}
         style={{
           transform: `translateY(${offset * 0.2}px)`,
         }}
       >
         <h1
-          className={`header-title text-neutral-950 text-clamp-mobile font-bold leading-snug sm:text-clamp`}
+          className={`header-title text-neutral-950 text-clamp-mobile font-bold leading-snug sm:text-clamp very-short:text-clamp-very-short`}
         >
           Hello, I&apos;m <span className="text-primary">Mick Dellaert</span>,{" "}
-          <br className={`hidden ${height < 600 ? "sm:hidden" : "sm:block"}`} />
+          <br className={`hidden sm:block`} />
           <span className="whitespace-nowrap">a graphic designer </span>on{" "}
           <span className="sm:whitespace-nowrap"> a journey </span>{" "}
-          <br
-            className={` hidden ${height < 600 ? "sm:hidden" : "sm:block"}`}
-          />
+          <br className={`hidden sm:block`} />
           <span className="whitespace-nowrap">of becoming </span>{" "}
           <span>
             a
