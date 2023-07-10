@@ -6,7 +6,7 @@ function ProjectSkills({ singleProject }) {
       {singleProject.icons.map((skills, i) => {
         const ProjectSkills = skillIcons[skills.iconCode];
         return (
-          <ProjectSkills key={i} className="h-[24px] w-[24px] fill-gray-400" />
+          <ProjectSkills key={i} className="h-[24px] w-[24px] fill-neutral-400" />
         );
       })}
     </>
