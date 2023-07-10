@@ -11,7 +11,14 @@ import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-const TEXTS = ["web", "great", "front-end", "skilled", "full stack", "creative"];
+const TEXTS = [
+  "web",
+  "great",
+  "front-end",
+  "skilled",
+  "full stack",
+  "creative",
+];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -43,22 +50,23 @@ const Hero = () => {
   return (
     <>
       <div
-        // className="hero relative grid grid-cols-8 bg-white mx-6 md:mx-16 2xl:mx-40 my-8 md:my-20 lg:my-28 xl:mt-32 xl:mb-16 2xl:mt-44 2xl:mb-28"
-        className={`${height < 600 ? "mt-32" : "mt-48"} flex h-[35vh] flex-col sm:h-[45vh]`}
+        className={`${
+          height < 600 ? "mt-32" : "mt-48"
+        } flex h-[35vh] flex-col sm:h-[45vh]`}
         style={{
           transform: `translateY(${offset * 0.2}px)`,
         }}
       >
         <h1
-          className={`header-title text-clamp-mobile font-bold leading-snug sm:text-clamp`}
+          className={`header-title text-gray-950 text-clamp-mobile font-bold leading-snug sm:text-clamp`}
         >
           Hello, I&apos;m <span className="text-primary">Mick Dellaert</span>,{" "}
-          {/* <br className={`hidden md:block ${height < 600 ? 'hidden' : ''}`} /> */}
           <br className={`hidden ${height < 600 ? "sm:hidden" : "sm:block"}`} />
           <span className="whitespace-nowrap">a graphic designer </span>on{" "}
           <span className="sm:whitespace-nowrap"> a journey </span>{" "}
-          {/* <br className="hidden md:block" /> */}
-          <br className={` hidden ${height < 600 ? "sm:hidden" : "sm:block"}`} />
+          <br
+            className={` hidden ${height < 600 ? "sm:hidden" : "sm:block"}`}
+          />
           <span className="whitespace-nowrap">of becoming </span>{" "}
           <span>
             a
