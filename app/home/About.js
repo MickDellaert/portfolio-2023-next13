@@ -104,12 +104,10 @@ const About = () => {
             </a>
             <a
               className="contact-link text-neutral-950 block font-semibold leading-relaxed hover:text-primary"
-              href="tel:number: 0488244705"
+              href="tel: +32488244705"
             >
               0488 244 705
             </a>
-
-
 
             <a
               className="contact-link text-neutral-950 font-semibold leading-relaxed hover:text-primary"
