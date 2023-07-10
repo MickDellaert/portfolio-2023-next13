@@ -17,7 +17,7 @@ const About = () => {
 
         <div className="mx-auto grid max-w-screen-2xl px-6 md:px-12 grid-cols-1 gap-6 md:grid-cols-8">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
-            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-gray-950">
+            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-neutral-950">
               About Me
             </h1>
             <p className="text-xl leading-snug">
@@ -84,7 +84,7 @@ const About = () => {
             />
           </div>
           <div className="contact my-6 self-end text-xl font-bold text-primary md:col-span-4 md:mb-0 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7">
-            <h1 className="mb-4 text-4xl leading-normal text-gray-950">Contact</h1>
+            <h1 className="mb-4 text-4xl leading-normal text-neutral-950">Contact</h1>
             <a
               className="contact-link leading-relaxed "
               href="https://www.linkedin.com/in/mick-dellaert"

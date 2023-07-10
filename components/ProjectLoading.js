@@ -10,7 +10,7 @@ export const ProjectLoading = () => {
       <div className="flex flex-wrap">
         {[...Array(13).keys()].map((i) => (
           <div
-            className="mr-2 mb-2 h-6 w-14 md:w-16 shrink-0 animate-pulse rounded-lg bg-neutral-200 sm:mr-3"
+            className="mr-2 mb-2 h-6 w-14 md:w-16 shrink-0 animate-pulse rounded-lg bg-neutral-100 sm:mr-3"
             key={i}
           ></div>
         ))}
@@ -18,7 +18,7 @@ export const ProjectLoading = () => {
       <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {[...Array(12).keys()].map((i) => (
           <div
-            className="aspect-square animate-pulse rounded-2xl bg-neutral-200"
+            className="aspect-square animate-pulse rounded-2xl bg-neutral-100"
             key={i}
           ></div>
         ))}
