@@ -15,7 +15,9 @@ async function Skills() {
       <div id="skills" className="relative top-36"></div>
 
       <div className="mx-auto mt-44">
-        <h2 className="mb-12 text-center text-4xl font-bold">Skills</h2>
+        <h2 className="text-gray-950 mb-12 text-center text-4xl font-bold">
+          Skills
+        </h2>
 
         {/* <div className="w-50 h-50 flex flex-wrap justify-center gap-4 lg:w-3/4 m-auto">
           {icons.map((skill, i) => {
@@ -39,7 +41,7 @@ async function Skills() {
                 <div className="group flex flex-col items-center">
                   <HomeSkills
                     key={i}
-                    className="h-12 w-12 cursor-pointer fill-gray-400 group-hover:fill-primary"
+                    className="h-12 w-12 cursor-pointer fill-neutral-400 group-hover:fill-primary"
                   />
                   <h3 className="mt-1 h-4 text-center text-sm font-bold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
                     {skill.iconName}

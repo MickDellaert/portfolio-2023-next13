@@ -8,7 +8,7 @@ const About = () => {
       <div id="about" className="relative top-36"></div>
 
 
-      <section className="about-container mx-6 mt-44 mb-12 rounded-2xl bg-gray-100 py-20 ">
+      <section className="about-container mx-6 mt-44 mb-12 rounded-2xl bg-neutral-100 py-20 ">
         {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
           <h1 className="header-title leading-normal text-4xl text-emerald-600">
             About
@@ -17,7 +17,7 @@ const About = () => {
 
         <div className="mx-auto grid max-w-screen-2xl px-6 md:px-12 grid-cols-1 gap-6 md:grid-cols-8">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
-            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-black">
+            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-gray-950">
               About Me
             </h1>
             <p className="text-xl leading-snug">
@@ -84,7 +84,7 @@ const About = () => {
             />
           </div>
           <div className="contact my-6 self-end text-xl font-bold text-primary md:col-span-4 md:mb-0 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7">
-            <h1 className="mb-4 text-4xl leading-normal text-black">Contact</h1>
+            <h1 className="mb-4 text-4xl leading-normal text-gray-950">Contact</h1>
             <a
               className="contact-link leading-relaxed "
               href="https://www.linkedin.com/in/mick-dellaert"

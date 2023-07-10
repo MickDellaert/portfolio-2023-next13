@@ -17,7 +17,8 @@ if (!projects) {
 let allTechNames = projectsTech.map((tech) => tech.iconName);
 let uniqueTechNames = [...new Set(allTechNames)];
 
-// console.log(projectsTech);
+console.log(projects)
+console.log(projects[0].images);
 // console.log(allTechNames);
 // console.log(uniqueTechNames);
 
