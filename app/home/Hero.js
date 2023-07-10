@@ -58,7 +58,7 @@ const Hero = () => {
         }}
       >
         <h1
-          className={`header-title text-gray-950 text-clamp-mobile font-bold leading-snug sm:text-clamp`}
+          className={`header-title text-neutral-950 text-clamp-mobile font-bold leading-snug sm:text-clamp`}
         >
           Hello, I&apos;m <span className="text-primary">Mick Dellaert</span>,{" "}
           <br className={`hidden ${height < 600 ? "sm:hidden" : "sm:block"}`} />

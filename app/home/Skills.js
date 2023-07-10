@@ -15,7 +15,7 @@ async function Skills() {
       <div id="skills" className="relative top-36"></div>
 
       <div className="mx-auto mt-44">
-        <h2 className="text-gray-950 mb-12 text-center text-4xl font-bold">
+        <h2 className="text-neutral-950 mb-12 text-center text-4xl font-bold">
           Skills
         </h2>
 

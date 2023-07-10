@@ -12,7 +12,7 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
       <Link className="relative" href={`/project/${urlName}`}>
         <div className="group">
           <div className="relative overflow-hidden ">
-            <div className="group  bg-neutral-100 rounded-2xl overflow-hidden">
+            <div className="group  overflow-hidden rounded-2xl bg-neutral-100">
               <CldImage
                 className={`rounded-2xl drop-shadow-2xl filter transition-all duration-200 ease-in-out sm:group-hover:translate-y-44 ${
                   filteredProjects.length === 0
@@ -32,17 +32,16 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
               className="mt-3 mb-5 flex w-full items-center justify-between transition-all duration-200 ease-in-out sm:absolute sm:-top-44 sm:mt-0 sm:mb-0 
              sm:flex-col sm:justify-center sm:group-hover:translate-y-52"
             >
-              <h2 className="w-4/5 text-lg font-bold text-neutral-950 sm:mb-3 sm:w-11/12 sm:text-center sm:text-xl md:text-2xl xl:text-[1.65rem]">
+              <h2 className="text-neutral-950 w-4/5 text-lg font-bold sm:mb-3 sm:w-11/12 sm:text-center sm:text-xl md:text-2xl xl:text-[1.65rem]">
                 {name}
               </h2>
-              <p className="mb-1 hidden text-base font-normal text-gray-400 sm:hidden">
+              <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
                 Built with
               </p>
               <div className="flex justify-center gap-2 sm:mb-5">
-
-              <p className="mb-1 hidden text-base font-semibold text-gray-500 sm:block">
-                Built with:
-              </p>
+                <p className="mb-1 hidden text-base font-semibold text-neutral-500 sm:block">
+                  Built with:
+                </p>
 
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = skillIcons[skills.iconCode];
@@ -54,7 +53,7 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
                   );
                 })}
               </div>
-              <p className="hidden text-base font-bold text-primary underline decoration-2 underline-offset-4 hover:text-gray-950 hover:decoration-primary sm:block">
+              <p className="hover:text-neutral-950 hidden text-base font-bold text-primary underline decoration-2 underline-offset-4 hover:decoration-primary sm:block">
                 Find out more
               </p>
             </div>

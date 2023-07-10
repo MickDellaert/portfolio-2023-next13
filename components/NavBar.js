@@ -44,7 +44,7 @@ const Navbar = () => {
                   {colorChange ? (
                     <Logo className=" h-9 w-9 opacity-0 transition" />
                   ) : (
-                    <Logo className="h-9 w-9 fill-gray-950 transition" />
+                    <Logo className="h-9 w-9 fill-neutral-950 transition" />
                   )}
                 </Link>
               </div>
@@ -55,8 +55,8 @@ const Navbar = () => {
                 href="/#projects" scroll={false}
                 className={`${
                   colorChange
-                    ? "text-gray-950 opacity-0 transition hover:text-gray-950"
-                    : "text-gray-950 transition hover:text-primary"
+                    ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
+                    : "text-neutral-950 transition hover:text-primary"
                 } mr-3 sm:mr-6 font-bold`}
               >
                 Projects
@@ -65,8 +65,8 @@ const Navbar = () => {
                 href="/#skills" scroll={false}
                 className={`${
                   colorChange
-                    ? "text-gray-950 opacity-0 transition hover:text-gray-950"
-                    : "text-gray-950 transition hover:text-primary"
+                    ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
+                    : "text-neutral-950 transition hover:text-primary"
                 } mr-3 sm:mr-6 font-bold`}
               >
                 Skills
@@ -76,8 +76,8 @@ const Navbar = () => {
                 href="/#about" scroll={false}
                 className={`${
                   colorChange
-                    ? "text-gray-950 opacity-0 hover:text-gray-950"
-                    : "text-gray-950 hover:text-primary"
+                    ? "text-neutral-950 opacity-0 hover:text-neutral-950"
+                    : "text-neutral-950 hover:text-primary"
                 } font-bold`}
               >
                 About
