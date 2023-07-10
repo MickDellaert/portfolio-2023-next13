@@ -30,8 +30,13 @@ module.exports = {
 
       fontSize: {
         clamp: "clamp(1.2rem, 5.5vw, 3.2rem)",
-        'clamp-mobile': "clamp(1.2rem, 7vw, 2.4rem)",
+        "clamp-mobile": "clamp(1.2rem, 7vw, 2.4rem)",
+        "clamp-very-short": "clamp(1.2rem, 4vw, 2.4rem)",
+      },
 
+      screens: {
+        short: { raw: "(max-height: 700px)" },
+        "very-short": { raw: "(max-height: 480px)" },
       },
     },
   },

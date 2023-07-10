@@ -7,7 +7,6 @@ const About = () => {
       {/* <div id="about" className="about-anchor"></div> */}
       <div id="about" className="relative top-36"></div>
 
-
       <section className="about-container mx-6 mt-44 mb-12 rounded-2xl bg-neutral-100 py-20 ">
         {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
           <h1 className="header-title leading-normal text-4xl text-emerald-600">
@@ -15,9 +14,9 @@ const About = () => {
           </h1>
         </div> */}
 
-        <div className="mx-auto grid max-w-screen-2xl px-6 md:px-12 grid-cols-1 gap-6 md:grid-cols-8">
+        <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-6 px-6 md:grid-cols-8 md:px-12">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
-            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-neutral-950">
+            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-primary">
               About Me
             </h1>
             <p className="text-xl leading-snug">
@@ -84,9 +83,11 @@ const About = () => {
             />
           </div>
           <div className="contact my-6 self-end text-xl font-bold text-primary md:col-span-4 md:mb-0 xl:col-span-2 xl:col-start-7 2xl:col-span-2 2xl:col-start-7">
-            <h1 className="mb-4 text-4xl leading-normal text-neutral-950">Contact</h1>
+            <h1 className="mb-4 text-4xl leading-normal text-primary">
+              Contact
+            </h1>
             <a
-              className="contact-link leading-relaxed "
+              className="contact-link text-neutral-950 font-semibold leading-relaxed hover:text-primary"
               href="https://www.linkedin.com/in/mick-dellaert"
               target="_blank"
               rel="noreferrer"
@@ -94,16 +95,24 @@ const About = () => {
               LinkedIn
             </a>
             <a
-              className="contact-link block leading-relaxed"
+              className="contact-link text-neutral-950 block font-semibold leading-relaxed hover:text-primary"
               href="https://github.com/MickDellaert"
               target="_blank"
               rel="noreferrer"
             >
               Github
             </a>
-            <p className="contact-link leading-relaxed ">0488 244 705</p>
             <a
-              className="contact-link leading-relaxed "
+              className="contact-link text-neutral-950 block font-semibold leading-relaxed hover:text-primary"
+              href="tel:number: 0488244705"
+            >
+              0488 244 705
+            </a>
+
+
+
+            <a
+              className="contact-link text-neutral-950 font-semibold leading-relaxed hover:text-primary"
               href="mailto: mickdellaert@yahoo.com"
             >
               mickdellaert@gmail.com
