@@ -12,9 +12,9 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
       <Link className="relative" href={`/project/${urlName}`}>
         <div className="group">
           <div className="relative overflow-hidden ">
-            <div className="group  overflow-hidden rounded-2xl bg-neutral-100">
+            <div className="group overflow-hidden rounded-2xl bg-neutral-100">
               <CldImage
-                className={`rounded-2xl drop-shadow-2xl filter transition-all duration-200 ease-in-out sm:group-hover:translate-y-44 ${
+                className={`rounded-2xl drop-shadow-xl filter transition-all duration-200 ease-in-out  sm:group-hover:translate-y-44 ${
                   filteredProjects.length === 0
                     ? "grayscale-0"
                     : filteredProjects.includes(project)
@@ -38,9 +38,9 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
               <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
                 Built with
               </p>
-              <div className="flex justify-center gap-2 sm:mb-5">
-                <p className="mb-1 hidden text-base font-semibold text-neutral-500 sm:block">
-                  Built with:
+              <div className="flex items-center gap-2 sm:mb-5">
+                <p className="mb-1 hidden text-base font-semibold text-neutral-400 sm:block">
+                  Built with
                 </p>
 
                 {project.icons.map((skills, i) => {
@@ -48,7 +48,7 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
                   return (
                     <ProjectSkills
                       key={i}
-                      className="h-[20px] w-[20px] fill-gray-500"
+                      className="h-[20px] w-[20px] text-neutral-400"
                     />
                   );
                 })}

@@ -12,7 +12,7 @@ function ProjectDetailHeader({ singleProject }) {
       </div>
       <div className="flex justify-between">
         <div className="flex gap-2 fill-primary sm:flex-row">
-          <p className="hidden text-base text-neutral-400 sm:block">Built with:</p>
+          <p className="hidden text-base text-neutral-400 sm:block">Built with</p>
           <div className="flex gap-2">
             <ProjectSkills singleProject={singleProject} />
           </div>
