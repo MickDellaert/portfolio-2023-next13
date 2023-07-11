@@ -1,9 +1,9 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
 
 import "./globals.css";
-// import { Archivo } from "next/font/google";
-// const mainFont = Archivo({ subsets: ["latin"] });
 
 import { Red_Hat_Display } from "next/font/google";
 const mainFont = Red_Hat_Display({
@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         {/* <HashScroll> */}
         <Navbar />
         {children}
+        <Analytics />
         {/* </HashScroll> */}
         <Footer />
       </body>
