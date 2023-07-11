@@ -15,21 +15,22 @@ async function Skills() {
       <div id="skills" className="relative top-36"></div>
 
       <div className="mx-auto mt-44">
-        <h2 className="text-primary mb-12 text-center text-4xl font-bold">
+        <h2 className="mb-12 text-center text-4xl font-bold text-primary">
           Skills
         </h2>
 
-        <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6 xl:w-2/3">
+        {/* <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6 xl:w-2/3"> */}
+        <div className="mx-auto flex w-[90%] flex-wrap justify-center xl:w-3/4 2xl:w-4/6">
           {icons.map((skill, i) => {
             const HomeSkills = skillIcons[skill.iconCode];
             return (
               <>
-                <div className="group flex flex-col items-center">
+                <div className="group flex basis-1/4 flex-col py-1 md:basis-1/6">
                   <HomeSkills
                     key={i}
-                    className="h-12 w-12 cursor-pointer fill-neutral-400 group-hover:fill-primary"
+                    className="m-auto h-10 w-10 cursor-pointer fill-neutral-400 group-hover:fill-primary md:h-12 md:w-12"
                   />
-                  <h3 className="mt-1 h-4 text-center text-sm font-bold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
+                  <h3 className="mt-1 mb-6 h-4 text-center text-sm font-bold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
                     {skill.iconName}
                   </h3>
                 </div>
