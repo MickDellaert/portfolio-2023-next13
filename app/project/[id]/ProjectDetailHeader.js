@@ -37,7 +37,7 @@ function ProjectDetailHeader({ singleProject }) {
           {/* <p className="hidden text-base text-neutral-400 sm:block">
             Built with
           </p> */}
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2">
             <ProjectSkills singleProject={singleProject} />
           </div>
         </div>

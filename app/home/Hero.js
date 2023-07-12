@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className={`mt-48 flex h-[35vh] flex-col sm:h-[45vh] very-short:mt-20 short:mt-32 short:h-[52vh]`}
+        className={`mt-48 flex h-[35vh] flex-col sm:h-[45vh] very-short:mt-20 shortandwide:mt-32 shortandwide:h-[52vh]`}
         style={{
           transform: `translateY(${offset * 0.2}px)`,
         }}
