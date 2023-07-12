@@ -13,11 +13,11 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const TEXTS = [
   "web",
-  "dedicated",
+  "creative",
   "front-end",
   "skilled",
   "full stack",
-  "creative",
+  "dedicated",
 ];
 
 const Hero = () => {
@@ -68,7 +68,7 @@ const Hero = () => {
             a
             <span className="whitespace-nowrap text-primary">
               {" "}
-              <TextTransition springConfig={presets.gentle} inline>
+              <TextTransition springConfig={presets.wobbly} delay={0} inline>
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>{" "}
               developer

@@ -50,14 +50,14 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="navlinks mb-3 self-end ">
+            <div className="navlinks mb-3 self-end font-semibold">
               <Link
                 href="/#projects" scroll={false}
                 className={`${
                   colorChange
                     ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
                     : "text-neutral-950 transition hover:text-primary"
-                } mr-3 sm:mr-6 font-bold`}
+                } mr-3 sm:mr-6`}
               >
                 Projects
               </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   colorChange
                     ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
                     : "text-neutral-950 transition hover:text-primary"
-                } mr-3 sm:mr-6 font-bold`}
+                } mr-3 sm:mr-6`}
               >
                 Skills
               </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                   colorChange
                     ? "text-neutral-950 opacity-0 hover:text-neutral-950"
                     : "text-neutral-950 hover:text-primary"
-                } font-bold`}
+                }`}
               >
                 About
               </Link>

@@ -25,19 +25,19 @@ function ProjectDetailBottomNav({ singleProject, data }) {
 
   return (
     <>
-      <div className="project-navbuttons flex justify-between">
+      <div className="project-navbuttons flex justify-between font-semibold">
         <Link
           href={`/project/${previousProject}`}
           scroll={false}
-          className="text-regular font-bold text-neutral-400 hover:text-primary"
+          className="text-regular text-neutral-400 hover:text-primary"
         >
           {singleProject.id > 1 ? "← Previous" : ""}
         </Link>
         <Link
           href={`/project/${nextProject}`}
-          className="text-regular font-bold text-neutral-400 hover:text-primary"
+          className="text-regular text-neutral-400 hover:text-primary"
         >
-          {singleProject.id < data.length ? "Next →" : ""} 
+          {singleProject.id < data.length ? "Next →" : ""}
         </Link>
       </div>
     </>
