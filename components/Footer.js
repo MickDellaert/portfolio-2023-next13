@@ -9,7 +9,7 @@ const Footer = () => {
             &copy; 2023 - Mick Dellaert
             {/* &copy; 2023 - Mick Dellaert - All rights reserved */}
           </h4>
-          <div className="ml-2 flex items-center gap-2 text-neutral-400">
+          <div className="ml-2 flex items-center gap-1 text-neutral-400 sm:gap-2">
             Built with <skillIcons.SiNextdotjs /> <skillIcons.SiTailwindcss />{" "}
             <skillIcons.SiSupabase />
           </div>
