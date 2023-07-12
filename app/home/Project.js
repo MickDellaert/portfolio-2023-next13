@@ -3,18 +3,20 @@
 import Link from "next/link";
 import React from "react";
 import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 import skillIcons from "@/components/skillIcons";
 
 function Project({ urlName, name, mainImage, filteredProjects, project }) {
+
   return (
     <>
       <Link className="relative" href={`/project/${urlName}`}>
         <div className="group">
           <div className="relative overflow-hidden ">
-            <div className="group overflow-hidden rounded-2xl bg-neutral-100">
-              <CldImage
-                className={`rounded-2xl drop-shadow-xl filter transition-all duration-200 ease-in-out  sm:group-hover:translate-y-44 ${
+            <div className="group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-100">
+              <Image
+                className={`rounded-2xl drop-shadow-xl filter transition-all duration-200 ease-in-out sm:group-hover:translate-y-44 ${
                   filteredProjects.length === 0
                     ? "grayscale-0"
                     : filteredProjects.includes(project)
@@ -23,8 +25,10 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
                 }`}
                 src={mainImage}
                 alt={name}
-                width={600}
-                height={600}
+                fill={true}
+                sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 22vw"
+                priority={`${project.id < 5 ? true : false}`}
+                // priority={true}
               />
             </div>
 
@@ -35,13 +39,13 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
               <h2 className="text-neutral-950 w-4/5 text-lg font-bold sm:mb-3 sm:w-11/12 sm:text-center sm:text-xl md:text-2xl xl:text-[1.65rem]">
                 {name}
               </h2>
-              <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
+              {/* <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
                 Built with
-              </p>
+              </p> */}
               <div className="flex items-center gap-2 sm:mb-5">
-                <p className="mb-1 hidden text-base font-semibold text-neutral-400 sm:block">
+                {/* <p className="mb-1 hidden text-base font-semibold text-neutral-400 sm:block">
                   Built with
-                </p>
+                </p> */}
 
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = skillIcons[skills.iconCode];
@@ -53,7 +57,7 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
                   );
                 })}
               </div>
-              <p className="hover:text-neutral-950 hidden text-base font-bold text-primary underline decoration-2 underline-offset-4 hover:decoration-primary sm:block">
+              <p className="hover:text-neutral-950 hidden text-base font-semibold text-primary underline decoration-2 underline-offset-4 hover:decoration-primary sm:block">
                 Find out more
               </p>
             </div>
