@@ -7,8 +7,9 @@ import "./globals.css";
 
 import { Red_Hat_Display } from "next/font/google";
 const mainFont = Red_Hat_Display({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   variable: "--font-redhat",
+  display: 'swap',
   // fallback: ["Helvetica", "sans-serif"],
 });
 
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body
-        className={`${mainFont.variable} font-sans`}
+        className={`${mainFont.variable} font-sans antialiased `}
       >
         {/* <HashScroll> */}
         <Navbar />

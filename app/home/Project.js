@@ -84,7 +84,7 @@ function Project({ filteredProjects, project, i }) {
             >
               <h2
                 className="w-4/5 text-lg font-bold leading-tight text-neutral-950 
-                sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8cqi]"
+                sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8.2cqi]"
               >
                 {project.name}
               </h2>
@@ -101,11 +101,20 @@ function Project({ filteredProjects, project, i }) {
                   return <ProjectSkills key={i} className="h-[20px] w-[20px] fill-neutral-600" />;
                 })}
               </div>
-              <p
+              {/* <p
                 className="hidden text-sm font-semibold text-neutral-950 underline decoration-1 underline-offset-4  
               hover:text-neutral-950 hover:decoration-2 sm:block"
               >
                 Find out more →
+              </p> */}
+              <p
+                className="relative inline-block text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100
+            before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-neutral-950 before:transition-all
+            before:duration-[400ms] before:ease-out 
+            after:absolute after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] 
+            after:bg-neutral-600 hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden"
+              >
+                Find out more
               </p>
             </div>
           </div>

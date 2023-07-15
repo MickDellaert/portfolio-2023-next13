@@ -15,7 +15,7 @@ export const ProjectLoading = () => {
           ></div>
         ))}
       </div>
-      <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-6 grid gap-7 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {[...Array(12).keys()].map((i) => (
           <div
             className="aspect-square animate-pulse rounded-2xl bg-neutral-100"

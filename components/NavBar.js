@@ -29,9 +29,14 @@ const Navbar = () => {
   return (
     <Fragment>
       <nav id="home">
-        <div className="navbar-wrapper fixed top-0 left-0 right-0 z-20 w-full ">
+        <div className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full ">
+          {/* <div className={`navbar-container mx-6 flex h-20 items-center justify-between`}> */}
           <div
-            className={`navbar-container mx-6 flex h-20 items-center justify-between`}
+            className={`${
+              colorChange
+                ? "mx-6 flex h-20 items-center justify-between opacity-0 transition-all "
+                : "mx-6 flex h-20 items-center justify-between opacity-100 transition-all"
+            } mr-3 sm:mr-6`}
           >
             {/* ${
               colorChange
@@ -52,7 +57,38 @@ const Navbar = () => {
 
             <div className="navlinks mb-3 self-end font-semibold">
               <Link
-                href="/#projects" scroll={false}
+                href="/#projects"
+                scroll={false}
+                className="relative mr-3 inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
+                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8 sm:text-lg"
+              >
+                Projects
+              </Link>
+              <Link
+                href="/#skills"
+                scroll={false}
+                className="relative mr-3 inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
+                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8 sm:text-lg"
+              >
+                Skills
+              </Link>
+
+              <Link
+                href="/#about"
+                scroll={false}
+                className="relative inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute before:left-[0%]
+                before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all before:duration-[400ms]
+                before:ease-out hover:text-primary  hover:before:scale-x-100 hover:after:hidden sm:text-lg"
+              >
+                About
+              </Link>
+            </div>
+            {/* <div className="navlinks mb-3 self-end font-semibold">
+              <Link
+                href="/#projects"
+                scroll={false}
                 className={`${
                   colorChange
                     ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
@@ -62,7 +98,8 @@ const Navbar = () => {
                 Projects
               </Link>
               <Link
-                href="/#skills" scroll={false}
+                href="/#skills"
+                scroll={false}
                 className={`${
                   colorChange
                     ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
@@ -73,7 +110,8 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/#about" scroll={false}
+                href="/#about"
+                scroll={false}
                 className={`${
                   colorChange
                     ? "text-neutral-950 opacity-0 hover:text-neutral-950"
@@ -82,7 +120,7 @@ const Navbar = () => {
               >
                 About
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

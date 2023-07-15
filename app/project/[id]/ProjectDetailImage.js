@@ -6,7 +6,7 @@ import React from "react";
 
 function ProjectDetailImage({ singleProject }) {
   return (
-    <div className="pics mt-6 mb-4 grid gap-8 md:grid-cols-2">
+    <div className="pics mt-6 sm:mt-8 mb-4 grid gap-8 md:grid-cols-2">
       {singleProject.images.map((image, i) => {
         return (
             <div key={i} className= "relative aspect-square">
