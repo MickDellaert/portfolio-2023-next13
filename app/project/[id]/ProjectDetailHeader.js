@@ -6,40 +6,54 @@ import ProjectSkills from "./ProjectSkills";
 function ProjectDetailHeader({ singleProject }) {
   return (
     <>
-      <div className="mb-12 xl:mr-[30vw]">
-        <h2 className="mb-4 text-4xl font-bold text-neutral-950">
-          {singleProject.name}
-        </h2>
-        <p className="text-lg">{singleProject.description}</p>
+      <div className="mb-16 xl:w-3/5">
+        <h2 className="mb-4 text-4xl font-bold text-neutral-950">{singleProject.name}</h2>
+        <p className="text-lg text-neutral-950">{singleProject.description}</p>
       </div>
       <div className="flex justify-between">
         <div className="flex gap-4">
           <Link
             href={singleProject.linkLive}
-            className="livelink text-base font-semibold text-neutral-950 underline decoration-primary 
-            decoration-1 underline-offset-4 hover:text-primary hover:decoration-2 "
+            className="relative inline-block text-base font-semibold text-neutral-500 transition-all duration-100
+            before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
+            before:duration-[400ms] before:ease-out 
+            after:absolute after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] 
+            after:bg-primary hover:text-primary hover:before:scale-x-100 hover:after:hidden"
             target="_blank"
             rel="noreferrer"
           >
             {singleProject.linkName}
           </Link>
           {singleProject.linkGit.includes("https") && (
-            <Link
-              href={singleProject.linkGit}
-              className="gitlink text-base font-semibold text-neutral-950 underline decoration-primary 
-              decoration-1 underline-offset-4 hover:text-primary hover:decoration-2 "
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </Link>
+            <>
+              {/* <Link
+                href={singleProject.linkGit}
+                className="gitlink text-base font-semibold text-neutral-500 underline decoration-primary 
+              decoration-1 underline-offset-4"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </Link> */}
+              <Link
+                href={singleProject.linkGit}
+                className="relative inline-block text-base font-semibold text-neutral-500 transition-all duration-100 before:absolute
+                before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
+                before:duration-[400ms] before:ease-out after:absolute after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] 
+                after:bg-primary hover:text-primary hover:before:scale-x-100 hover:after:hidden"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div>Github</div>
+              </Link>
+            </>
           )}
         </div>
         <div className="flex gap-2 fill-primary sm:flex-row">
           {/* <p className="hidden text-base text-neutral-400 sm:block">
             Built with
           </p> */}
-          <div className="flex gap-1 sm:gap-2">
+          <div className="flex gap-1 sm:gap-2 ">
             <ProjectSkills singleProject={singleProject} />
           </div>
         </div>
