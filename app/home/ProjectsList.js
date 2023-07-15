@@ -28,20 +28,23 @@ export default function ProjectsList({ projects }) {
     return Array.from(new Set(combinedArray));
   }
 
+  // console.log(projects)
+
   return (
     <>
       <ul className="mt-6 grid gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {combinedAndSorted.map((project, i) => (
           <Project
-            key={i}
-            id={project.id}
-            urlName={project.urlName}
-            name={project.name}
-            description={project.description}
-            mainImage={project.images[0].url}
-            selectedProjects={selectedProjects}
-            projects={projects}
+            key={project.id}
+            // id={project.id}
+            // urlName={project.urlName}
+            // name={project.name}
+            // description={project.description}
+            // mainImage={project.images[0].url}
+            // selectedProjects={selectedProjects}
+            // projects={projects}
             project={project}
+            index={i}
             filteredProjects={filteredProjects}
           />
         ))}

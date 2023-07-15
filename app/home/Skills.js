@@ -35,7 +35,7 @@ async function Skills() {
                   </h3>
                 </div>
               </>
-            );
+            );  
           })}
         </div>
       </div>

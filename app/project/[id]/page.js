@@ -1,7 +1,7 @@
 // export const revalidate = 0;
 // export const dynamic = "force-static";
 
-import { notFound } from "next/navigation"
+import { notFound } from "next/navigation";
 import supabase from "../../../utils/supabase";
 
 // import Loading from "../../loading";
@@ -11,15 +11,27 @@ import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
 export default async function ProjectDetail({ params: { id } }) {
-
+  
   const { data } = await supabase
     .from("projects")
-    .select(`*, icons(*), images(*)`)
+    .select(`urlName`)
     .order("id");
+
+  const { data: singleData } = await supabase
+    .from("projects")
+    .select(`*, icons(*), images(*)`)
+    .order("id")
+    .order("id", { foreignTable: "images", ascending: true })
+    .range(1, 2, { foreignTable: "images" })
+    .match({ urlName: id })
+    .single();
+
+  console.log(singleData);
+
   // .match({ urlName: id })
   // .single();
 
-  if (!data) {
+  if (!data || !singleData) {
     notFound();
   }
 
@@ -29,15 +41,15 @@ export default async function ProjectDetail({ params: { id } }) {
   //   notFound();
   // }
 
-  const projectFilter = data.filter((project) => id === project.urlName);
-  const singleProject = projectFilter[0];
+  // const projectFilter = data.filter((project) => id === project.urlName);
+  // const singleProject = projectFilter[0];
 
   return (
     <>
-      <div className="mx-auto mt-24 mb-16 max-w-screen-2xl px-6 pt-12">
-        <ProjectDetailHeader singleProject={singleProject} />
-        <ProjectDetailImage singleProject={singleProject} />
-        <ProjectDetailBottomNav singleProject={singleProject} data={data} />
+      <div className="mx-auto mb-16 mt-24 max-w-screen-2xl px-6 pt-12">
+        <ProjectDetailHeader singleProject={singleData} />
+        <ProjectDetailImage singleProject={singleData} />
+        <ProjectDetailBottomNav singleProject={singleData} data={data} />
       </div>
     </>
   );
@@ -48,8 +60,6 @@ export async function generateStaticParams() {
     .from("projects")
     .select("urlName")
     .order("id");
-
-  // console.log(testdata);
 
   return data.map((el) => ({
     id: el.urlName.toString(),

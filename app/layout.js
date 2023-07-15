@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${mainFont.variable} font-sans`}>
+      <body
+        className={`${mainFont.variable} font-sans`}
+      >
         {/* <HashScroll> */}
         <Navbar />
         {children}
