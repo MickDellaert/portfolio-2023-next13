@@ -4,11 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import supabase from "@/utils/supabase";
 
 function ProjectDetailBottomNav({ singleProject, data }) {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [projects, setProjects] = useState([]);
 
   const [previousProject, setPreviousProject] = useState(singleProject.urlName);
   const [nextProject, setNextProject] = useState(singleProject.urlName);
@@ -22,6 +19,9 @@ function ProjectDetailBottomNav({ singleProject, data }) {
       setNextProject(data[singleProject.id].urlName);
     }
   }, [data, singleProject.id]);
+
+  // console.log(nextProject)
+  // console.log(singleProject.id)
 
   return (
     <>

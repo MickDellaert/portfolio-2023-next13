@@ -7,7 +7,7 @@ function ProjectDetailHeader({ singleProject }) {
   return (
     <>
       <div className="mb-12 xl:mr-[30vw]">
-        <h2 className="text-neutral-950 mb-4 text-4xl font-bold">
+        <h2 className="mb-4 text-4xl font-bold text-neutral-950">
           {singleProject.name}
         </h2>
         <p className="text-lg">{singleProject.description}</p>
@@ -16,7 +16,8 @@ function ProjectDetailHeader({ singleProject }) {
         <div className="flex gap-4">
           <Link
             href={singleProject.linkLive}
-            className="livelink hover:text-neutral-950 text-base font-semibold text-primary underline decoration-2 underline-offset-4 hover:decoration-primary"
+            className="livelink text-base font-semibold text-neutral-950 underline decoration-primary 
+            decoration-1 underline-offset-4 hover:text-primary hover:decoration-2 "
             target="_blank"
             rel="noreferrer"
           >
@@ -25,7 +26,8 @@ function ProjectDetailHeader({ singleProject }) {
           {singleProject.linkGit.includes("https") && (
             <Link
               href={singleProject.linkGit}
-              className="gitlink hover:text-neutral-950 text-base font-semibold text-primary underline decoration-2 underline-offset-4 hover:decoration-primary"
+              className="gitlink text-base font-semibold text-neutral-950 underline decoration-primary 
+              decoration-1 underline-offset-4 hover:text-primary hover:decoration-2 "
               target="_blank"
               rel="noreferrer"
             >

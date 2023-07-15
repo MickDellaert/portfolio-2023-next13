@@ -38,7 +38,10 @@ module.exports = {
         shortandwide: { raw: "((max-height: 721px) and (min-width: 639px))" },
         "very-short": { raw: "(max-height: 480px)" },
       },
+      containers: {
+        "2xs": "16rem",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/container-queries")],
 };

@@ -24,9 +24,6 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
   const [offset, setOffset] = useState(0);
 
-  // const { width, height } = useWindowSize(10); // wait 100ms for the resize events
-  // const { width, height } = useWindowDimensions();
-
   useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
@@ -50,13 +47,13 @@ const Hero = () => {
   return (
     <>
       <div
-        className={`mt-48 flex h-[35vh] flex-col sm:h-[45vh] very-short:mt-20 shortandwide:mt-32 shortandwide:h-[52vh]`}
+        className={`mt-48 flex h-[35vh] flex-col sm:h-[45vh] shortandwide:mt-32 shortandwide:h-[52vh] very-short:mt-20`}
         style={{
           transform: `translateY(${offset * 0.2}px)`,
         }}
       >
         <h1
-          className={`header-title text-neutral-950 text-clamp-mobile font-bold leading-snug sm:text-clamp very-short:text-clamp-very-short`}
+          className={`header-title text-clamp-mobile font-bold leading-snug text-neutral-950 sm:text-clamp very-short:text-clamp-very-short`}
         >
           Hello, I&apos;m <span className="text-primary">Mick Dellaert</span>,{" "}
           <br className={`hidden sm:block`} />
@@ -68,7 +65,7 @@ const Hero = () => {
             a
             <span className="whitespace-nowrap text-primary">
               {" "}
-              <TextTransition springConfig={presets.wobbly} delay={0} inline>
+              <TextTransition springConfig={presets.wobbly} inline>
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>{" "}
               developer

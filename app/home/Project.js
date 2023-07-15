@@ -2,39 +2,91 @@
 
 import Link from "next/link";
 import React from "react";
-import { CldImage } from "next-cloudinary";
 import Image from "next/image";
+
+import { useState, useRef } from "react";
+import { useMediaQuery } from "usehooks-ts";
 
 import skillIcons from "@/components/skillIcons";
 
-function Project({ urlName, name, mainImage, filteredProjects, project }) {
+function Project({ filteredProjects, project, i }) {
+  const notSmall = useMediaQuery("(min-width: 640px)");
+  const [hover, setHover] = useState(-1);
+  const elementRef = useRef([]);
+
+  const SetHoverStateOn = (i) => {
+    setHover(i);
+  };
+  const SetHoverStateOff = () => {
+    setHover(-1);
+  };
+
+  // console.log(project.color);
+
   return (
     <>
-      <Link className="relative" href={`/project/${urlName}`}>
-        <div className="group">
-          <div className="relative overflow-hidden ">
-            <div className="group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-100">
+      <Link className="relative" href={`/project/${project.urlName}`}>
+        <div
+          className="group cursor-default sm:cursor-pointer"
+          onMouseLeave={SetHoverStateOff}
+          onMouseEnter={() => SetHoverStateOn(i)}
+        >
+          <div className="relative overflow-hidden rounded-2xl @container sm:group-hover:bg-[#d1f4fe]">
+            <div
+              className={`group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-100 ease-in-out
+              `}
+              style={
+                hover === i
+                  ? {
+                      backgroundColor: `#${project.color}`,
+                    }
+                  : { transition: "background-color 0.2s ease" }
+              }
+            >
               <Image
-                className={`rounded-2xl drop-shadow-xl filter transition-all duration-200 ease-in-out sm:group-hover:translate-y-44 ${
+                src={project.images[0].url}
+                alt={project.name}
+                fill={true}
+                sizes="(max-width: 639px) 80vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 22vw"
+                className={`rounded-2xl drop-shadow-xl filter  ${
                   filteredProjects.length === 0
                     ? "grayscale-0"
                     : filteredProjects.includes(project)
                     ? "grayscale-0"
                     : "opacity-75 grayscale group-hover:opacity-100 group-hover:grayscale-0"
                 }`}
-                src={mainImage}
-                alt={name}
-                fill={true}
-                sizes="(max-width: 639px) 80vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 22vw"
+                style={
+                  hover === i && notSmall
+                    ? {
+                        transform: `translateY(${elementRef.current[i]?.offsetHeight - 5}px) `,
+                        transition: "0.32s ease-out",
+                      }
+                    : { transition: "0.32s ease-in" }
+                }
               />
             </div>
 
             <div
-              className="mb-6 mt-4 flex w-full items-center justify-between transition-all duration-200 ease-in-out sm:absolute sm:-top-44 sm:mb-0 sm:mt-0 
-             sm:flex-col sm:justify-center sm:group-hover:translate-y-52"
+              ref={(ref) => (elementRef.current[i] = ref)}
+              className="mb-6 mt-4 flex w-full items-center justify-between transition-all 
+              sm:absolute sm:-top-full sm:mb-0 sm:mt-0 sm:flex-col sm:justify-center sm:ease-in-out"
+              style={
+                hover === i
+                  ? {
+                      top: `0px`,
+                      transition: "all 0.28s ease-out",
+                    }
+                  : {
+                      // top: `translateY ${elementRef.current[i]?.offsetHeight}px`,
+                      transition: "all 0.48s ease-in",
+                    }
+              }
             >
-              <h2 className="w-4/5 text-lg font-bold text-neutral-950 sm:mb-3 sm:w-11/12 sm:text-center sm:text-xl md:text-2xl xl:text-[1.65rem] leading-tight">
-                {name}
+              <h2
+                className="w-4/5 text-lg font-bold leading-tight text-neutral-950 
+                sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8cqi]"
+              >
+                {project.name}
               </h2>
               {/* <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
                 Built with
@@ -46,16 +98,14 @@ function Project({ urlName, name, mainImage, filteredProjects, project }) {
 
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = skillIcons[skills.iconCode];
-                  return (
-                    <ProjectSkills
-                      key={i}
-                      className="h-[20px] w-[20px] text-neutral-400"
-                    />
-                  );
+                  return <ProjectSkills key={i} className="h-[20px] w-[20px] fill-neutral-600" />;
                 })}
               </div>
-              <p className="hidden text-base font-semibold text-primary underline decoration-2 underline-offset-4 hover:text-neutral-950 hover:decoration-primary sm:block">
-                Find out more
+              <p
+                className="hidden text-sm font-semibold text-neutral-950 underline decoration-1 underline-offset-4  
+              hover:text-neutral-950 hover:decoration-2 sm:block"
+              >
+                Find out more →
               </p>
             </div>
           </div>
