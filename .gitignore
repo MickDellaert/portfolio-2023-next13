@@ -50,5 +50,4 @@ next.config.js
 # utils\supabase.js
 
 app\home\ProjectsState.js
-app\home\Test.js
-app\home\TestChild.js
+app/home/Test.js

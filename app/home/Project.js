@@ -108,7 +108,7 @@ function Project({ filteredProjects, project, i }) {
                 Find out more →
               </p> */}
               <p
-                className="relative inline-block text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100
+                className="relative hidden sm:inline-block text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100
             before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-neutral-950 before:transition-all
             before:duration-[400ms] before:ease-out 
             after:absolute after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] 
