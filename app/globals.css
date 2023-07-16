@@ -56,3 +56,8 @@ h2 {
 svg {
   display: block;
 }
+
+.insetshadow {
+  -webkit-box-shadow: inset 5px 5px 37px 39px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 5px 5px 37px 39px rgba(0, 0, 0, 0.02);
+}
