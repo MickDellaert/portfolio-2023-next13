@@ -34,6 +34,11 @@ module.exports = {
         "clamp-very-short": "clamp(1.2rem, 4vw, 2.4rem)",
       },
 
+      fontWeight: {
+        semibold: "650",
+        bold: "680",
+      },
+
       screens: {
         shortandwide: { raw: "((max-height: 721px) and (min-width: 639px))" },
         "very-short": { raw: "(max-height: 480px)" },

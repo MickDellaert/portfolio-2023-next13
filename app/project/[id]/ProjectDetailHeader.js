@@ -7,7 +7,7 @@ function ProjectDetailHeader({ singleProject }) {
   return (
     <>
       <div className="mb-16 xl:w-3/5">
-        <h2 className="mb-4 text-4xl font-bold text-neutral-950">{singleProject.name}</h2>
+        <h2 className="mb-4 text-4xl font-[680] text-neutral-950">{singleProject.name}</h2>
         <p className="text-lg text-neutral-950">{singleProject.description}</p>
       </div>
       <div className="flex justify-between">

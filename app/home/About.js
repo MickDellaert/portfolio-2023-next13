@@ -16,9 +16,9 @@ const About = () => {
 
         <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-6 px-6 md:grid-cols-8 md:px-12">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
-            <h1 className="header-title mb-4 text-4xl font-bold leading-normal text-primary">
+            <h2 className="header-title mb-4 text-4xl font-bold leading-normal text-primary">
               About Me
-            </h1>
+            </h2>
             <p className="text-xl leading-snug">
               Hi, I&apos;m Mick, an experienced graphic designer, knowledgeable
               dtp-operator, and aspiring web developer from Antwerp. Nice to
@@ -87,7 +87,7 @@ const About = () => {
               Contact
             </h1>
             <a
-              className="contact-link text-neutral-950 font-semibold leading-relaxed hover:text-primary"
+              className="contact-link leading-relaxed hover:text-primary"
               href="https://www.linkedin.com/in/mick-dellaert"
               target="_blank"
               rel="noreferrer"
@@ -95,7 +95,7 @@ const About = () => {
               LinkedIn
             </a>
             <a
-              className="contact-link text-neutral-950 block font-semibold leading-relaxed hover:text-primary"
+              className="contact-link block leading-relaxed hover:text-primary"
               href="https://github.com/MickDellaert"
               target="_blank"
               rel="noreferrer"
@@ -103,14 +103,14 @@ const About = () => {
               Github
             </a>
             <a
-              className="contact-link text-neutral-950 block font-semibold leading-relaxed hover:text-primary"
+              className="contact-link block leading-relaxed hover:text-primary"
               href="tel: +32488244705"
             >
               0488 244 705
             </a>
 
             <a
-              className="contact-link text-neutral-950 font-semibold leading-relaxed hover:text-primary"
+              className="contact-link leading-relaxed hover:text-primary"
               href="mailto: mickdellaert@yahoo.com"
             >
               mickdellaert@gmail.com
