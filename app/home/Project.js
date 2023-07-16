@@ -6,9 +6,7 @@ import Image from "next/image";
 
 import { useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useAnimation } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 import skillIcons from "@/components/skillIcons";
 
@@ -17,9 +15,6 @@ function Project({ filteredProjects, project, i }) {
   const [hover, setHover] = useState(-1);
   const elementRef = useRef([]);
 
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
   const SetHoverStateOn = (i) => {
     setHover(i);
   };
@@ -27,6 +22,8 @@ function Project({ filteredProjects, project, i }) {
     setHover(-1);
   };
 
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const controls = useAnimation();
   // console.log(controls);
 
@@ -42,15 +39,15 @@ function Project({ filteredProjects, project, i }) {
     },
   };
 
-  // useEffect(() => {
-  //   console.log("Element is in view: ", isInView);
-  // }, [isInView]);
-
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
     }
   }, [controls, isInView]);
+
+  // useEffect(() => {
+  //   console.log("Element is in view: ", isInView);
+  // }, [isInView]);
 
   return (
     <>
@@ -68,7 +65,7 @@ function Project({ filteredProjects, project, i }) {
             className="relative overflow-hidden rounded-2xl @container sm:group-hover:bg-[#d1f4fe]"
           >
             <div
-              className={`group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-100 ease-in-out
+              className={`insetshadow group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-50 ease-in-out
               `}
               style={
                 hover === i
@@ -82,6 +79,7 @@ function Project({ filteredProjects, project, i }) {
                 src={project.images[0].url}
                 alt={project.name}
                 fill={true}
+                priority={project.id < 5}
                 sizes="(max-width: 639px) 80vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 22vw"
                 className={`rounded-2xl drop-shadow-xl filter  ${
                   filteredProjects.length === 0
