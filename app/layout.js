@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body
-        className={`${mainFont.variable} font-sans antialiased `}
+        className={`${mainFont.variable} font-sans text-neutral-950 antialiased `}
       >
         {/* <HashScroll> */}
         <Navbar />

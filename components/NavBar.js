@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
 import { useState, Fragment } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   // const router = useRouter();
@@ -26,10 +27,28 @@ const Navbar = () => {
     });
   };
 
+  const item = {
+    hidden: { opacity: 0, y: -100 },
+    show: {
+      opacity: 1,
+      y: 0,
+      // transition: {
+      //   ease: "easeIn",
+      //   delay: 1,
+      //   duration: 1
+      // },
+    },
+  };
+
   return (
     <Fragment>
       <nav id="home">
-        <div className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full ">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={item}
+          className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full "
+        >
           {/* <div className={`navbar-container mx-6 flex h-20 items-center justify-between`}> */}
           <div
             className={`${
@@ -55,7 +74,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="navlinks mb-3 self-end font-semibold">
+            <div className="navlinks mb-3 self-end font-[650]">
               <Link
                 href="/#projects"
                 scroll={false}
@@ -122,7 +141,7 @@ const Navbar = () => {
               </Link>
             </div> */}
           </div>
-        </div>
+        </motion.div>
       </nav>
     </Fragment>
   );

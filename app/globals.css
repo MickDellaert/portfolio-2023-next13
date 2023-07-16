@@ -10,6 +10,18 @@
     /* --color-secondary: 111 114 185; */
     /* ... */
   }
+  h2 {
+    @apply font-bold text-primary;
+  }
+  h3 {
+    @apply font-semibold;
+  }
+  p {
+    @apply text-neutral-950;
+  }
+  a {
+    @apply font-semibold text-neutral-950;
+  }
 }
 
 * {
@@ -44,4 +56,3 @@ h2 {
 svg {
   display: block;
 }
-
