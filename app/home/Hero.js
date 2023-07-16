@@ -48,7 +48,7 @@ const Hero = () => {
         delay: 0.2,
         duration: 0.65,
         type: "spring",
-        bounce: 0.4
+        bounce: 0.4,
       },
     },
   };

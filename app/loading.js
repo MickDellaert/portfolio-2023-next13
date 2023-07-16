@@ -1,8 +1,6 @@
 function Loading() {
   return (
-    <div className="absolute top-24 left-1/2 z-50 justify-center text-primary">
-      Loading home...
-    </div>
+    <div className="flex h-screen w-full items-center justify-center font-semibold text-primary">Loading home...</div>
   );
 }
 
