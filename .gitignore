@@ -51,3 +51,4 @@ next.config.js
 
 app\home\ProjectsState.js
 app/home/Test.js
+app/components/skillIconsTest.js

@@ -54,7 +54,13 @@ export const SkillsAnimated = ({ icons }) => {
       <div id="skills" className="relative top-36"></div>
 
       <div className="mx-auto mt-40">
-        <motion.h2 ref={ref} initial="hidden" animate={controls} variants={title} className="mb-12 text-center text-4xl">
+        <motion.h2
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={title}
+          className="mb-12 text-center text-4xl"
+        >
           Skills
         </motion.h2>
 
@@ -69,17 +75,15 @@ export const SkillsAnimated = ({ icons }) => {
           {icons.map((skill, i) => {
             const HomeSkills = skillIcons[skill.iconCode];
             return (
-              <>
-                <motion.div key={i} variants={item} className="group flex basis-1/4 flex-col py-1 md:basis-1/6">
-                  <HomeSkills
-                    key={i}
-                    className="m-auto h-10 w-10 cursor-pointer fill-neutral-400 group-hover:fill-primary md:h-12 md:w-12"
-                  />
-                  <h4 className="mb-6 mt-1 h-4 text-center text-sm font-semibold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
-                    {skill.iconName}
-                  </h4>
-                </motion.div>
-              </>
+              <motion.div key={i} variants={item} className="group flex basis-1/4 flex-col py-1 md:basis-1/6">
+                <HomeSkills
+                  key={i}
+                  className="m-auto h-10 w-10 cursor-pointer fill-neutral-400 group-hover:fill-primary md:h-12 md:w-12"
+                />
+                <h4 className="mb-6 mt-1 h-4 text-center text-sm font-semibold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
+                  {skill.iconName}
+                </h4>
+              </motion.div>
             );
           })}
         </motion.div>
