@@ -21,7 +21,6 @@
 // import { SiAdobephotoshop } from "react-icons/si";
 // import { SiReact } from "react-icons/si";
 
-
 import {
   SiHtml5,
   SiCss3,
@@ -50,7 +49,7 @@ import {
   SiFramer,
   SiReactquery,
   SiNodedotjs,
-  SiSvelte
+  SiSvelte,
 } from "react-icons/si";
 
 // import {TbBrandFramerMotion} from "react-icons/tb"
@@ -83,7 +82,12 @@ const skillIcons = {
   SiFramer,
   SiReactquery,
   SiNodedotjs,
-  SiSvelte
+  SiSvelte,
+};
+
+const skillIconsTest = {
+  React: { Name: "React", Icon: SiReact },
+  ReactTwo: { Name: "React", Icon: SiReact },
 };
 
 export default skillIcons;

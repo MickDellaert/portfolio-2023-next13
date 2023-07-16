@@ -16,7 +16,7 @@ function ProjectDetailImage({ singleProject }) {
       initial="hidden"
       animate="visible"
       variants={item}
-      className="pics mb-4 mt-6 grid gap-8 sm:mt-8 md:grid-cols-2"
+      className="pics mb-4 mt-6 grid gap-7 sm:mt-8 md:grid-cols-2"
     >
       {singleProject.images.map((image, i) => {
         return (

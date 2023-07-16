@@ -75,7 +75,7 @@ const Hero = () => {
             a
             <span className="whitespace-nowrap text-primary">
               {" "}
-              <TextTransition springConfig={presets.wobbly} inline>
+              <TextTransition springConfig={presets.gentle} inline>
                 {TEXTS[index % TEXTS.length]}
               </TextTransition>{" "}
               developer

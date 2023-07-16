@@ -1,6 +1,7 @@
 // export const revalidate = 0;
 // export const dynamic = "force-static";
 
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import supabase from "../../../utils/supabase";
 
@@ -10,8 +11,12 @@ import ProjectDetailHeader from "./ProjectDetailHeader";
 import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
+export const metadata = {
+  title: "Mick's projects"
+}
+
 export default async function ProjectDetail({ params: { id } }) {
-  
+   
   const { data } = await supabase
     .from("projects")
     .select(`urlName`)

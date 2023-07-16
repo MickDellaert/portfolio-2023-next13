@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from 'next'
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar";
@@ -12,6 +13,13 @@ const mainFont = Red_Hat_Display({
   display: 'swap',
   // fallback: ["Helvetica", "sans-serif"],
 });
+
+export const metadata = {
+  title: "Mick's portfolio",
+  icons: {
+    icon: '/icon.ico',
+  },
+}
 
 // import HashScroll from "@/components/HashScroll";
 
