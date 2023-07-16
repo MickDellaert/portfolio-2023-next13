@@ -20,25 +20,27 @@ function ProjectsFilter({ uniqueTechNames }) {
 
   const container = {
     hidden: { opacity: 0 },
-    show: {
+    visible: {
       opacity: 1,
       transition: {
-        ease: "easeIn",
-        staggerChildren: 0.1,
+        // ease: "easeIn",
+        // staggerChildren: 0.05,
       },
     },
   };
 
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1 },
+    visible: { opacity: 1 },
   };
+
   return (
     <>
       <motion.div className="relative z-50 flex items-center justify-start ">
-        <motion.div className="" initial="hidden" animate="show" variants={item}>
+        <motion.div className="" initial="hidden" animate="visible" variants={container}>
           {uniqueTechNames.map((techName) => (
             <motion.button
+              variants={item}
               className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.60rem] font-semibold leading-none 
               sm:mr-3 sm:px-2 sm:py-1 sm:text-xs md:hover:bg-primary md:hover:text-white 
               ${activeTags?.includes(techName) ? "bg-primary text-white" : "bg-neutral-300"}`}
