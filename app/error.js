@@ -2,8 +2,8 @@
 
 function Error() {
   return (
-    <div className="absolute top-24 left-1/2 z-50 justify-center text-primary">
-      Failed to load
+    <div className="flex h-screen w-full items-center justify-center font-semibold text-primary">
+      Failed to load :&#40;
     </div>
   );
 }

@@ -101,7 +101,7 @@ function Project({ filteredProjects, project, i }) {
 
             <div
               ref={(ref) => (elementRef.current[i] = ref)}
-              className="mb-6 mt-4 opacity-0 flex w-full items-center justify-between transition-all 
+              className="mb-6 mt-4 sm:opacity-0 flex w-full items-center justify-between transition-all 
               sm:absolute sm:-top-full sm:mb-0 sm:mt-0 sm:flex-col sm:justify-center sm:ease-in-out"
               style={
                 hover === i
