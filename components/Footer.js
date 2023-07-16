@@ -1,5 +1,4 @@
 import skillIcons from "@/components/skillIcons";
-import skillIconsTest from "@/components/skillIconsTest";
 
 const Footer = () => {
   return (
