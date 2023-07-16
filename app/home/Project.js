@@ -4,8 +4,11 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useAnimation } from "framer-motion";
 
 import skillIcons from "@/components/skillIcons";
 
@@ -14,6 +17,9 @@ function Project({ filteredProjects, project, i }) {
   const [hover, setHover] = useState(-1);
   const elementRef = useRef([]);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   const SetHoverStateOn = (i) => {
     setHover(i);
   };
@@ -21,7 +27,30 @@ function Project({ filteredProjects, project, i }) {
     setHover(-1);
   };
 
-  // console.log(project.color);
+  const controls = useAnimation();
+  // console.log(controls);
+
+  const item = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: "easeIn",
+        // delay: 0.2,
+        duration: 0.2,
+      },
+    },
+  };
+
+  // useEffect(() => {
+  //   console.log("Element is in view: ", isInView);
+  // }, [isInView]);
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
 
   return (
     <>
@@ -31,7 +60,13 @@ function Project({ filteredProjects, project, i }) {
           onMouseLeave={SetHoverStateOff}
           onMouseEnter={() => SetHoverStateOn(i)}
         >
-          <div className="relative overflow-hidden rounded-2xl @container sm:group-hover:bg-[#d1f4fe]">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={item}
+            className="relative overflow-hidden rounded-2xl @container sm:group-hover:bg-[#d1f4fe]"
+          >
             <div
               className={`group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-100 ease-in-out
               `}
@@ -82,12 +117,12 @@ function Project({ filteredProjects, project, i }) {
                     }
               }
             >
-              <h2
-                className="w-4/5 text-lg font-bold leading-tight text-neutral-950 
+              <h3
+                className="w-4/5 text-xl leading-tight text-neutral-950 
                 sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8.2cqi]"
               >
                 {project.name}
-              </h2>
+              </h3>
               {/* <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
                 Built with
               </p> */}
@@ -108,16 +143,16 @@ function Project({ filteredProjects, project, i }) {
                 Find out more →
               </p> */}
               <p
-                className="relative hidden sm:inline-block text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100
-            before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-neutral-950 before:transition-all
-            before:duration-[400ms] before:ease-out 
-            after:absolute after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] 
-            after:bg-neutral-600 hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden"
+                className="relative hidden text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100 before:absolute
+            before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-neutral-950 before:transition-all before:duration-[400ms]
+            before:ease-out after:absolute 
+            after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] after:bg-neutral-600 
+            hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden sm:inline-block"
               >
                 Find out more
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Link>
     </>
