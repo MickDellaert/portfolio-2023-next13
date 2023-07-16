@@ -3,22 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
-import { useState, Fragment } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef, Fragment } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Navbar = () => {
-  // const router = useRouter();
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
+
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest >= 80) {
+      setHidden(true);
     } else {
-      setColorchange(false);
+      setHidden(false);
     }
-  };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", changeNavbarColor);
-  }
+  });
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,7 +28,7 @@ const Navbar = () => {
 
   const item = {
     hidden: { opacity: 0, y: -100 },
-    show: {
+    visible: {
       opacity: 1,
       y: 0,
       // transition: {
@@ -45,51 +44,35 @@ const Navbar = () => {
       <nav id="home">
         <motion.div
           initial="hidden"
-          animate="show"
+          animate={hidden ? "hidden" : "visible"}
           variants={item}
           className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full "
         >
-          {/* <div className={`navbar-container mx-6 flex h-20 items-center justify-between`}> */}
-          <div
-            className={`${
-              colorChange
-                ? "mx-6 flex h-20 items-center justify-between opacity-0 transition-all "
-                : "mx-6 flex h-20 items-center justify-between opacity-100 transition-all"
-            } mr-3 sm:mr-6`}
-          >
-            {/* ${
-              colorChange
-                ? "border-b-2 border-white bg-white"
-                : "border-b-2 border-primary bg-white"
-            } */}
+          <div className={`navbar-container mx-6 flex h-20 items-center justify-between`}>
             <div className="logo-container mb-3 self-end">
-              <div className="logo">
+              <div className="logo ">
                 <Link href="/" onClick={scrollToTop}>
-                  {colorChange ? (
-                    <Logo className=" h-9 w-9 opacity-0 transition" />
-                  ) : (
-                    <Logo className="h-9 w-9 fill-neutral-950 transition" />
-                  )}
+                  <Logo className=" h-9 w-9 fill-neutral-950 transition" />
                 </Link>
               </div>
             </div>
 
-            <div className="navlinks mb-3 self-end font-[650]">
+            <div className="navlinks mb-3 self-end text-base font-[650] sm:text-lg">
               <Link
                 href="/#projects"
                 scroll={false}
-                className="relative mr-3 inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                className="relative mr-3 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
                 before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
-                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8 sm:text-lg"
+                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8"
               >
                 Projects
               </Link>
               <Link
                 href="/#skills"
                 scroll={false}
-                className="relative mr-3 inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                className="relative mr-3 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
                 before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
-                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8 sm:text-lg"
+                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8"
               >
                 Skills
               </Link>
@@ -97,9 +80,9 @@ const Navbar = () => {
               <Link
                 href="/#about"
                 scroll={false}
-                className="relative inline-block text-base font-semibold text-neutral-950 transition-all duration-100 before:absolute before:left-[0%]
+                className="relative inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute before:left-[0%]
                 before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all before:duration-[400ms]
-                before:ease-out hover:text-primary  hover:before:scale-x-100 hover:after:hidden sm:text-lg"
+                before:ease-out hover:text-primary  hover:before:scale-x-100 hover:after:hidden"
               >
                 About
               </Link>

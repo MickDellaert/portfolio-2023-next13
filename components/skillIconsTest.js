@@ -90,4 +90,4 @@ const skillIconsTest = {
   ReactTwo: { Name: "React", Icon: SiReact },
 };
 
-export default skillIcons;
+export default skillIconsTest;
