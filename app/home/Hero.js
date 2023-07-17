@@ -39,7 +39,7 @@ const Hero = () => {
   }, []);
 
   const item = {
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: -70 },
     visible: {
       opacity: 1,
       y: 0,

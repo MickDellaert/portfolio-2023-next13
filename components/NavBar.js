@@ -48,11 +48,11 @@ const Navbar = () => {
           variants={item}
           className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full "
         >
-          <div className={`navbar-container mx-6 flex h-20 items-center justify-between`}>
+          <div className={`navbar-container mx-6 flex h-16 sm:h-20 items-center justify-between`}>
             <div className="logo-container mb-3 self-end">
               <div className="logo ">
                 <Link href="/" onClick={scrollToTop}>
-                  <Logo className=" h-9 w-9 fill-neutral-950 transition" />
+                  <Logo className="h-8 w-8 sm:h-9 sm:w-9 fill-neutral-950 transition" />
                 </Link>
               </div>
             </div>
