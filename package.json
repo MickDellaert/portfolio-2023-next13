@@ -11,6 +11,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.7.0",
     "@tailwindcss/container-queries": "^0.1.1",
+    "@uidotdev/usehooks": "^2.0.1",
     "@vercel/analytics": "^1.0.1",
     "encoding": "^0.1.13",
     "eslint": "8.33.0",
@@ -24,6 +25,7 @@
     "react-icons": "^4.10.1",
     "react-spinners": "^0.13.8",
     "react-text-transition": "^3.1.0",
+    "react-use": "^17.4.0",
     "sharp": "^0.31.3",
     "swr": "^2.0.3",
     "use-scramble": "^2.2.12",

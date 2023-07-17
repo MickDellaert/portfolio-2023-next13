@@ -16,6 +16,8 @@ const mainFont = Red_Hat_Display({
 
 export const metadata = {
   title: "Mick's portfolio",
+  description: "Mick Dellaert, a graphic designer on a journey of becoming a developer.",
+  creator: "Mick Dellaert",
   icons: {
     icon: '/icon.ico',
   },

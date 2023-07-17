@@ -37,8 +37,8 @@ function ProjectDetailBottomNav({ singleProject, data }) {
       >
         <Link href={`/project/${previousProject}`} scroll={false} className="text-regular group">
           {singleProject.id > 1 ? (
-            <div className="flex gap-2 text-neutral-500 hover:text-primary">
-              <p className="rotate-90 text-neutral-500 group-hover:text-primary ">↓</p>
+            <div className="flex gap-2 text-neutral-400 hover:text-primary">
+              <p className="rotate-90 text-neutral-400 group-hover:text-primary ">↓</p>
               Previous
             </div>
           ) : (
@@ -47,8 +47,8 @@ function ProjectDetailBottomNav({ singleProject, data }) {
         </Link>
         <Link href={`/project/${nextProject}`} className="text-regular group">
           {singleProject.id < data.length ? (
-            <div className="flex gap-2 text-neutral-500 group-hover:text-primary">
-              Next <p className="rotate-90 text-neutral-500 group-hover:text-primary">↑</p>
+            <div className="flex gap-2 text-neutral-400 group-hover:text-primary">
+              Next <p className="rotate-90 text-neutral-400 group-hover:text-primary">↑</p>
             </div>
           ) : (
             ""
