@@ -47,7 +47,7 @@ const About = () => {
         <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-6 px-6 md:grid-cols-8 md:px-12">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
             <h2 className="header-title mb-4 text-4xl font-bold leading-normal text-primary">About Me</h2>
-            <p className="text-xl leading-snug">
+            <p className="text-lg leading-normal">
               Hi, I&apos;m Mick, an experienced graphic designer, knowledgeable dtp-operator, and aspiring web developer
               from Antwerp. Nice to meet you, welcome to my portfolio.
               <br></br>
