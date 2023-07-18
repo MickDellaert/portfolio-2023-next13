@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import portret from "../../public/portret/portret-gray-23.jpg";
@@ -7,7 +7,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
 
   const item = {
@@ -28,7 +28,6 @@ const About = () => {
   }, [controls, isInView]);
   return (
     <>
-      {/* <div id="about" className="about-anchor"></div> */}
       <div id="about" className="relative top-36"></div>
 
       <motion.section
@@ -38,25 +37,20 @@ const About = () => {
         variants={item}
         className="about-container mx-6 mb-12 mt-40 rounded-2xl bg-neutral-100 py-12 md:py-20"
       >
-        {/* <div className="grid grid-cols-1 md:grid-cols-8 gap-6 mx-6 md:mx-16 2xl:mx-40 pt-6 md:pt-16 2xl:pt-32">
-          <h1 className="header-title leading-normal text-4xl text-emerald-600">
-            About
-          </h1>
-        </div> */}
-
+ 
         <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-6 px-6 md:grid-cols-8 md:px-12">
           <div className="about-text md:col-span-8 xl:col-span-5 xl:row-span-2 2xl:col-span-5">
             <h2 className="header-title mb-4 text-4xl font-bold leading-normal text-primary">About Me</h2>
             <p className="text-lg leading-normal">
-              Hi, I&apos;m Mick, an experienced graphic designer, knowledgeable dtp-operator, and aspiring web developer
-              from Antwerp. Nice to meet you, welcome to my portfolio.
+              Hi, I&apos;m Mick, an experienced graphic designer, dtp-operator, and aspiring web developer
+              from Antwerp. Thanks for stopping by, I hope you enjoy having a look around on my portfolio website.
               <br></br>
               <br></br>
-              On this website you can find some of the projects made recently with new skills I gained during a
-              seven-month full-time Junior Web Developer training at BeCode Antwerp, a graduation project at Hack Your
-              Future Antwerp and my first internship at Webit. They represent the first steps I have been taking in my
-              ambition of becoming a full stack developer with an emphasis on front-end. More projects can be found on
-              my{" "}
+              Here you can find some of the projects made recently with new skills I gained during a
+              seven-month full-time Junior Web Developer training at BeCode Antwerp, a graduation project at
+              HackYourFuture Antwerp and my first internship at Webit. They represent the first steps I have been taking
+              in my ambition of becoming a full stack developer with an emphasis on front-end. More projects can be
+              found on my{" "}
               <a href="https://github.com/MickDellaert" target="_blank" rel="noreferrer" className="font-bold">
                 Github
               </a>{" "}

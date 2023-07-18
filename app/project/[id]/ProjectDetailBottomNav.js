@@ -19,9 +19,6 @@ function ProjectDetailBottomNav({ singleProject, data }) {
     }
   }, [data, singleProject.id]);
 
-  // console.log(nextProject)
-  // console.log(singleProject.id)
-
   const item = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },

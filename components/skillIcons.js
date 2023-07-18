@@ -85,9 +85,4 @@ const skillIcons = {
   SiSvelte,
 };
 
-const skillIconsTest = {
-  React: { Name: "React", Icon: SiReact },
-  ReactTwo: { Name: "React", Icon: SiReact },
-};
-
 export default skillIcons;

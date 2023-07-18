@@ -20,13 +20,7 @@ function ProjectsFilter({ uniqueTechNames }) {
 
   const container = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        // ease: "easeIn",
-        // staggerChildren: 0.05,
-      },
-    },
+    visible: { opacity: 1 },
   };
 
   const item = {
@@ -42,7 +36,7 @@ function ProjectsFilter({ uniqueTechNames }) {
             <motion.button
               variants={item}
               className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.60rem] font-semibold leading-none 
-              sm:mr-3 sm:px-2 sm:py-1 sm:text-xs md:hover:bg-primary md:hover:text-white drop-shadow-lg
+              drop-shadow-lg sm:mr-3 sm:px-2 sm:py-1 sm:text-xs md:hover:bg-primary md:hover:text-white
               ${activeTags?.includes(techName) ? "bg-primary text-white" : "bg-neutral-50"}`}
               onClick={() => {
                 handleClick(techName);
