@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-// import { CldImage } from "next-cloudinary";
 
 function ProjectDetailImage({ singleProject }) {
   const item = {
@@ -16,7 +15,7 @@ function ProjectDetailImage({ singleProject }) {
       initial="hidden"
       animate="visible"
       variants={item}
-      className="pics mb-4 mt-6 grid gap-7 sm:mt-8 md:grid-cols-2"
+      className="pics mb-4 mt-6 grid gap-7 sm:mt-6 md:grid-cols-2"
     >
       {singleProject.images.map((image, i) => {
         return (
@@ -24,8 +23,6 @@ function ProjectDetailImage({ singleProject }) {
             <Image
               className="rounded-2xl"
               key={singleProject.id}
-              // width={1000}
-              // height={1000}
               fill={true}
               sizes="(max-width: 767px) 100vw, 50vw"
               priority={true}

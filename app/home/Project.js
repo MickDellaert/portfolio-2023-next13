@@ -23,9 +23,8 @@ function Project({ filteredProjects, project, i }) {
   };
 
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
-  // console.log(controls);
 
   const item = {
     hidden: { opacity: 0 },
@@ -33,7 +32,6 @@ function Project({ filteredProjects, project, i }) {
       opacity: 1,
       transition: {
         ease: "easeIn",
-        // delay: 0.2,
         duration: 0.2,
       },
     },
@@ -44,10 +42,6 @@ function Project({ filteredProjects, project, i }) {
       controls.start("visible");
     }
   }, [controls, isInView]);
-
-  // useEffect(() => {
-  //   console.log("Element is in view: ", isInView);
-  // }, [isInView]);
 
   return (
     <>
@@ -111,42 +105,30 @@ function Project({ filteredProjects, project, i }) {
                       opacity: "1",
                     }
                   : {
-                      // top: `translateY ${elementRef.current[i]?.offsetHeight}px`,
                       transition: "all 0.48s ease-in",
                     }
               }
             >
               <h3
-                className="w-4/5 text-xl leading-tight text-neutral-950 
+                className="w-3/4 text-xl leading-tight text-neutral-950 
                 sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8.2cqi]"
               >
                 {project.name}
               </h3>
-              {/* <p className="mb-1 hidden text-base font-normal text-neutral-400 sm:hidden">
-                Built with
-              </p> */}
-              <div className="flex items-center gap-2 sm:mb-5">
-                {/* <p className="mb-1 hidden text-base font-semibold text-neutral-400 sm:block">
-                  Built with
-                </p> */}
 
+              <div className="flex items-center gap-x-1.5 sm:mb-5 sm:gap-x-2">
                 {project.icons.map((skills, i) => {
                   const ProjectSkills = skillIcons[skills.iconCode];
                   return <ProjectSkills key={i} className="h-[20px] w-[20px] fill-neutral-400 sm:fill-neutral-500" />;
                 })}
               </div>
-              {/* <p
-                className="hidden text-sm font-semibold text-neutral-950 underline decoration-1 underline-offset-4  
-              hover:text-neutral-950 hover:decoration-2 sm:block"
-              >
-                Find out more →
-              </p> */}
+
               <p
-                className="relative hidden text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100 before:absolute
-            before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-neutral-950 before:transition-all before:duration-[400ms]
-            before:ease-out after:absolute 
-            after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] after:bg-neutral-600 
-            hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden sm:inline-block"
+                className="relative hidden text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100 
+                before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0
+              before:bg-neutral-950 before:transition-all before:duration-[400ms] before:ease-out after:absolute 
+                after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] after:bg-neutral-600
+              hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden sm:inline-block"
               >
                 Find out more
               </p>

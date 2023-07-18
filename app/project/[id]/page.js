@@ -1,26 +1,17 @@
-// export const revalidate = 0;
-// export const dynamic = "force-static";
-
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import supabase from "../../../utils/supabase";
-
-// import Loading from "../../loading";
 
 import ProjectDetailHeader from "./ProjectDetailHeader";
 import ProjectDetailImage from "./ProjectDetailImage";
 import ProjectDetailBottomNav from "./ProjectDetailBottomNav";
 
 export const metadata = {
-  title: "Mick's projects"
-}
+  title: "Mick's projects",
+};
 
 export default async function ProjectDetail({ params: { id } }) {
-   
-  const { data } = await supabase
-    .from("projects")
-    .select(`urlName`)
-    .order("id");
+  const { data } = await supabase.from("projects").select(`urlName`).order("id");
 
   const { data: singleData } = await supabase
     .from("projects")
@@ -33,21 +24,9 @@ export default async function ProjectDetail({ params: { id } }) {
 
   console.log(singleData);
 
-  // .match({ urlName: id })
-  // .single();
-
   if (!data || !singleData) {
     notFound();
   }
-
-  // const { data: test } = await supabase.from("projects").select("urlName");
-
-  // if (!test) {
-  //   notFound();
-  // }
-
-  // const projectFilter = data.filter((project) => id === project.urlName);
-  // const singleProject = projectFilter[0];
 
   return (
     <>
@@ -61,10 +40,7 @@ export default async function ProjectDetail({ params: { id } }) {
 }
 
 export async function generateStaticParams() {
-  const { data } = await supabase
-    .from("projects")
-    .select("urlName")
-    .order("id");
+  const { data } = await supabase.from("projects").select("urlName").order("id");
 
   return data.map((el) => ({
     id: el.urlName.toString(),

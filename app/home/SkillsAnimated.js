@@ -7,7 +7,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 export const SkillsAnimated = ({ icons }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
 
   const container = {
@@ -22,9 +22,7 @@ export const SkillsAnimated = ({ icons }) => {
   };
 
   const title = {
-    hidden: {
-      opacity: 0,
-    },
+    hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
@@ -44,10 +42,6 @@ export const SkillsAnimated = ({ icons }) => {
       controls.start("visible");
     }
   }, [controls, isInView]);
-
-  // useEffect(() => {
-  //   console.log("Element is in view: ", isInView);
-  // }, [isInView]);
 
   return (
     <>

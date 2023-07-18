@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Logo from "./Logo";
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useState, Fragment } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Navbar = () => {
-
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
@@ -48,11 +46,11 @@ const Navbar = () => {
           variants={item}
           className="navbar-wrapper fixed left-0 right-0 top-0 z-20 w-full "
         >
-          <div className={`navbar-container mx-6 flex h-16 sm:h-20 items-center justify-between`}>
+          <div className={`navbar-container mx-6 flex h-16 items-center justify-between sm:h-20`}>
             <div className="logo-container mb-3 self-end">
               <div className="logo ">
                 <Link href="/" onClick={scrollToTop}>
-                  <Logo className="h-8 w-8 sm:h-9 sm:w-9 fill-neutral-950 transition" />
+                  <Logo className="h-8 w-8 fill-neutral-950 transition sm:h-9 sm:w-9" />
                 </Link>
               </div>
             </div>
@@ -61,18 +59,18 @@ const Navbar = () => {
               <Link
                 href="/#projects"
                 scroll={false}
-                className="relative mr-3 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                className="relative mr-4 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
                 before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
-                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8"
+                before:duration-[400ms] before:ease-out sm:mr-8 sm:hover:text-primary sm:hover:before:scale-x-100 sm:hover:after:hidden"
               >
                 Projects
               </Link>
               <Link
                 href="/#skills"
                 scroll={false}
-                className="relative mr-3 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
+                className="relative mr-4 inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute
                 before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all
-                before:duration-[400ms] before:ease-out  hover:text-primary hover:before:scale-x-100 hover:after:hidden sm:mr-8"
+                before:duration-[400ms] before:ease-out sm:mr-8 sm:hover:text-primary sm:hover:before:scale-x-100 sm:hover:after:hidden"
               >
                 Skills
               </Link>
@@ -82,47 +80,11 @@ const Navbar = () => {
                 scroll={false}
                 className="relative inline-block font-semibold text-neutral-950 transition-all duration-100 before:absolute before:left-[0%]
                 before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0 before:bg-primary before:transition-all before:duration-[400ms]
-                before:ease-out hover:text-primary  hover:before:scale-x-100 hover:after:hidden"
+                before:ease-out sm:hover:text-primary sm:hover:before:scale-x-100 sm:hover:after:hidden"
               >
                 About
               </Link>
             </div>
-            {/* <div className="navlinks mb-3 self-end font-semibold">
-              <Link
-                href="/#projects"
-                scroll={false}
-                className={`${
-                  colorChange
-                    ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
-                    : "text-neutral-950 transition hover:text-primary"
-                } mr-3 sm:mr-6`}
-              >
-                Projects
-              </Link>
-              <Link
-                href="/#skills"
-                scroll={false}
-                className={`${
-                  colorChange
-                    ? "text-neutral-950 opacity-0 transition hover:text-neutral-950"
-                    : "text-neutral-950 transition hover:text-primary"
-                } mr-3 sm:mr-6`}
-              >
-                Skills
-              </Link>
-
-              <Link
-                href="/#about"
-                scroll={false}
-                className={`${
-                  colorChange
-                    ? "text-neutral-950 opacity-0 hover:text-neutral-950"
-                    : "text-neutral-950 hover:text-primary"
-                }`}
-              >
-                About
-              </Link>
-            </div> */}
           </div>
         </motion.div>
       </nav>
