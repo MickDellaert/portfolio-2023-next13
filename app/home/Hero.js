@@ -1,16 +1,8 @@
 "use client";
 
-// import { Archivo } from "next/font/google";
-// const mainFont = Archivo({ subsets: ["latin"] });
-
-// import { Red_Hat_Display } from "next/font/google";
-// const mainFont = Red_Hat_Display({ subsets: ["latin"] });
-
-// import useWindowSize from "use-window-size-v2";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const TEXTS = ["web", "creative", "front-end", "skilled", "full stack", "dedicated"];
 
@@ -85,11 +77,6 @@ const Hero = () => {
         </h1>
 
         <h1 className=" mb-10 animate-bounce text-clamp-mobile font-bold leading-snug text-primary sm:text-clamp">↓</h1>
-
-        {/* <h2 className="mt-8 mb-8 text-base leading-normal sm:w-4/6 md:text-[1.3vw]">
-        Here you can have a look at some of the projects I have been working on
-        during my journey of becoming a web-developer
-      </h2> */}
       </motion.div>
     </>
   );

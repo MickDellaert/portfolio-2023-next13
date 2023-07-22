@@ -29,11 +29,6 @@ const Navbar = () => {
     visible: {
       opacity: 1,
       y: 0,
-      // transition: {
-      //   ease: "easeIn",
-      //   delay: 1,
-      //   duration: 1
-      // },
     },
   };
 

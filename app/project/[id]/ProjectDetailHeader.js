@@ -20,7 +20,7 @@ function ProjectDetailHeader({ singleProject }) {
 
         <div className="flex justify-between">
           <div className="mt-1 flex gap-2 fill-primary sm:flex-row">
-            <p className="hidden font-semibold text-neutral-400 sm:block">Made with</p>
+            <p className="hidden font-semibold text-neutral-400 sm:block">Built with</p>
             <div className="flex gap-x-1.5 sm:gap-x-2">
               <ProjectSkills singleProject={singleProject} />
             </div>

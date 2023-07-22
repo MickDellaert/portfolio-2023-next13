@@ -58,7 +58,6 @@ export const SkillsAnimated = ({ icons }) => {
           Skills
         </motion.h2>
 
-        {/* <div className="mx-auto grid w-3/4 grid-cols-4 justify-items-center gap-y-8 gap-x-4 md:grid-cols-6 xl:w-2/3"> */}
         <motion.div
           ref={ref}
           initial="hidden"

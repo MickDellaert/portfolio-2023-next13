@@ -9,8 +9,9 @@ import { useMediaQuery } from "usehooks-ts";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 import skillIcons from "@/components/skillIcons";
+import { Tooltip } from "@/components/Tooltip";
 
-function Project({ filteredProjects, project, i }) {
+function ProjectTest({ filteredProjects, project, i }) {
   const notSmall = useMediaQuery("(min-width: 640px)");
   const [hover, setHover] = useState(-1);
   const elementRef = useRef([]);
@@ -47,7 +48,7 @@ function Project({ filteredProjects, project, i }) {
     <>
       <Link className="relative" href={`/project/${project.urlName}`}>
         <div
-          className="group cursor-default sm:cursor-pointer"
+          className="cursor-default sm:cursor-pointer"
           onMouseLeave={SetHoverStateOff}
           onMouseEnter={() => SetHoverStateOn(i)}
         >
@@ -56,7 +57,7 @@ function Project({ filteredProjects, project, i }) {
             initial="hidden"
             animate={controls}
             variants={item}
-            className="relative overflow-hidden rounded-2xl @container sm:group-hover:bg-[#d1f4fe]"
+            className="relative rounded-2xl @container"
           >
             <div
               className={`insetshadow group relative aspect-square h-full w-full overflow-hidden rounded-2xl bg-neutral-50 ease-in-out
@@ -92,46 +93,53 @@ function Project({ filteredProjects, project, i }) {
                 }
               />
             </div>
-
-            <div
-              ref={(ref) => (elementRef.current[i] = ref)}
-              className="mb-6 mt-4 flex w-full items-center justify-between transition-all sm:absolute 
+            <div className="w-full sm:absolute sm:top-0 sm:aspect-square sm:overflow-hidden">
+              <div
+                ref={(ref) => (elementRef.current[i] = ref)}
+                className="mb-6 mt-4 flex w-full items-center justify-between transition-all sm:absolute 
               sm:-top-full sm:mb-0 sm:mt-0 sm:flex-col sm:justify-center sm:opacity-0 sm:ease-in-out"
-              style={
-                hover === i
-                  ? {
-                      top: `0px`,
-                      transition: "all 0.28s ease-out",
-                      opacity: "1",
-                    }
-                  : {
-                      transition: "all 0.48s ease-in",
-                    }
-              }
-            >
-              <h3
-                className="w-3/4 text-xl leading-tight text-neutral-950 
-                sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8.2cqi]"
+                style={
+                  hover === i
+                    ? {
+                        top: `0px`,
+                        transition: "all 0.28s ease-out",
+                        opacity: "1",
+                      }
+                    : {
+                        transition: "all 0.48s ease-in",
+                      }
+                }
               >
-                {project.name}
-              </h3>
+                <h3
+                  className="w-3/4 text-xl leading-tight text-neutral-950 
+                sm:mb-3 sm:mt-5 sm:w-11/12 sm:px-3 sm:text-center sm:text-[8.2cqi]"
+                >
+                  {project.name}
+                </h3>
 
-              <div className="flex items-center gap-x-1.5 sm:mb-5 sm:gap-x-2">
-                {project.icons.map((skills, i) => {
-                  const ProjectSkills = skillIcons[skills.iconCode];
-                  return <ProjectSkills key={i} className="h-[20px] w-[20px] fill-neutral-400 sm:fill-neutral-500" />;
-                })}
-              </div>
+                <div className="flex items-center gap-x-1.5 sm:mb-5 sm:gap-x-2">
+                  {project.icons.map((skills, i) => {
+                    const ProjectSkills = skillIcons[skills.iconCode];
+                    return !notSmall ? (
+                      <Tooltip key={i} tooltip={skills.iconName} tipDirection={"bottom left"}>
+                        <ProjectSkills key={i} className="h-5 w-5 fill-neutral-400 sm:fill-neutral-500" />
+                      </Tooltip>
+                    ) : (
+                      <ProjectSkills key={i} className="h-5 w-5 fill-neutral-400 sm:fill-neutral-500" />
+                    );
+                  })}
+                </div>
 
-              <p
-                className="relative hidden text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100 
+                <p
+                  className="relative hidden text-[4.4cqi] font-semibold text-neutral-600 transition-all duration-100 
                 before:absolute before:left-[0%] before:top-full before:block before:h-0.5 before:w-[100%] before:scale-x-0
               before:bg-neutral-950 before:transition-all before:duration-[400ms] before:ease-out after:absolute 
                 after:left-[0%] after:top-full after:block after:h-0.5 after:w-[100%] after:bg-neutral-600
               hover:text-neutral-950 hover:before:scale-x-100 hover:after:hidden sm:inline-block"
-              >
-                Find out more
-              </p>
+                >
+                  Find out more
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -140,4 +148,4 @@ function Project({ filteredProjects, project, i }) {
   );
 }
 
-export default Project;
+export default ProjectTest;

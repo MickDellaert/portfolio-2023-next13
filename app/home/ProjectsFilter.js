@@ -35,8 +35,8 @@ function ProjectsFilter({ uniqueTechNames }) {
           {uniqueTechNames.map((techName) => (
             <motion.button
               variants={item}
-              className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.60rem] font-semibold leading-none 
-              drop-shadow-lg sm:mr-3 sm:px-2 sm:py-1 sm:text-xs md:hover:bg-primary md:hover:text-white
+              className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.65rem] font-semibold leading-none 
+              drop-shadow-lg sm:mr-3 sm:px-2 sm:py-1 sm:text-xs sm:hover:bg-primary sm:hover:text-white
               ${activeTags?.includes(techName) ? "bg-primary text-white" : "bg-neutral-50"}`}
               onClick={() => {
                 handleClick(techName);
@@ -50,7 +50,7 @@ function ProjectsFilter({ uniqueTechNames }) {
             <button
               onClick={() => setFilters([])}
               className="mb-2 mr-3 h-6 rounded-lg border-2 border-primary px-2 py-1 text-xs font-semibold leading-none 
-              text-primary md:hover:bg-primary md:hover:text-white"
+              text-primary sm:hover:bg-primary sm:hover:text-white"
             >
               Clear
             </button>
