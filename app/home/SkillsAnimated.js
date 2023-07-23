@@ -63,7 +63,7 @@ export const SkillsAnimated = ({ icons }) => {
           initial="hidden"
           animate={controls}
           variants={container}
-          className="mx-auto flex w-[90%] flex-wrap justify-center xl:w-3/4 2xl:w-4/6"
+          className="mx-auto flex w-[96%] flex-wrap justify-center xl:w-3/4 2xl:w-4/6"
         >
           {icons.map((skill, i) => {
             const HomeSkills = skillIcons[skill.iconCode];
