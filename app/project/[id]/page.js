@@ -22,8 +22,6 @@ export default async function ProjectDetail({ params: { id } }) {
     .match({ urlName: id })
     .single();
 
-  console.log(singleData);
-
   if (!data || !singleData) {
     notFound();
   }

@@ -35,7 +35,7 @@ function ProjectsFilter({ uniqueTechNames }) {
           {uniqueTechNames.map((techName) => (
             <motion.button
               variants={item}
-              className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.65rem] font-semibold leading-none 
+              className={`mb-2 mr-2 h-6 rounded-lg px-2 py-px text-[0.6rem] font-semibold leading-none 
               drop-shadow-lg sm:mr-3 sm:px-2 sm:py-1 sm:text-xs sm:hover:bg-primary sm:hover:text-white
               ${activeTags?.includes(techName) ? "bg-primary text-white" : "bg-neutral-50"}`}
               onClick={() => {
