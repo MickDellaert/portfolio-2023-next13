@@ -25,6 +25,7 @@ function ProjectDetailImage({ singleProject }) {
               key={singleProject.id}
               fill={true}
               sizes="(max-width: 767px) 100vw, 50vw"
+              quality={85}
               priority={true}
               alt={image.name}
               src={image.url}
