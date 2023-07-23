@@ -8,8 +8,7 @@ import { useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-import skillIcons from "@/components/skillIcons";
-import { Tooltip } from "@/components/Tooltip";
+import skillIcons from "@/utils/skillIcons";
 
 function ProjectTest({ filteredProjects, project, i }) {
   const notSmall = useMediaQuery("(min-width: 640px)");
@@ -117,16 +116,10 @@ function ProjectTest({ filteredProjects, project, i }) {
                   {project.name}
                 </h3>
 
-                <div className="flex items-center gap-x-1.5 sm:mb-5 sm:gap-x-2">
+                <div className="flex items-center gap-x-1.5 sm:mb-5 sm:gap-x-2 ">
                   {project.icons.map((skills, i) => {
                     const ProjectSkills = skillIcons[skills.iconCode];
-                    return !notSmall ? (
-                      <Tooltip key={i} tooltip={skills.iconName} tipDirection={"bottom left"}>
-                        <ProjectSkills key={i} className="h-5 w-5 fill-neutral-400 sm:fill-neutral-500" />
-                      </Tooltip>
-                    ) : (
-                      <ProjectSkills key={i} className="h-5 w-5 fill-neutral-400 sm:fill-neutral-500" />
-                    );
+                    return <ProjectSkills key={i} className="h-5 w-5 fill-neutral-400 sm:fill-neutral-500" />;
                   })}
                 </div>
 

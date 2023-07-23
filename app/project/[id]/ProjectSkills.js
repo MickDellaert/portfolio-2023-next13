@@ -1,4 +1,4 @@
-import skillIcons from "@/components/skillIcons";
+import skillIcons from "@/utils/skillIcons";
 import { Tooltip } from "@/components/Tooltip";
 
 function ProjectSkills({ singleProject }) {

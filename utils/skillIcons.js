@@ -52,8 +52,6 @@ import {
   SiSvelte,
 } from "react-icons/si";
 
-// import {TbBrandFramerMotion} from "react-icons/tb"
-
 const skillIcons = {
   SiHtml5,
   SiCss3,

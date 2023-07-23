@@ -1,6 +1,6 @@
 "use client";
 
-import skillIcons from "@/components/skillIcons";
+import skillIcons from "@/utils/skillIcons";
 
 import { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -73,7 +73,7 @@ export const SkillsAnimated = ({ icons }) => {
                   key={i}
                   className="m-auto h-10 w-10 cursor-pointer fill-neutral-400 group-hover:fill-primary md:h-12 md:w-12"
                 />
-                <h4 className="mb-6 mt-1 h-4 text-center text-sm font-semibold text-primary opacity-0 group-hover:block group-hover:opacity-100 md:text-base">
+                <h4 className="mb-6 mt-1 h-4 text-center text-sm font-semibold text-primary opacity-0 transition-all group-hover:block group-hover:opacity-100 md:text-base">
                   {skill.iconName}
                 </h4>
               </motion.div>
