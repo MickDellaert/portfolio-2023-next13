@@ -19,7 +19,9 @@ export const metadata = {
   description: "Mick Dellaert, a graphic designer on a journey of becoming a developer.",
   creator: "Mick Dellaert",
   icons: {
-    icon: "/icon.ico",
+    // icon: {url: "/favicon.svg"},
+    // icon: "/favicon.ico",
+    icon: "/icon.svg",
   },
 };
 

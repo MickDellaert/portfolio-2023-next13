@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import TextTransition, { presets } from "react-text-transition";
+import { TextAnimation } from "../../utils/TextAnimation";
 
-const TEXTS = ["web", "creative", "front-end", "skilled", "full stack", "dedicated"];
+const TEXTS = ["web ", "creative ", "front-end", "skilled", "full stack", "dedicated"];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -57,7 +57,7 @@ const Hero = () => {
         }}
       >
         <h1
-          className={`header-title text-clamp-mobile font-[680] leading-snug text-neutral-950 sm:text-clamp very-short:text-clamp-very-short`}
+          className={`header-title text-clamp-mobile font-bold leading-snug text-neutral-950 sm:text-clamp very-short:text-clamp-very-short`}
         >
           Hello, I&apos;m <span className="text-primary">Mick Dellaert</span>, <br className={`hidden sm:block`} />
           <span className="whitespace-nowrap">a graphic designer </span>on{" "}
@@ -67,10 +67,7 @@ const Hero = () => {
             a
             <span className="whitespace-nowrap text-primary">
               {" "}
-              <TextTransition springConfig={presets.gentle} inline>
-                {TEXTS[index % TEXTS.length]}
-              </TextTransition>{" "}
-              developer
+              <TextAnimation index={index}>{TEXTS[index % TEXTS.length]}</TextAnimation> developer
             </span>
           </span>
           .

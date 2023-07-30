@@ -10,7 +10,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 import skillIcons from "@/utils/skillIcons";
 
-function ProjectTest({ filteredProjects, project, i }) {
+function Project({ filteredProjects, project, i }) {
   const notSmall = useMediaQuery("(min-width: 640px)");
   const [hover, setHover] = useState(-1);
   const elementRef = useRef([]);
@@ -141,4 +141,4 @@ function ProjectTest({ filteredProjects, project, i }) {
   );
 }
 
-export default ProjectTest;
+export default Project;
