@@ -48,17 +48,17 @@ export const SkillsAnimated = ({ icons }) => {
     visible: { opacity: 1 },
   };
 
-  // const skillIcon = notSmall
-  //   ? {
-  //       invisible: { opacity: 1 },
-  //       visible: { opacity: 0 },
-  //     }
-  //   : { invisible: { opacity: 1 }, visible: { opacity: 1 } };
+  const skillIcon = notSmall
+    ? {
+        invisible: { opacity: 1 },
+        visible: { opacity: 0 },
+      }
+    : { invisible: { opacity: 1 }, visible: { opacity: 1 } };
 
-  const skillIcon = {
-    invisible: { opacity: 1 },
-    visible: { opacity: 0 },
-  };
+  // const skillIcon = {
+  //   invisible: { opacity: 1 },
+  //   visible: { opacity: 0 },
+  // };
 
   const skillDetails = {
     invisible: { opacity: 0 },
@@ -78,7 +78,7 @@ export const SkillsAnimated = ({ icons }) => {
 
   return (
     <>
-      <div id="skills" className="relative top-12"></div>
+      <div id="skills" className="relative top-20"></div>
 
       <div className="mx-auto mt-40">
         <motion.h2
@@ -114,7 +114,7 @@ export const SkillsAnimated = ({ icons }) => {
 
                   <motion.div
                     variants={skillDetails}
-                    className="absolute left-0 top-0 flex h-full w-full flex-col justify-between rounded-lg bg-neutral-50 p-4 drop-shadow-xl"
+                    className="absolute hidden left-0 top-0 sm:flex h-full w-full flex-col justify-between rounded-lg bg-neutral-50 p-4 drop-shadow-xl"
                   >
                     <div className="flex flex-col justify-center sm:flex-row h-7 sm:items-center">
                       <HomeSkills className="hidden sm:block mr-3 h-7 w-7 fill-primary" />
