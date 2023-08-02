@@ -74,7 +74,7 @@ function Project({ filteredProjects, project, i }) {
                 alt={project.name}
                 fill={true}
                 priority={project.id < 5}
-                sizes="(max-width: 639px) 80vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 22vw"
+                sizes="(max-width: 639px) 80vw, (max-width: 767px) 50vw, (max-width: 1279px) 33vw, 22vw"
                 className={`rounded-2xl drop-shadow-xl filter  ${
                   filteredProjects.length === 0
                     ? "grayscale-0"

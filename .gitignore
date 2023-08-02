@@ -55,3 +55,4 @@ app/components/skillIconsTest.js
 app/home/ProjectFramer.js
 app/home/HeroTest.js
 app/home/ProjectTest.js
+app/home/SkillsAnimatedTest.js
