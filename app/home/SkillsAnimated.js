@@ -4,11 +4,17 @@ import skillIcons from "@/utils/skillIcons";
 
 import { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { useMediaQuery } from "usehooks-ts";
 
 export const SkillsAnimated = ({ icons }) => {
+  const notSmall = useMediaQuery("(min-width: 640px)");
+
   const ref = useRef(null);
+
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
+
+  // console.log(`${icons[0]?.level}%`);
 
   const container = {
     hidden: { opacity: 0 },
@@ -35,6 +41,33 @@ export const SkillsAnimated = ({ icons }) => {
         type: "spring",
       },
     },
+  };
+
+  const skillContainer = {
+    invisible: { opacity: 1 },
+    visible: { opacity: 1 },
+  };
+
+  const skillIcon = notSmall
+    ? {
+        invisible: { opacity: 1 },
+        visible: { opacity: 0 },
+      }
+    : { invisible: { opacity: 1 }, visible: { opacity: 1 } };
+
+  // const skillIcon = {
+  //   invisible: { opacity: 1 },
+  //   visible: { opacity: 0 },
+  // };
+
+  const skillDetails = {
+    invisible: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const skillWidth = {
+    invisible: { width: "0%" },
+    visible: (i) => ({ width: `${icons[i].level}%` }),
   };
 
   useEffect(() => {
@@ -68,14 +101,42 @@ export const SkillsAnimated = ({ icons }) => {
           {icons.map((skill, i) => {
             const HomeSkills = skillIcons[skill.iconCode];
             return (
-              <motion.div key={i} variants={item} className="group flex basis-1/4 flex-col py-1 md:basis-1/6">
-                <HomeSkills
-                  key={i}
-                  className="m-auto h-10 w-10 cursor-pointer fill-neutral-400 group-hover:fill-primary md:h-12 md:w-12"
-                />
-                <h4 className="mb-6 mt-1 h-4 text-center text-sm font-semibold text-primary opacity-0 transition-all group-hover:block group-hover:opacity-100 md:text-base">
-                  {skill.iconName}
-                </h4>
+              <motion.div key={i} variants={item} className="group flex h-28 basis-1/4 flex-col py-1 md:basis-1/6">
+                <motion.div
+                  className="relative h-full sm:cursor-pointer"
+                  initial="invisible"
+                  whileHover="visible"
+                  variants={skillContainer}
+                >
+                  <motion.div className="flex h-full flex-col justify-center" variants={skillIcon}>
+                    <HomeSkills className="m-auto h-10 w-10  fill-neutral-400 md:h-12 md:w-12" />
+                  </motion.div>
+
+                  <motion.div
+                    variants={skillDetails}
+                    className="absolute left-0 top-0 hidden h-full w-full flex-col justify-between rounded-lg bg-neutral-50 p-4 drop-shadow-xl sm:flex"
+                  >
+                    <div className="flex h-7 items-center">
+                      <HomeSkills className="mr-3 h-7 w-7 fill-primary" />
+                      <h3 className="text-base font-bold leading-tight">{skill.iconName}</h3>
+                    </div>
+                    <hr className="bg-neutral-50"></hr>
+                    <div className="mb-1.5 flex flex-col justify-end">
+                      <div className="flex justify-between items-center">
+                        <h3 className="text-sm font-normal text-neutral-950">Skill level</h3>
+                        <h3 className="text-base font-bold text-neutral-950">{`${skill.level}%`}</h3>
+                      </div>
+                      <div className="relative w-full">
+                        <div className="absolute h-1.5 w-full rounded-lg bg-neutral-200"></div>
+                        <motion.div
+                          custom={i}
+                          variants={skillWidth}
+                          className={`absolute h-1.5 rounded-lg bg-primary`}
+                        ></motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             );
           })}
