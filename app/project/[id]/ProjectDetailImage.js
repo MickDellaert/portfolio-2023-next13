@@ -24,7 +24,7 @@ function ProjectDetailImage({ singleProject }) {
               className="rounded-2xl"
               key={singleProject.id}
               fill={true}
-              sizes="(max-width: 767px) 100vw, 50vw"
+              sizes="(max-width: 767px) 98vw, 40vw"
               priority={true}
               alt={image.name}
               src={image.url}
