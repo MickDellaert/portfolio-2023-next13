@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -27,7 +28,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-redhat)", "sans-serif"],
       },
-
+      
       fontSize: {
         clamp: "clamp(1.2rem, 5.5vw, 3.2rem)",
         "clamp-mobile": "clamp(1.2rem, 7vw, 2.4rem)",
