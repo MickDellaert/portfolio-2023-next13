@@ -17,14 +17,17 @@ import Skills from "./home/Skills";
 import About from "./home/About";
 
 export default async function Index() {
+
   return (
     <>
       <div className="mt-[100px]"></div>
       <div className={`mx-auto min-h-screen max-w-screen-2xl px-6`}>
         <Hero />
-        <Suspense fallback={<ProjectLoading />}>
+        <Projects />
+
+        {/* <Suspense fallback={<ProjectLoading />}>
           <Projects />
-        </Suspense>
+        </Suspense> */}
         <Skills />
       </div>
       <About />
