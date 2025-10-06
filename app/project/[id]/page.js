@@ -10,7 +10,8 @@ export const metadata = {
   title: "Mick's projects",
 };
 
-export default async function ProjectDetail({ params: { id } }) {
+export default async function ProjectDetail({ params }) {
+  const { id } = await params;
   const { data } = await supabase.from("projects").select(`urlName`).order("id");
 
   const { data: singleData } = await supabase
@@ -19,7 +20,7 @@ export default async function ProjectDetail({ params: { id } }) {
     .order("id")
     .order("id", { foreignTable: "images", ascending: true })
     .range(1, 2, { foreignTable: "images" })
-    .match({ urlName: id })
+    .match({ urlName: id }) // gebruik hier de 'id'
     .single();
 
   if (!data || !singleData) {
