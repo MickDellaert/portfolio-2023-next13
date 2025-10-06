@@ -1,5 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import { Metadata } from "next";
 
 import Footer from "@/components/Footer";
@@ -31,10 +33,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* <head /> */}
       <body className={`${mainFont.variable} font-sans text-neutral-950 antialiased `}>
+        <GoogleAnalytics gaId="G-TTX6SYC5GY" />
         <Navbar />
         {children}
         <Analytics />
-        <SpeedInsights/>
+        <SpeedInsights />
         <Footer />
       </body>
     </html>

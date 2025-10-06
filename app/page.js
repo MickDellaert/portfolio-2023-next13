@@ -25,7 +25,7 @@ export default async function Index() {
         <Suspense fallback={<ProjectLoading />}>
           <Projects />
         </Suspense>
-        <Skills />
+        {/* <Skills /> */}
       </div>
       <About />
     </>
