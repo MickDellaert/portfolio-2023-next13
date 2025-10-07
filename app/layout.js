@@ -33,13 +33,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* <head /> */}
       <body className={`${mainFont.variable} font-sans text-neutral-950 antialiased `}>
-        <GoogleAnalytics gaId="G-TTX6SYC5GY" />
         <Navbar />
         {children}
         <Analytics />
         <SpeedInsights />
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-TTX6SYC5GY" />
     </html>
   );
 }
